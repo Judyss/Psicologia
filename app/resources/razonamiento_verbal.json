@@ -1,1283 +1,1282 @@
 [
   {
-    "id":1,
-    "numero":"1",
-    "pregunta":"... es a empezar como fin es a...",
-    "incisos":[
+    "id": 1,
+    "numero": "1",
+    "pregunta": "... es a empezar como fin es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"comienzo - continuar"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "comienzo - continuar"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"emprender - comienzo"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "emprender - comienzo"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"inicio - terminar"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "inicio - terminar"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"terminar - conclucion"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "terminar - conclucion"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"objetivo - iniciar"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "objetivo - iniciar"
       }
     ]
   },
   {
-    "id":2,
-    "numero":"2",
-    "pregunta":"...es a mago como chiste a...",
-    "incisos":[
+    "id": 2,
+    "numero": "2",
+    "pregunta": "...es a mago como chiste a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"truco - habilidad"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "truco - habilidad"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"actor - risa"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "actor - risa"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"comediante - actor"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "comediante - actor"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"habilidad - tragico"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "habilidad - tragico"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"truco - humorista"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "truco - humorista"
       }
     ]
   },
   {
-    "id":3,
-    "numero":"3",
-    "pregunta":"... es a pentágono como diez  es a...",
-    "incisos":[
+    "id": 3,
+    "numero": "3",
+    "pregunta": "... es a pentï¿½gono como diez  es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"poligono - doble"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "poligono - doble"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"cinco - decálogo"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "cinco - decï¿½logo"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"ángulo - decálogo"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "ï¿½ngulo - decï¿½logo"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"pentagrama - cinco"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "pentagrama - cinco"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"decámetro - doble"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "decï¿½metro - doble"
       }
     ]
   },
   {
-    "id":4,
-    "numero":"4",
-    "pregunta":"... es a mano como calcetín es a...",
-    "incisos":[
+    "id": 4,
+    "numero": "4",
+    "pregunta": "... es a mano como calcetï¿½n es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"dedo - zapato"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "dedo - zapato"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"guante - pie"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "guante - pie"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"gesto - zapato"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "gesto - zapato"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"brazo - pie"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "brazo - pie"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"pulgar - lana"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "pulgar - lana"
       }
     ]
   },
   {
-    "id":5,
-    "numero":"5",
-    "pregunta":"... es a arañar como avispa es a...",
-    "incisos":[
+    "id": 5,
+    "numero": "5",
+    "pregunta": "... es a araï¿½ar como avispa es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"uña - aguijón"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "uï¿½a - aguijï¿½n"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"gato - picar"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "gato - picar"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"morder - araña"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "morder - araï¿½a"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"uña - tela"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "uï¿½a - tela"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"morder - veneno"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "morder - veneno"
       }
     ]
   },
   {
-    "id":6,
-    "numero":"6",
-    "pregunta":"...es a izar como abajo es a...",
-    "incisos":[
+    "id": 6,
+    "numero": "6",
+    "pregunta": "...es a izar como abajo es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"subir - arriba"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "subir - arriba"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"peso - descender"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "peso - descender"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"arriba - arriar"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "arriba - arriar"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"vela - mar"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "vela - mar"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"bandera - vela"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "bandera - vela"
       }
     ]
   },
   {
-    "id":7,
-    "numero":"7",
-    "pregunta":"... es a boca como gruño es a...",
-    "incisos":[
+    "id": 7,
+    "numero": "7",
+    "pregunta": "... es a boca como gruï¿½o es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"mueca - ojo"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "mueca - ojo"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"cara - gesto"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "cara - gesto"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"ademán - burla"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "ademï¿½n - burla"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"diente - gesto"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "diente - gesto"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"rostro - ojo"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "rostro - ojo"
       }
     ]
   },
   {
-  "id":8,
-  "numero":"8",
-  "pregunta":"... es a tierra como golfo es a...",
-  "incisos":[
-    {
-      "id":1,
-      "inciso":"a",
-      "opcion":"cabo - mar"
-    },
-    {
-      "id":2,
-      "inciso":"b",
-      "opcion":"lago - bahía"
-    },
-    {
-      "id":3,
-      "inciso":"c",
-      "opcion":"muelle - cabo"
-    },
-    {
-      "id":4,
-      "inciso":"d",
-      "opcion":"mar - playa"
-    },
-    {
-      "id":5,
-      "inciso":"e",
-      "opcion":"río - bahía "
-    }
-  ]
-},
-  {
-    "id":9,
-    "numero":"9",
-    "pregunta":"... es a tarde como primero es a...",
-    "incisos":[
+    "id": 8,
+    "numero": "8",
+    "pregunta": "... es a tierra como golfo es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"temprano - numero"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "cabo - mar"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"pronto - uno"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "lago - bahï¿½a"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"mañana - pronto"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "muelle - cabo"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"temprano - ultimo"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "mar - playa"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"segundo - ultimo "
+        "id": 5,
+        "inciso": "e",
+        "opcion": "rï¿½o - bahï¿½a "
       }
     ]
   },
   {
-    "id":10,
-    "numero":"10",
-    "pregunta":"... es a red como eslabón es a...",
-    "incisos":[
+    "id": 9,
+    "numero": "9",
+    "pregunta": "... es a tarde como primero es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"pesca - hierro"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "temprano - numero"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"malla - cadena"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "pronto - uno"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"tejido . anillo"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "maï¿½ana - pronto"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"barca - hierro"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "temprano - ultimo"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"hilo - perdenal"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "segundo - ultimo "
       }
     ]
   },
   {
-    "id":11,
-    "numero":"11",
-    "pregunta":"... es a ordinario como peculiar es a...",
-    "incisos":[
+    "id": 10,
+    "numero": "10",
+    "pregunta": "... es a red como eslabï¿½n es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"habitual - general"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "pesca - hierro"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"común - característico"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "malla - cadena"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"raro - propio"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "tejido . anillo"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"familiar - vulgar"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "barca - hierro"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"raro . específico"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "hilo - perdenal"
       }
     ]
   },
   {
-    "id":12,
-    "numero":"12",
-    "pregunta":"... es a nuez como piel es a...",
-    "incisos":[
+    "id": 11,
+    "numero": "11",
+    "pregunta": "... es a ordinario como peculiar es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"fruta - animal"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "habitual - general"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"cáscara - uva"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "comï¿½n - caracterï¿½stico"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"vegetal - corteza"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "raro - propio"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"aceite - vino"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "familiar - vulgar"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"ardilla - lobo"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "raro . especï¿½fico"
       }
     ]
   },
   {
-    "id":13,
-    "numero":"13",
-    "pregunta":"... es a pobreza como abundancia es a...",
-    "incisos":[
+    "id": 12,
+    "numero": "12",
+    "pregunta": "... es a nuez como piel es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"dinero - ahorro"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "fruta - animal"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"dinero - opulencia"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "cï¿½scara - uva"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"riqueza - bienestar"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "vegetal - corteza"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"escasez - miseria"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "aceite - vino"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"riqueza - escasez"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "ardilla - lobo"
       }
     ]
   },
   {
-    "id":14,
-    "numero":"14",
-    "pregunta":"... es a flota como a soldado es a...",
-    "incisos":[
+    "id": 13,
+    "numero": "13",
+    "pregunta": "... es a pobreza como abundancia es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"mar - guerra"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "dinero - ahorro"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"barco - guerra"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "dinero - opulencia"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"buque - ejercito"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "riqueza - bienestar"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"mar - infantería"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "escasez - miseria"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"armada - capitan"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "riqueza - escasez"
       }
     ]
   },
   {
-    "id":15,
-    "numero":"15",
-    "pregunta":"... es a alumno como pedriatra es a...",
-    "incisos":[
+    "id": 14,
+    "numero": "14",
+    "pregunta": "... es a flota como a soldado es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"educación - salud"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "mar - guerra"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"profesor - médico"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "barco - guerra"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"colegio - maestro"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "buque - ejercito"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"libro - puericultor"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "mar - infanterï¿½a"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"profesor - niño"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "armada - capitan"
       }
     ]
   },
   {
-    "id":16,
-    "numero":"16",
-    "pregunta":"... es a azar como recompensa es a...",
-    "incisos":[
+    "id": 15,
+    "numero": "15",
+    "pregunta": "... es a alumno como pedriatra es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"sorteo - castigo"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "educaciï¿½n - salud"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"suerte - fortuna"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "profesor - mï¿½dico"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"destino - elección"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "colegio - maestro"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"suerte - mérito"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "libro - puericultor"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"premio - dinero"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "profesor - niï¿½o"
       }
     ]
   },
   {
-    "id":17,
-    "numero":"17",
-    "pregunta":"... es a muelle como avión  es a...",
-    "incisos":[
+    "id": 16,
+    "numero": "16",
+    "pregunta": "... es a azar como recompensa es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"puerto - piloto"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "sorteo - castigo"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"mercancía - nave"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "suerte - fortuna"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"aterrizaje - pista"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "destino - elecciï¿½n"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"descarga - comandante"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "suerte - mï¿½rito"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"barco - hangar"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "premio - dinero"
       }
     ]
   },
   {
-    "id":18,
-    "numero":"18",
-    "pregunta":"... es a frecuente como escaso es a...",
-    "incisos":[
+    "id": 17,
+    "numero": "17",
+    "pregunta": "... es a muelle como aviï¿½n  es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"corriente - bastante"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "puerto - piloto"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"ordinario - vulgar"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "mercancï¿½a - nave"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"abundante - raro"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "aterrizaje - pista"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"suficiente - habitual"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "descarga - comandante"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"vulgar - corriente"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "barco - hangar"
       }
     ]
   },
   {
-    "id":19,
-    "numero":"19",
-    "pregunta":"... es a despejar como clave es a...",
-    "incisos":[
+    "id": 18,
+    "numero": "18",
+    "pregunta": "... es a frecuente como escaso es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"tiempo - aclarar"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "corriente - bastante"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"resolver - símbolo"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "ordinario - vulgar"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"ocultar - secreto"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "abundante - raro"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"incógnita - descifrar"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "suficiente - habitual"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"problema - ocultar"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "vulgar - corriente"
       }
     ]
   },
   {
-    "id":20,
-    "numero":"20",
-    "pregunta":"... es a abandonar como aceptar es a...",
-    "incisos":[
+    "id": 19,
+    "numero": "19",
+    "pregunta": "... es a despejar como clave es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"desertar - dimitir"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "tiempo - aclarar"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"iniciar - concentir"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "resolver - sï¿½mbolo"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"dimitir - renunciar"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "ocultar - secreto"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"emprender - renunciar"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "incï¿½gnita - descifrar"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"huir rechazar"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "problema - ocultar"
       }
     ]
   },
   {
-    "id":21,
-    "numero":"21",
-    "pregunta":"... es a avión como timonel es a...",
-    "incisos":[
+    "id": 20,
+    "numero": "20",
+    "pregunta": "... es a abandonar como aceptar es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"motor - hélice"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "desertar - dimitir"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"aeropuerto - puerto"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "iniciar - concentir"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"piloto - embarcación"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "dimitir - renunciar"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"piloto - capitán"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "emprender - renunciar"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"embarcación - timón"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "huir rechazar"
       }
     ]
   },
   {
-    "id":22,
-    "numero":"22",
-    "pregunta":"... es a copia como creacion es a...",
-    "incisos":[
+    "id": 21,
+    "numero": "21",
+    "pregunta": "... es a aviï¿½n como timonel es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"original - reproducción"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "motor - hï¿½lice"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"auténtico - invención"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "aeropuerto - puerto"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"falso - frause"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "piloto - embarcaciï¿½n"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"real - ficticio"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "piloto - capitï¿½n"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"imitación - fraude"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "embarcaciï¿½n - timï¿½n"
       }
     ]
   },
   {
-    "id":23,
-    "numero":"23",
-    "pregunta":"... es a cortés como tosco es a...",
-    "incisos":[
+    "id": 22,
+    "numero": "22",
+    "pregunta": "... es a copia como creacion es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"gentil - grotesco"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "original - reproducciï¿½n"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"delicado - terco"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "autï¿½ntico - invenciï¿½n"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"educado - grosero"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "falso - frause"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"correcto - fino"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "real - ficticio"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"grosero - rudo"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "imitaciï¿½n - fraude"
       }
     ]
   },
   {
-    "id":24,
-    "numero":"24",
-    "pregunta":"... es a fatiga como bebida es a...",
-    "incisos":[
+    "id": 23,
+    "numero": "23",
+    "pregunta": "... es a cortï¿½s como tosco es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"descanso - sed"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "gentil - grotesco"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"trabajo - sed"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "delicado - terco"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"cansancio - agua"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "educado - grosero"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"sueño - alimento"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "correcto - fino"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"trabajo - alimento"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "grosero - rudo"
       }
     ]
   },
   {
-    "id":25,
-    "numero":"25",
-    "pregunta":"... es a cuervo como pelo es a...",
-    "incisos":[
+    "id": 24,
+    "numero": "24",
+    "pregunta": "... es a fatiga como bebida es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"nido - cabeza"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "descanso - sed"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"ave - animal"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "trabajo - sed"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"rapiña - zorro"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "cansancio - agua"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"pluma - zorro"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "sueï¿½o - alimento"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"ave - abrigo"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "trabajo - alimento"
       }
     ]
   },
   {
-    "id":26,
-    "numero":"26",
-    "pregunta":"... es a ganar como desear es a...",
-    "incisos":[
+    "id": 25,
+    "numero": "25",
+    "pregunta": "... es a cuervo como pelo es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"trabajar - pedir"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "nido - cabeza"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"perder - optar"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "ave - animal"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"competir - conseguir"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "rapiï¿½a - zorro"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"jugar - escoger"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "pluma - zorro"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"participar - aborrecer"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "ave - abrigo"
       }
     ]
   },
   {
-    "id":27,
-    "numero":"27",
-    "pregunta":"... es a tiempo como inmenso es a...",
-    "incisos":[
+    "id": 26,
+    "numero": "26",
+    "pregunta": "... es a ganar como desear es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"movimiento - medida"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "trabajar - pedir"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"momento - vasto"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "perder - optar"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"eterno - cantidad"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "competir - conseguir"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"dilatado - momento"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "jugar - escoger"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"medida - cantidad"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "participar - aborrecer"
       }
     ]
   },
   {
-    "id":28,
-    "numero":"28",
-    "pregunta":"... es a caliente como gélido es a...",
-    "incisos":[
+    "id": 27,
+    "numero": "27",
+    "pregunta": "... es a tiempo como inmenso es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"hirviente - tórrido"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "movimiento - medida"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"tórrido - frío"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "momento - vasto"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"tibio - incandescente"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "eterno - cantidad"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"templado - glaciar"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "dilatado - momento"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"fuego - frío"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "medida - cantidad"
       }
     ]
   },
   {
-    "id":29,
-    "numero":"29",
-    "pregunta":"... es a aceptación como proyecto es a...",
-    "incisos":[
+    "id": 28,
+    "numero": "28",
+    "pregunta": "... es a caliente como gï¿½lido es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"promesa - compromiso"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "hirviente - tï¿½rrido"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"presupuesto - plano"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "tï¿½rrido - frï¿½o"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"propuesta - ejecución"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "tibio - incandescente"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"obra - oferta"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "templado - glaciar"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"contrato - obligación"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "fuego - frï¿½o"
       }
     ]
   },
   {
-    "id":30,
-    "numero":"30",
-    "pregunta":"... es a consultar como respuesta es a...",
-    "incisos":[
+    "id": 29,
+    "numero": "29",
+    "pregunta": "... es a aceptaciï¿½n como proyecto es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"interrogar - argumento"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "promesa - compromiso"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"aconsejar - duda"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "presupuesto - plano"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"consejo - réplica"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "propuesta - ejecuciï¿½n"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"preguntar - consejo"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "obra - oferta"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"opinión - disputar"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "contrato - obligaciï¿½n"
       }
     ]
   },
   {
-    "id":31,
-    "numero":"31",
-    "pregunta":"... es a zanja como arado es a...",
-    "incisos":[
+    "id": 30,
+    "numero": "30",
+    "pregunta": "... es a consultar como respuesta es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"cimiento - surco"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "interrogar - argumento"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"excavar - tierra"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "aconsejar - duda"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"draga - cultivo"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "consejo - rï¿½plica"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"excavadora - surco"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "preguntar - consejo"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"hoyo - siembra"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "opiniï¿½n - disputar"
       }
     ]
   },
   {
-    "id":32,
-    "numero":"32",
-    "pregunta":"... es a rechazar como agredir es a...",
-    "incisos":[
+    "id": 31,
+    "numero": "31",
+    "pregunta": "... es a zanja como arado es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"avanzar - insultar"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "cimiento - surco"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"luchar - enemigo"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "excavar - tierra"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"repeler - retroceder"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "draga - cultivo"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"atacar - repeler"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "excavadora - surco"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"golpe - daño"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "hoyo - siembra"
       }
     ]
   },
   {
-    "id":33,
-    "numero":"33",
-    "pregunta":"... es a árbol como manantial es a...",
-    "incisos":[
+    "id": 32,
+    "numero": "32",
+    "pregunta": "... es a rechazar como agredir es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"tierra - fuente"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "avanzar - insultar"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"fruta - roca"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "luchar - enemigo"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"hierba - nieve"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "repeler - retroceder"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"tallo - río"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "atacar - repeler"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"abono - fuente"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "golpe - daï¿½o"
       }
     ]
   },
   {
-    "id":34,
-    "numero":"34",
-    "pregunta":"... es a separar como proximidad es a...",
-    "incisos":[
+    "id": 33,
+    "numero": "33",
+    "pregunta": "... es a ï¿½rbol como manantial es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"unir - cercanía"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "tierra - fuente"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"despedida - volver"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "fruta - roca"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"alejar - incluir"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "hierba - nieve"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"juntar - distancia"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "tallo - rï¿½o"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"cercanía - amistad"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "abono - fuente"
       }
     ]
   },
   {
-    "id":35,
-    "numero":"35",
-    "pregunta":"... es a esculpir como cuero es a...",
-    "incisos":[
+    "id": 34,
+    "numero": "34",
+    "pregunta": "... es a separar como proximidad es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"buril - repujar"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "unir - cercanï¿½a"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"curtir - piel"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "despedida - volver"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"cincel - adornar"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "alejar - incluir"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"piedra - repujar"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "juntar - distancia"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"estatua - tallar"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "cercanï¿½a - amistad"
       }
     ]
   },
   {
-    "id":36,
-    "numero":"36",
-    "pregunta":"... es a fino como copioso es a...",
-    "incisos":[
+    "id": 35,
+    "numero": "35",
+    "pregunta": "... es a esculpir como cuero es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"sutil - escaso"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "buril - repujar"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"delgado - escaso"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "curtir - piel"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"gordo - oopulento"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "cincel - adornar"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"elegante exiguo"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "piedra - repujar"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"grueso - exiguo"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "estatua - tallar"
       }
     ]
   },
   {
-    "id":37,
-    "numero":"37",
-    "pregunta":"... es a frase como letra es a...",
-    "incisos":[
+    "id": 36,
+    "numero": "36",
+    "pregunta": "... es a fino como copioso es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"verbo - escritura"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "sutil - escaso"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"escritura - música"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "delgado - escaso"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"párrafo - escritura"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "gordo - oopulento"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"adjetivo - ortografía"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "elegante exiguo"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"palabra - palabra"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "grueso - exiguo"
       }
     ]
   },
   {
-    "id":38,
-    "numero":"38",
-    "pregunta":"... es a vigilia como dormir es a...",
-    "incisos":[
+    "id": 37,
+    "numero": "37",
+    "pregunta": "... es a frase como letra es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"atención - soñar"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "verbo - escritura"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"sueño - velar"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "escritura - mï¿½sica"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"noche - soñar"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "pï¿½rrafo - escritura"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"despertar - fatiga"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "adjetivo - ortografï¿½a"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"centinela - descansar"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "palabra - palabra"
       }
     ]
   },
   {
-    "id":39
-    "numero":"39",
-    "pregunta":"... es a labranza como máquina es a...",
-    "incisos":[
+    "id": 38,
+    "numero": "38",
+    "pregunta": "... es a vigilia como dormir es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"campo - herramienta"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "atenciï¿½n - soï¿½ar"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"tierra - producción"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "sueï¿½o - velar"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"agricultor - ingeniero"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "noche - soï¿½ar"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"apero - mecánico"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "despertar - fatiga"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"apero - fabricación"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "centinela - descansar"
       }
     ]
   },
   {
-    "id":40,
-    "numero":"40",
-    "pregunta":"... es a seguridad como indicio es a...",
-    "incisos":[
+    "id": 39,
+    "numero": "39",
+    "pregunta": "... es a labranza como mï¿½quina es a...",
+    "incisos": [
       {
-        "id":1,
-        "inciso":"a",
-        "opcion":"policía - crimen"
+        "id": 1,
+        "inciso": "a",
+        "opcion": "campo - herramienta"
       },
       {
-        "id":2,
-        "inciso":"b",
-        "opcion":"sospecha - evidencia"
+        "id": 2,
+        "inciso": "b",
+        "opcion": "tierra - producciï¿½n"
       },
       {
-        "id":3,
-        "inciso":"c",
-        "opcion":"justicia - prueba"
+        "id": 3,
+        "inciso": "c",
+        "opcion": "agricultor - ingeniero"
       },
       {
-        "id":4,
-        "inciso":"d",
-        "opcion":"sospecha - orden"
+        "id": 4,
+        "inciso": "d",
+        "opcion": "apero - mecï¿½nico"
       },
       {
-        "id":5,
-        "inciso":"e",
-        "opcion":"cereza - persuasión"
+        "id": 5,
+        "inciso": "e",
+        "opcion": "apero - fabricaciï¿½n"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "numero": "40",
+    "pregunta": "... es a seguridad como indicio es a...",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "policï¿½a - crimen"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "sospecha - evidencia"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "justicia - prueba"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "sospecha - orden"
+      },
+      {
+        "id": 5,
+        "inciso": "e",
+        "opcion": "cereza - persuasiï¿½n"
       }
     ]
   }
-
 ]
