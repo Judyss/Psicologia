@@ -1,0 +1,259 @@
+[
+  {
+    "id":1,
+    "numero":"1",
+    "pregunta":"... es a empezar como fin es a...",
+    "imagen":"imagen1.jpg",
+    "incisos":[
+      {
+        "id":1,
+        "inciso":"a",
+        "opcion":"comienzo - continuar"
+      },
+      {
+        "id":2,
+        "inciso":"b",
+        "opcion":"emprender - comienzo"
+      },
+      {
+        "id":3,
+        "inciso":"c",
+        "opcion":"inicio - terminar"
+      },
+      {
+        "id":4,
+        "inciso":"d",
+        "opcion":"terminar - conclucion"
+      },
+      {
+        "id":5,
+        "inciso":"e",
+        "opcion":"objetivo - iniciar"
+      }
+    ]
+  },
+  {
+    "id":2,
+    "numero":"2",
+    "pregunta":"...es a mago como chiste a...",
+    "incisos":[
+      {
+        "id":1,
+        "inciso":"a",
+        "opcion":"truco - habilidad"
+      },
+      {
+        "id":2,
+        "inciso":"b",
+        "opcion":"actor - risa"
+      },
+      {
+        "id":3,
+        "inciso":"c",
+        "opcion":"comediante - actor"
+      },
+      {
+        "id":4,
+        "inciso":"d",
+        "opcion":"habilidad - tragico"
+      },
+      {
+        "id":5,
+        "inciso":"e",
+        "opcion":"truco - humorista"
+      }
+    ]
+  },
+  {
+    "id":3,
+    "numero":"3",
+    "pregunta":"... es a pentágono como diez  es a...",
+    "incisos":[
+      {
+        "id":1,
+        "inciso":"a",
+        "opcion":"poligono - doble"
+      },
+      {
+        "id":2,
+        "inciso":"b",
+        "opcion":"cinco - decálogo"
+      },
+      {
+        "id":3,
+        "inciso":"c",
+        "opcion":"ángulo - decálogo"
+      },
+      {
+        "id":4,
+        "inciso":"d",
+        "opcion":"pentagrama - cinco"
+      },
+      {
+        "id":5,
+        "inciso":"e",
+        "opcion":"decámetro - doble"
+      }
+    ]
+  },
+  {
+    "id":4,
+    "numero":"4",
+    "pregunta":"... es a mano como calcetín es a...",
+    "incisos":[
+      {
+        "id":1,
+        "inciso":"a",
+        "opcion":"dedo - zapato"
+      },
+      {
+        "id":2,
+        "inciso":"b",
+        "opcion":"guante - pie"
+      },
+      {
+        "id":3,
+        "inciso":"c",
+        "opcion":"gesto - zapato"
+      },
+      {
+        "id":4,
+        "inciso":"d",
+        "opcion":"brazo - pie"
+      },
+      {
+        "id":5,
+        "inciso":"e",
+        "opcion":"pulgar - lana"
+      }
+    ]
+  },
+  {
+    "id":5,
+    "numero":"5",
+    "pregunta":"... es a arañar como avispa es a...",
+    "incisos":[
+      {
+        "id":1,
+        "inciso":"a",
+        "opcion":"uña - aguijón"
+      },
+      {
+        "id":2,
+        "inciso":"b",
+        "opcion":"gato - picar"
+      },
+      {
+        "id":3,
+        "inciso":"c",
+        "opcion":"morder - araña"
+      },
+      {
+        "id":4,
+        "inciso":"d",
+        "opcion":"uña - tela"
+      },
+      {
+        "id":5,
+        "inciso":"e",
+        "opcion":"morder - veneno"
+      }
+    ]
+  },
+  {
+    "id":6,
+    "numero":"6",
+    "pregunta":"...es a izar como abajo es a...",
+    "incisos":[
+      {
+        "id":1,
+        "inciso":"a",
+        "opcion":"subir - arriba"
+      },
+      {
+        "id":2,
+        "inciso":"b",
+        "opcion":"peso - descender"
+      },
+      {
+        "id":3,
+        "inciso":"c",
+        "opcion":"arriba - arriar"
+      },
+      {
+        "id":4,
+        "inciso":"d",
+        "opcion":"vela - mar"
+      },
+      {
+        "id":5,
+        "inciso":"e",
+        "opcion":"bandera - vela"
+      }
+    ]
+  },
+  {
+    "id":7,
+    "numero":"7",
+    "pregunta":"... es a boca como gruño es a...",
+    "incisos":[
+      {
+        "id":1,
+        "inciso":"a",
+        "opcion":"mueca - ojo"
+      },
+      {
+        "id":2,
+        "inciso":"b",
+        "opcion":"cara - gesto"
+      },
+      {
+        "id":3,
+        "inciso":"c",
+        "opcion":"ademán - burla"
+      },
+      {
+        "id":4,
+        "inciso":"d",
+        "opcion":"diente - gesto"
+      },
+      {
+        "id":5,
+        "inciso":"e",
+        "opcion":"rostro - ojo"
+      }
+    ]
+  },
+  {
+    "id":8,
+    "numero":"8",
+    "pregunta":"... es a tierra como golfo es a...",
+    "incisos":[
+      {
+        "id":1,
+        "inciso":"a",
+        "opcion":"cabo - mar"
+      },
+      {
+        "id":2,
+        "inciso":"b",
+        "opcion":"lago - bahía"
+      },
+      {
+        "id":3,
+        "inciso":"c",
+        "opcion":"muelle - cabo"
+      },
+      {
+        "id":4,
+        "inciso":"d",
+        "opcion":"mar - playa"
+      },
+      {
+        "id":5,
+        "inciso":"e",
+        "opcion":"río - bahía "
+      }
+    ]
+  }
+]
