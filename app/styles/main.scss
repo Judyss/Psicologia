@@ -2,9 +2,17 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
-@import "razonamiento-verbal";
-@import "evaluaciones";
 
+
+@mixin border-radius($border){
+  -webkit-border-radius: $border;
+  -moz-border-radius: $border;
+  -o-border-radius: $border;
+  border-radius: $border;
+}
+h1{
+  margin: 0 !important;
+}
 .mT10{  margin-top: 10px;  }
 .mT20{  margin-top: 20px;  }
 .mT30{  margin-top: 30px;  }
@@ -17,6 +25,18 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 .mB40{  margin-bottom: 40px;  }
 .mB80{  margin-bottom: 80px;  }
 
+.pT10{  padding-top: 10px;  }
+.pT20{  padding-top: 20px;  }
+.pT30{  padding-top: 30px;  }
+.pT40{  padding-top: 40px;  }
+.pT80{  padding-top: 80px;  }
+
+.pB10{  padding-bottom: 10px; }
+.pB20{  padding-bottom: 20px; }
+.pB30{  padding-bottom: 30px; }
+.pB40{  padding-bottom: 40px; }
+.pB80{  padding-bottom: 80px; }
+
 .fixed{
   position: fixed;
 }
@@ -24,3 +44,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   width: 100%;
   height: 100%;
 }
+.full-min{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body{
+  background: #27ae60 !important;
+}
+@import "razonamiento-verbal";
+@import "evaluaciones";

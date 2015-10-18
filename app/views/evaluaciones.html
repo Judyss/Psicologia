@@ -1,18 +1,15 @@
-<div id="evaluaciones" class="fixed full center-block">
-    <h1 class="mT40">Evaluaciones</h1>
+<div id="evaluaciones" class="full-min center-block pT40 pB80">
+  <h1 class="mT40">Evaluaciones</h1>
 
-    <div class="container text-center">
-        <hr>
-        <hr>
-        <p class="text-center">Elija la evaluacion a realizar</p>
-        <div class="col-xs-12 col-md-2 text-center" data-ng-repeat="evaluacion in evaluaciones">
-            <a href data-ng-click="selectEvaluacion(evaluacion.tipo)">
-                <img src="images/evaluaciones/razonamiento_verbal/razonamientoverbal-icono.png">
-
-                <h3>{{evaluacion .nombre}}</h3>
-
-                <p>{{evaluacion .descripcion}}</p>
-            </a>
-        </div>
+  <div class="container text-center pT20">
+    <hr><hr>
+    <p class="text-center mT20">Elija la evaluacion a realizar</p>
+    <div class="col-xs-12 col-md-2 text-center mT20" data-ng-repeat="evaluacion in evaluaciones">
+      <a href data-ng-click="selectEvaluacion(evaluacion.tipo)" class="lista_evaluaciones">
+        <img ng-src="images/{{evaluacion.imagen}}">
+        <h2>{{evaluacion.nombre}}</h2>
+        <p>{{evaluacion.descripcion}}</p>
+      </a>
     </div>
+  </div>
 </div>
