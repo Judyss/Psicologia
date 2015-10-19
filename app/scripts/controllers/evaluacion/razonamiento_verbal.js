@@ -8,7 +8,7 @@
  * Controller of the psicologiaApp
  */
 angular.module('psicologiaApp')
-    .controller('EvaluacionRazonamientoVerbalCtrl', function ($scope, $rootScope, $http, $timeout, $interval, $uibModal, $log) {
+    .controller('EvaluacionRazonamientoVerbalCtrl', function ($scope, $rootScope, $http, $timeout, $interval) {
         $scope.preguntas = [];
         $scope.tiempo = 20 * 60 * 1000;
         $scope.tiempo_restante = 200;
@@ -48,7 +48,7 @@ angular.module('psicologiaApp')
             });
         };
 
-        $scope.open();
+        //$scope.open();
 
         $scope.pregunta_actual = 0;
         $scope.setPregunta = function(index){
@@ -56,17 +56,6 @@ angular.module('psicologiaApp')
         };
 
     })
-    .controller('RazonamientoVerbalModalCtrl', function ($scope, $modalInstance, items) {
-        $scope.items = items;
-        $scope.selected = {
-            item: $scope.items[0]
-        };
+    .controller('RazonamientoVerbalModalCtrl', function ($scope) {
 
-        $scope.ok = function () {
-            $modalInstance.close($scope.selected.item);
-        };
-
-        $scope.cancel = function () {
-            $modalInstance.dismiss('cancel');
-        };
     });

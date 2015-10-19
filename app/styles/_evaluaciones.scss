@@ -1,10 +1,39 @@
 $color-fondo: #27ae60;
-
 #evaluaciones {
-  width: 100%;
-  height: 100%;
+//  width: 100%;
+//  height: 100%;
   background: $color-fondo;
+  hr{
+    margin: 5px;
+  }
+  @include transition(0.5s all);
   h1, p{
     color: #fff;
+  }
+  a{
+    text-decoration: none !important;
+    img{
+      @include transition(0.5s all);
+      @include border-radius(50%);
+      width: 95%;
+    }
+  }
+  a:hover{
+    img{
+      width: 100%;
+      box-shadow: 0px 0px 22px rgba(0,0,0,1);
+    }
+  }
+  .lista_evaluaciones{
+    h2{
+      color: #fff;
+      font-size: 25px;
+    }
+    p{
+      color: #fff;
+      text-align: justify;
+      font-size: 20px;
+      font-style: italic;
+    }
   }
 }

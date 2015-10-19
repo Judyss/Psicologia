@@ -1,56 +1,84 @@
-$color-fondo: #27ae60;
-@mixin border-radius($border){
-  -webkit-border-radius: $border;
-  -moz-border-radius: $border;
-  -o-border-radius: $border;
-  border-radius: $border;
-}
-#razonamiento-verbal {
-  width: 100%;
-  height: 100%;
+$color-fondo: #fff;
+
+#razonamiento-verbal, .razonamiento-verbal {
+  max-width: 750px;
+  padding: 20px;
+  margin: 0 auto;
   background: $color-fondo;
-  h1, p{
-    color: #fff;
+  @include box-shadow(10px 10px rgba(0, 0, 0, 0.2));
+  .header {
+    background: #3498db;
+    padding: 20px;
+    margin: -20px;
+    h1 {
+      color: #fff;
+    }
   }
-  .title{
-    color: white;
+  h1, p {
+    color: #7f8c8d;
   }
-  .img-lg{
+  .title {
+    color: #7f8c8d;
+  }
+  .img-lg {
     width: 400px;
-    height: 200px;
+    height: 400px;
   }
-  .img-md{
-    width: 360px;
-    height: 160px;
+  .img-md {
+    width: 300px;
+    height: 300px;
   }
-  .img-xg{
-    width: 420px;
-    height: 409px;
-  }
-  .lista-respuestas{
+  .lista-respuestas {
     display: inline-block;
-    margin: 20px;
-    input, label{
+    // margin: 20px;
+    input, label {
       display: inline-block;
-      color: white;
+      color: #fff;
       text-transform: uppercase;
     }
-  }
-  .cubes{
-    width: 100%;
-    position: fixed;
-    bottom: 10px;
-    .cube{
-      width: 50px;
-      height: 50px;
-      background: greenyellow;
-      display: inline-block;
-      margin: 1px;
-      cursor: pointer;
-      @include border-radius(10px);
+    md-label{
+      color: #7f8c8d !important;
     }
-    .cube.current{
-      background: blue;
+  }
+}
+
+.navigation-quiz {
+  .cubes {
+    //position: fixed;
+    bottom: 10px;
+    .cube-btn, .cube {
+      md-tooltip, .tooltip-text {
+        span {
+          font-size: 25px;
+        }
+      }
+    }
+
+    .cube-btn {
+      height: 30px;
+      width: 40px;
+      display: inline-block;
+      margin: 0.5px;
+      cursor: pointer;
+      background: #3498db;
+      color: #fff;
+      font-size: 15px;
+      padding-top: 5px;
+    }
+    .cube {
+      width: 24px;
+      height: 30px;
+      background-color: #1abc9c;
+      display: inline-block;
+      margin: 0.5px;
+      cursor: pointer;
+      padding-top: 5px;
+      @include border-radius(1px);
+      color: #fff;
+      font-size: 15px;
+    }
+    .cube.current {
+      background-color: #e67e22;
     }
   }
 }

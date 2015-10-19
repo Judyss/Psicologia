@@ -3,36 +3,42 @@
     "id":1,
     "tipo":1,
     "nombre":"Razonamiento verbal",
-    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS"
+    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS",
+    "imagen":"evaluaciones/verbal.png"
   },
   {
     "id":2,
     "tipo":2,
     "nombre":"Razonamiento numerico",
-    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS"
+    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS",
+    "imagen":"evaluaciones/numerico.png"
   },
   {
     "id":3,
     "tipo":3,
     "nombre":"Razonamiento abstracto",
-    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS"
+    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS",
+    "imagen":"evaluaciones/abstracto.png"
   },
   {
     "id":4,
     "tipo":4,
     "nombre":"Razonamiento Mecanico",
-    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS"
+    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS",
+    "imagen":"evaluaciones/mecanico.png"
   },
   {
     "id":5,
     "tipo":5,
     "nombre":"Relaciones espaciales",
-    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS"
+    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS",
+    "imagen":"evaluaciones/espacial.png"
   },
   {
     "id":6,
     "tipo":6,
     "nombre":"Ortografia",
-    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS"
+    "descripcion": "evaluacion de razonamiento verbal , desarrollado con framework de java script Angular JS",
+    "imagen":"evaluaciones/ortografia.png"
   }
 ]
