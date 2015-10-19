@@ -26,7 +26,7 @@
   <section class="cubes text-center">
     <figure class="cube-btn" data-ng-click="setPregunta(pregunta_actual - 1)">
       <<
-      <md-tooltip>
+      <md-tooltip class="tooltip-text">
         Anterior
       </md-tooltip>
     </figure>
@@ -35,13 +35,13 @@
             data-ng-class="pregunta_actual == $index ? 'current':''"
             data-ng-click="setPregunta($index)">
       {{$index + 1}}
-      <md-tooltip>
+      <md-tooltip class="tooltip-text">
         {{pregunta.pregunta}}
       </md-tooltip>
     </figure>
     <figure class="cube-btn" data-ng-click="setPregunta(pregunta_actual + 1)">
       >>
-      <md-tooltip>
+      <md-tooltip class="tooltip-text">
         Siguiente
       </md-tooltip>
     </figure>

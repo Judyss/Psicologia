@@ -5,45 +5,56 @@ $color-fondo: #fff;
   padding: 20px;
   margin: 0 auto;
   background: $color-fondo;
-  @include box-shadow(10px 10px rgba(0,0,0,0.2));
-  .header{
+  @include box-shadow(10px 10px rgba(0, 0, 0, 0.2));
+  .header {
     background: #3498db;
     padding: 20px;
     margin: -20px;
-    h1{
+    h1 {
       color: #fff;
     }
   }
-  h1, p{
-    color: #000;
+  h1, p {
+    color: #7f8c8d;
   }
-  .title{
-    color: #000;
+  .title {
+    color: #7f8c8d;
   }
-  .img-lg{
+  .img-lg {
     width: 400px;
     height: 400px;
   }
-  .img-md{
+  .img-md {
     width: 300px;
     height: 300px;
   }
-  .lista-respuestas{
+  .lista-respuestas {
     display: inline-block;
-   // margin: 20px;
-    input, label{
+    // margin: 20px;
+    input, label {
       display: inline-block;
       color: #fff;
       text-transform: uppercase;
     }
+    md-label{
+      color: #7f8c8d !important;
+    }
   }
 }
 
-.navigation-quiz{
-  .cubes{
+.navigation-quiz {
+  .cubes {
     //position: fixed;
     bottom: 10px;
-    .cube-btn{
+    .cube-btn, .cube {
+      md-tooltip, .tooltip-text {
+        span {
+          font-size: 25px;
+        }
+      }
+    }
+
+    .cube-btn {
       height: 30px;
       width: 40px;
       display: inline-block;
@@ -51,10 +62,10 @@ $color-fondo: #fff;
       cursor: pointer;
       background: #3498db;
       color: #fff;
-      font-size: 12px;
+      font-size: 15px;
       padding-top: 5px;
     }
-    .cube{
+    .cube {
       width: 24px;
       height: 30px;
       background-color: #1abc9c;
@@ -64,9 +75,9 @@ $color-fondo: #fff;
       padding-top: 5px;
       @include border-radius(1px);
       color: #fff;
-      font-size: 12px;
+      font-size: 15px;
     }
-    .cube.current{
+    .cube.current {
       background-color: #e67e22;
     }
   }
