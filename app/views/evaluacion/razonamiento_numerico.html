@@ -7,7 +7,7 @@
         <section data-ng-repeat="pregunta in preguntas" data-ng-show="pregunta_actual == $index">
             <h2 ng-bind-html="pregunta.pregunta" class="title"></h2>
             <figure data-ng-show="pregunta.imagen" class="text-center">
-                <img src="images/evaluaciones/razonamiento_verbal/{{pregunta.imagen}}"
+                <img src="images/evaluaciones/razonamiento_numerico/{{pregunta.imagen}}"
                      ng-class="pregunta.imgClass? pregunta.imgClass: 'img-md'">
             </figure>
             <div class="text-center">
