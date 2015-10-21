@@ -7,22 +7,39 @@
  * Controller of the psicologiaApp
  */
 angular.module('psicologiaApp')
-  .controller('EvaluacionRazonamientoVerbalCtrl', function ($scope, $rootScope, $http, $timeout, $interval, $mdDialog) {
-    $scope.preguntas = [];
-    $scope.tiempo = 20 * 60 * 1000;
-    $scope.tiempo_restante = 200;
-    $interval(function () {
-      $scope.tiempo_restante -= 1;
-    }, 1000);
-    $scope.getPreguntas = function () {
-      $http.get('resources/razonamiento_verbal.json')
-        .success(function (data) {
-          $scope.preguntas = data;
-        })
-        .error(function () {
-        })
+  .controller('EvaluacionRazonamientoVerbalCtrl', function ($scope, $rootScope, $http, $timeout, $interval, $mdDialog, $location) {
+
+    $scope.segundos = 0;
+    $scope.minutos = 0;
+
+    $scope.startTime = function(){
+      $scope.segundos = 59 ;
+      $scope.minutos = 2;
+
+      function loopTime(){
+        var flag = true;
+        if($scope.segundos - 1>=0){
+          $scope.segundos--;
+        }else{
+          if($scope.minutos - 1 >=0){
+            $scope.minutos --;
+            $scope.segundos = 59;
+          }else{
+            flag = false;
+            $scope.finishTest();
+          }
+        }
+        if(flag){
+          $timeout(function(){loopTime()},1000);
+        }
+      }
+      loopTime();
     };
-    $scope.getPreguntas();
+
+    $scope.finishTest = function(){
+
+    };
+
     $scope.openInstrucciones = function (ev) {
       $mdDialog.show({
         controller: 'RazonamientoVerbalModalCtrl',
@@ -32,14 +49,22 @@ angular.module('psicologiaApp')
         clickOutsideToClose: true
       })
         .then(function (answer) {
-          $scope.status = 'You said the information was "' + answer + '".';
+          $scope.startTime();
         }, function () {
-          $scope.status = 'You cancelled the dialog.';
+          $scope.startTime();
         });
     };
     $scope.openInstrucciones();
+
+
     $scope.pregunta_actual = 0;
     $scope.setPregunta = function (index) {
+      if(index >= $rootScope.currentTest.length){
+        index = 0;
+      }
+      if(index <0 ){
+        index = $rootScope.currentTest.length - 1;
+      }
       $scope.pregunta_actual = index;
     };
   })
