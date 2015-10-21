@@ -1,5 +1,13 @@
 <div class="pT40"></div>
 <div id="razonamiento-verbal" class="">
+
+  <div class="menu-content-eval fixed" style="max-width: 150px;right: 20px">
+    <button class="btn btn-info btn-block" data-ng-click="finishTest()">
+      Enviar
+      <span class="glyphicon glyphicon-send"></span>
+    </button>
+  </div>
+
   <div class="header">
     <h1>
       Razonamiento verbal {{minutos}}:{{segundos}}
@@ -13,9 +21,9 @@
            ng-class="pregunta.imgClass? pregunta.imgClass: 'img-md'">
     </figure>
     <div class="text-center">
-      <div data-ng-repeat="inciso in pregunta.incisos" class="lista-respuestas text-left btn-block">
-        <md-radio-group ng-model="data.group1">
-          <md-radio-button value="{{inciso.inciso}}" class="md-primary">{{inciso.inciso}}) {{inciso.opcion}}
+      <div data-ng-repeat="inciso in pregunta.incisos" class="lista-respuestas text-left btn-block"  style="{{pregunta.imagen?'display: inline !important':''}}">
+        <md-radio-group ng-model="pregunta.respuesta">
+          <md-radio-button value="{{inciso.inciso}}" class="md-primary"  style="{{pregunta.imagen?'display: inline !important':''}}">{{inciso.inciso}}) {{inciso.opcion}}
           </md-radio-button>
         </md-radio-group>
       </div>

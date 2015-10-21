@@ -7,10 +7,12 @@
  * Controller of the psicologiaApp
  */
 angular.module('psicologiaApp')
-  .controller('EvaluacionRazonamientoVerbalCtrl', function ($scope, $rootScope, $http, $timeout, $interval, $mdDialog, $location) {
+  .controller('EvaluacionRazonamientoVerbalCtrl', function ($scope, $rootScope, $http, $timeout, $interval, $mdDialog, $location, $API,base64) {
 
     $scope.segundos = 0;
     $scope.minutos = 0;
+
+    $scope.data = {};
 
     $scope.startTime = function(){
       $scope.segundos = 59 ;
@@ -37,7 +39,21 @@ angular.module('psicologiaApp')
     };
 
     $scope.finishTest = function(){
+      var resp = new $API.razonamiento_verbal;
+      console.log($scope.data);
 
+      var data = [];
+
+      for(var i =0 ;i <$rootScope.currentTest.length;i++ ){
+        data.push($rootScope.currentTest.respuesta);
+      }
+
+      console.log(data);
+      resp.id_users = $rootScope.currentUser.id;
+      resp.respuestas = base64.encode(angular.toJson(data));
+      resp.$save(function(data){
+          console.log(data);
+      });
     };
 
     $scope.openInstrucciones = function (ev) {
@@ -67,6 +83,7 @@ angular.module('psicologiaApp')
       }
       $scope.pregunta_actual = index;
     };
+
   })
   .controller('RazonamientoVerbalModalCtrl', function ($scope, $mdDialog) {
     $scope.hide = function () {

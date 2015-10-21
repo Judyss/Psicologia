@@ -3,23 +3,25 @@
     <div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400"></div>
   </div>
 </div>
-<div class="fixed-header" style="top:0">
+<div class="fixed-header" style="top:0" ng-controller="MainCtrl">
   <div class="w-container container">
     <div class="w-row">
-      <div class="w-col w-col-3 logo">
+      <div class="w-col w-col-2 logo">
         <a href="#"><img class="logo" src="images/icono-emi.png" alt="Psicologia" style="    max-width: 107px;margin: 5px;"></a>
       </div>
-      <div class="w-col w-col-9">
+      <div class="w-col w-col-10">
         <div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400"
              data-contain="1" style=" padding: 0;margin: 0;">
           <div class="w-container nav">
             <nav class="w-nav-menu nav-menu" role="navigation">
               <a class="w-nav-link menu-li" scroll-to="'fullTop'" href>INICIO</a>
               <a class="w-nav-link menu-li" scroll-to="'#about'" href>DAT-5</a>
-              <a class="w-nav-link menu-li" scroll-to="'#service'" href>INGRESO</a>
+              <a class="w-nav-link menu-li" scroll-to="'#service'" href="" ng-show="!currentUser">INGRESO</a>
+              <a class="w-nav-link menu-li" href="" ng-show="currentUser" ng-click="logout()">SALIR</a>
               <a class="w-nav-link menu-li" scroll-to="'#portfolio'" href>REGISTRATE</a>
               <a class="w-nav-link menu-li" scroll-to="'#team'" href>TEAM</a>
               <a class="w-nav-link menu-li" scroll-to="'#contact'" href>CONTACTO</a>
+              <a class="w-nav-link menu-li" href="#/evaluacion" data-ng-show="currentUser">TEST</a>
             </nav>
             <div class="w-nav-button">
               <div class="w-icon-nav-menu"></div>
@@ -93,15 +95,20 @@
   </section>
 </div>
 
-<section class="service-parlex" id="service">
+<section class="service-parlex" id="service" ng-controller="MainCtrl">
   <section class="parlex-back">
     <div class="w-container">
       <div class="wrap">
         <div class="service-combo">
-          <div class="services">
+          <div class="services" ng-show="!currentUser">
             <h1 class="service-heading">INGRESO AL SISTEMA</h1>
 
             <div class="services-text">Ingrese su correo electronico y su contrasena</div>
+            <div class="sepreater service"></div>
+          </div>
+          <div class="services" ng-show="currentUser">
+            <h1 class="service-heading">{{currentUser.nombre + ' '+currentUser.ap_paterno+' '+currentUser.ap_materno}}</h1>
+            <div class="services-text">{{currentUser.especialidad.name}}</div>
             <div class="sepreater service"></div>
           </div>
         </div>
@@ -109,27 +116,31 @@
           <div class="modal-content">
             <br>
             <br>
-            <div class="modal-body">
-              <form class="form col-md-12 center-block" action="#/evaluaciones.html">
+            <div class="modal-body" ng-show="!currentUser">
+              <form class="form col-md-12 center-block" ng-submit="loginApp(credentials)">
                 <div class="form-group">
                   <md-input-container>
                     <md-icon md-svg-src="images/icons/ic_person_24px.svg"></md-icon>
-                    <input ng-model="auth.nombre" type="email" placeholder="Correo electronico" ng-required="true" class="input-lg">
+                    <input ng-model="credentials.email" type="email" placeholder="Correo electronico" ng-required="true" class="input-lg">
                   </md-input-container>
                 </div>
                 <div class="form-group">
                   <md-input-container>
                     <md-icon md-svg-src="images/icons/ic_person_24px.svg"></md-icon>
-                    <input ng-model="auth.pass" type="password" placeholder="Contrasena" ng-required="true" class="input-lg">
+                    <input ng-model="credentials.password" type="password" placeholder="Contrasena" ng-required="true" class="input-lg">
                   </md-input-container>
                 </div>
                 <div class="form-group">
-                  <button class="btn btn-primary btn-lg btn-block">Ingresar</button>
+                  <button class="btn btn-primary btn-lg btn-block" type="submit">Ingresar</button>
                   <br/>
                   <span class="pull-right"><a scroll-to="'#portfolio'" href="">Registrarse</a></span>
                 </div>
               </form>
               <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" ng-show="currentUser">
+              <h1 style="color: #333"> Bienvenido: {{currentUser.name}}</h1>
+              <img src="images/user_default.svg" width="150" class="center btn-block">
             </div>
           </div>
         </div>
@@ -151,7 +162,7 @@
         </div>
 
 
-            <div ng-controller="RegistroCtrl">
+            <div ng-controller="RegistroCtrl" data-ng-disabled="currentUser">
               <div class="register">
                 <div class="register-body">
                   <form ng-submit="registrar(account)">

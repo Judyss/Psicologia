@@ -8,7 +8,7 @@
  * Controller of the psicologiaApp
  */
 angular.module('psicologiaApp')
-  .controller('EvaluacionesCtrl', function ($scope, $rootScope,$timeout, $http, $location, $Toast) {
+  .controller('EvaluacionesCtrl', function ($scope, $rootScope,$timeout, $http, $location, $Toast,$API) {
 
     $scope.evaluaciones = [];
         $http.get("resources/evaluaciones.json")
@@ -77,4 +77,12 @@ angular.module('psicologiaApp')
                   break;
             }
         }
+
+
+    $scope.respuestas_rv = [];
+    $API.razonamiento_verbal.get().$promise.then(function(data){
+      console.log(data);
+      $scope.respuestas_rv = data.data;
+    })
+
   });

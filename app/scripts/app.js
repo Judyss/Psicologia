@@ -16,9 +16,16 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngMaterial',
-    'duScroll'
+    'duScroll',
+    'ab-base64'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $httpProvider) {
+
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
+    $httpProvider.interceptors.push('InterceptorService');
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/portfolio.html',
@@ -43,10 +50,22 @@ angular
       });
   });
 
-
 angular
-  .module('psicologiaApp').run(function($rootScope){
+  .module('psicologiaApp').run(function($rootScope, AuthService){
     $rootScope.currentTestSelected= {};
     $rootScope.currentTest = {};
     $rootScope.currentIndexTest = -1;
+    $rootScope.currentUser = AuthService.isLogged();
+
+    AuthService.autoLogin()
+      .then(function(data){
+        console.log('auto login success',data);
+        if(data.user)
+          $rootScope.currentUser = data.user;
+        else
+          $rootScope.currentUser = false;
+      },function(){
+        $rootScope.currentUser = false;
+      });
+
   });

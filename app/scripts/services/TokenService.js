@@ -9,11 +9,12 @@
  */
 angular.module('psicologiaApp')
   .service('TokenService', function ($cookies) {
-    var Authorization = 'Authorization';
+    //var Authorization = 'Authorization';
+    var Authorization = 'Bearer';
     return {
-      set:function(token){$cookies.Authorization = token},
-      get:function(){return $cookies.Authorization},
-      update:function(token){$cookies.Authorization = token},
-      delete:function(){$cookies.remove(Authorization)}
+      set:function(token){$cookies.put(Authorization,token);},
+      get:function(){return $cookies.get(Authorization)},
+      update:function(token){$cookies.put(Authorization,token);},
+      delete:function(){$cookies.put(Authorization,'');}
     };
   });
