@@ -13,8 +13,8 @@ angular.module('psicologiaApp')
     $scope.password = '';
 
     $scope.credentials = {
-      email:'eyvind_coaquira@hotmail.com',
-      password:'admin'
+      email:'',
+      password:''
     };
 
     $scope.loginApp = function(crendenciales){

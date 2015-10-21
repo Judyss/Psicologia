@@ -10,16 +10,16 @@
 angular.module('psicologiaApp')
   .controller('RegistroCtrl', function ($scope, $rootScope, $API,$Toast,$location,ScrollService) {
     $scope.account = new $API.usuarios;
-    $scope.account.nombre = "Judy";
-    $scope.account.ap_paterno="Judy";
-    $scope.account.ap_materno="Geronimo";
-    $scope.account.carnet="9981765";
-    $scope.account.semestre="1er Semestre";
-    $scope.account.id_especialidad="9";
-    $scope.account.name="Judya";
-    $scope.account.email="judy@judy.com";
-    $scope.account.password="judy";
-    $scope.account.repeat_password="judy";
+//    $scope.account.nombre = "Judy";
+//    $scope.account.ap_paterno="Judy";
+//    $scope.account.ap_materno="Geronimo";
+//    $scope.account.carnet="9981765";
+//    $scope.account.semestre="1er Semestre";
+//    $scope.account.id_especialidad="9";
+//    $scope.account.name="Judya";
+//    $scope.account.email="judy@judy.com";
+//    $scope.account.password="judy";
+//    $scope.account.repeat_password="judy";
     $scope.account.celular="";
     $scope.account.tipo_usuario=2;
     $scope.account.activo=true;
