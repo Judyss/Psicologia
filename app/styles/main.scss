@@ -52,5 +52,13 @@ h1{
 body{
   background: #27ae60 !important;
 }
+
+md-toast{
+  position: fixed !important;
+  bottom: 15px !important;;
+  z-index: 1100000;
+}
+
 @import "razonamiento-verbal";
 @import "evaluaciones";
+@import "register";

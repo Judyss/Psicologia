@@ -1,0 +1,97 @@
+<div ng-controller="RegistroCtrl" class="view-register">
+  <div class="register">
+    <div class="register-header">
+      <h3>REGISTRO DE ESTUDIANTES</h3>
+      <h4><b>Sistema de Test de Aptitudes Diferenciales DAT-5</b></h4>
+    </div>
+    <div class="register-body">
+      <form ng-submit="registrar(account)">
+        <md-content layout-padding class="autoScroll">
+          <!--Acocunt-->
+          <div class="col-xs-4">
+            <md-input-container>
+              <md-icon md-svg-src="images/icons/ic_person_24px.svg"></md-icon>
+              <input ng-model="account.nombre" type="text" placeholder="Nombres" ng-required="true">
+            </md-input-container>
+          </div>
+          <div class="col-xs-4">
+            <md-input-container>
+              <md-icon md-svg-src="images/icons/ic_person_24px.svg"></md-icon>
+              <input ng-model="account.ap_paterno" type="text" placeholder="Ap. Paterno" ng-required="true">
+            </md-input-container>
+          </div>
+          <div class="col-xs-4">
+            <md-input-container>
+              <md-icon md-svg-src="images/icons/ic_person_24px.svg"></md-icon>
+              <input ng-model="account.ap_materno" type="text" placeholder="Ap. Materno" ng-required="true">
+            </md-input-container>
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="col-xs-6">
+            <md-input-container>
+              <md-icon md-svg-src="images/icons/ic_person_24px.svg"></md-icon>
+              <input ng-model="account.carnet" type="text" placeholder="Carnet de indentidad (12345)" ng-required="true">
+            </md-input-container>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <div class="col-sm-6">
+            <md-input-container flex>
+              <label>Semestre</label>
+              <md-select ng-model="account.semestre">
+                <md-option ng-repeat="semestre in semestres" value="{{semestre.name}}">
+                  {{semestre.name}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+
+          <div class="col-sm-6">
+            <md-input-container flex>
+              <label>Carrera</label>
+              <md-select ng-model="account.id_especialidad">
+                <md-option ng-repeat="carrera in Carreras" value="{{carrera.id}}">
+                  {{carrera.name}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-sm-6">
+            <md-input-container>
+              <md-icon md-svg-src="images/icons/ic_person_24px.svg"></md-icon>
+              <input ng-model="account.name" type="text" placeholder="Nombre de usuario" ng-required="true">
+            </md-input-container>
+          </div>
+          <div class="col-sm-6">
+            <md-input-container>
+              <md-icon md-svg-src="images/icons/ic_email_24px.svg"></md-icon>
+              <input ng-model="account.email" type="email" placeholder="Correo electronico" ng-required="true">
+            </md-input-container>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-sm-6">
+            <md-input-container>
+              <md-icon md-svg-src="images/icons/ic_place_24px.svg"></md-icon>
+              <input ng-model="account.password" type="password" placeholder="Contrasena" ng-required="true">
+            </md-input-container>
+          </div>
+          <div class="col-sm-6">
+            <md-input-container>
+              <md-icon md-svg-src="images/icons/ic_place_24px.svg"></md-icon>
+              <input ng-model="account.repeat_password" type="password" placeholder="Repita contrasena" ng-required="true">
+            </md-input-container>
+          </div>
+          <div class="clearfix"></div>
+          <!--Info-->
+          <div class="clearfix"></div>
+          <div class="form-group text-center mT20">
+            <button type="submit" class="btn btn-success">Registrarse</button>
+          </div>
+        </md-content>
+      </form>
+    </div>
+  </div>
+</div>

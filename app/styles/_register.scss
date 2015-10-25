@@ -1,0 +1,62 @@
+@import "mixins";
+@import "variables";
+
+.view-register{
+  min-width: 100%;
+  min-height: 100%;
+  background-color: $login-background-view;
+  position: absolute;
+}
+@media (max-width: $xs-max) {
+  .register{
+    margin-top: 0 !important;
+  }
+}
+.register{
+  @include transition(all 0.5s);
+  @include border-radius($principal-border-radius);
+  @include box-shadow(10px 10px 0px rgba(0, 0, 0, 0.15));
+  color: $principal-text;
+  collapse: green(#fff);
+  max-width: 600px;
+  margin: 50px auto 0 auto;
+//  border: 0px solid $login-background-header;
+  .register-header{
+    background-color: $login-background-header;
+    text-align: center;
+    padding: 15px;
+  }
+  .register-body{
+    background-color: $login-background-body;
+    padding: 20px 10px 20px 10px;
+    a{
+      display: block;
+      font-weight: bold;
+      color: #868686;
+      text-align: center;
+      outline: none;
+    }
+    a:hover{
+      color: darken(#868686,15%);
+    }
+    .form-login{
+      background-color: inherit;
+      max-width: 500px;
+    }
+    .md-primary{
+      span, b{
+        color: #000000;
+      }
+    }
+  }
+  .register-footer{
+    background-color: $login-background-footer;
+    text-align: center;
+    padding: 15px;
+  }
+  .btn{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
