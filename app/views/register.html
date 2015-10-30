@@ -1,0 +1,133 @@
+<div data-ng-controller="RegisterCtrl" class="view-register">
+  <div class="app-register">
+    <div class="register-header">
+      <h3>SISTEMA DE PLANILLAS</h3>
+      <h4>REGISTRO DE USUARIO</h4>
+    </div>
+    <div class="register-body">
+      <form data-ng-submit="registerStudent(account)" class="form-register center-block">
+        <md-content layout-padding class="autoScroll">
+
+          <div class="col-xs-12 col-sm-6">
+            <label>Foto de perfil</label>
+            <label class="btn-block" for="upload_image">
+              <img data-ng-src="{{image?image:'images/user_default.svg'}}" class="profile-image"
+                   data-ng-class="image?'image':'thumb'">
+            </label>
+            <input id="upload_image" image-preview="image" type="file" class="hidden-input-file" file-model="account.image" accept="image/jpeg,image/png,image/jpg">
+
+            <md-radio-group ng-model="account.gender" class="center-block text-center" ng-required="true">
+              <md-radio-button value="M" class="md-primary mV0 inline-block">Varon</md-radio-button>
+              <md-radio-button value="F" class="md-primary mV0 inline-block">Mujer</md-radio-button>
+            </md-radio-group>
+          </div>
+
+          <div class="col-xs-12 col-sm-6">
+            <md-input-container class="col-xs-12">
+              <md-icon md-svg-src="images/icons/ic_person_18px.svg"></md-icon>
+              <!--<img src="images/icons/ic_person_18px.svg">-->
+              <input data-ng-model="account.first_name" type="text" minlength="3" placeholder="Nombre(s)"
+                     data-ng-required="true"
+                     required>
+            </md-input-container>
+            <md-input-container class="col-xs-12">
+              <md-icon md-svg-src="images/icons/ic_person_18px.svg"></md-icon>
+              <input data-ng-model="account.last_name" type="text" minlength="3" placeholder="Apellido(s)"
+                     data-ng-required="true" required>
+            </md-input-container>
+            <md-input-container class="col-xs-12">
+              <md-icon md-svg-src="images/icons/ic_phone_24px.svg"></md-icon>
+              <!--<img src="images/icons/ic_phone_24px.svg">-->
+              <input data-ng-model="account.phone_number" type="number" minlength="7" placeholder="Celular"
+                     data-ng-required="true" required>
+            </md-input-container>
+            <md-input-container class="col-xs-12">
+              <md-icon md-svg-src="images/icons/ic_perm_contact_calendar_24px.svg"></md-icon>
+              <input type="date" data-ng-model="account.date_of_birth" placeholder="Nacimiento" required>
+            </md-input-container>
+          </div>
+
+          <span class="clearfix"></span>
+
+          <div class="col-xs-12 col-sm-6">
+            <md-input-container class="col-xs-8 md-icon-float">
+              <label>Carnet</label>
+              <md-icon md-svg-src="images/icons/ic_account_circle_18px.svg"></md-icon>
+              <input data-ng-model="account.ci" type="text" minlength="3" maxlength="10"
+                     data-ng-required="true"
+                     required>
+            </md-input-container>
+            <md-input-container class="col-xs-4 mnT12" flex>
+              <label>Ciudad</label>
+              <md-select ng-model="account.city">
+                <md-option ng-repeat="city in City" value="{{city.id}}">
+                  {{city.name}}, <i>{{city.short}}</i>
+                </md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container class="col-xs-12 col-sm-8 mnT15" flex>
+              <label>Carrera</label>
+              <md-select ng-model="account.specialty">
+                <md-option ng-repeat="specialty in Specialty" value="{{specialty.id}}">
+                  {{specialty.name}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container class="col-xs-12 col-sm-4 mnT15" flex>
+              <label>Semestre</label>
+              <md-select ng-model="account.semester">
+                <md-option ng-repeat="semester in Semester" value="{{semester.id}}">
+                  {{semester.short}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+
+            <!--<md-input-container class="col-xs-12 mnT15" flex>
+              <label>Otro</label>
+              <md-select ng-model="account.specialty">
+                <md-option ng-repeat="specialty in Specialty" value="{{specialty.id}}">
+                  {{specialty.name}}
+                </md-option>
+              </md-select>
+            </md-input-container>-->
+
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <img class="ua-image" src="{{  (AcademicUnit | SearchFilter:'id':account.academicUnit).image}}">
+            <md-input-container class="col-xs-12" flex>
+              <label>Unidad Academica</label>
+              <md-select ng-model="account.academicUnit">
+                <md-option ng-repeat="academicUnit in AcademicUnit" value="{{academicUnit.id}}">
+                  {{academicUnit.name}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+          <span class="clearfix"></span>
+
+          <div class="col-xs-12">
+            <md-input-container class="col-xs-12 col-sm-6" >
+              <md-icon md-svg-src="images/icons/ic_email_24px.svg"></md-icon>
+              <!--<img src="images/icons/ic_email_24px.svg">-->
+              <input data-ng-model="account.email" type="email" placeholder="Correo electronico"
+                     data-ng-required="true" required>
+            </md-input-container>
+
+            <md-input-container class="col-xs-12 col-sm-6" >
+              <md-icon md-svg-src="images/icons/ic_lock_24px.svg"></md-icon>
+              <input data-ng-model="account.password" type="password" placeholder="Contraseña"
+                     data-ng-required="true" required>
+            </md-input-container>
+          </div>
+          <span class="clearfix"></span>
+
+          <div class="form-group text-center mT20">
+            <button type="submit" class="btn btn-success"><b>Registrarse</b></button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+

@@ -1,20 +1,30 @@
 'use strict';
-
 /**
  * @ngdoc service
- * @name emiAppApp.TokenService
+ * @name emiApp.TokenService
  * @description
  * # TokenService
  * Service in the emiAppApp.
  */
-angular.module('psicologiaApp')
+angular.module('emiApp')
   .service('TokenService', function ($cookies) {
-    //var Authorization = 'Authorization';
-    var Authorization = 'Bearer';
+    //name saved token
+    var TokenName = 'Token';
     return {
-      set:function(token){$cookies.put(Authorization,token);},
-      get:function(){return $cookies.get(Authorization)},
-      update:function(token){$cookies.put(Authorization,token);},
-      delete:function(){$cookies.put(Authorization,'');}
+      set: function (token) {
+        $cookies.put(TokenName, token);
+      },
+      get: function () {
+        return $cookies.get(TokenName);
+      },
+      update: function (token) {
+        $cookies.put(TokenName, token);
+      },
+      remove: function () {
+        $cookies.remove(TokenName);
+      },
+      getTokenName: function () {
+        return TokenName;
+      }
     };
   });

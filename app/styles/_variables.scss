@@ -1,3 +1,9 @@
+//theme app
+$color-theme-background: #27ae60;
+//$color-theme-background: #3498db;
+//$color-theme-background: #e67e22;
+$color-theme-text: #fff;
+
 //Responsive
 $xs-max: 767px;
 $sm-min: 768px;
@@ -6,62 +12,71 @@ $md-min: 992px;
 $md-max: 1199px;
 $lg-min: 1200px;
 //fonts
-$font-primary : 'Dosis', sans-serif;
-$font-secondary : 'Rajdhani', sans-serif;
-.ff{
-  font-family: $font-family-base;
-}
-//$background-app:#2C92B7;
-$background-app:#F2F2F2;
+$font-primary: 'Dosis', sans-serif;
+$font-secondary: 'Rajdhani', sans-serif;
 
+//$background-app:#2C92B7;
+//$background-app: #F2F2F2;
 //$background-app:#16A085;
 //$background-app:#4D8FAC;//good
 //$background-app:#fff;
 
+//splash screen
+$image-loader-first-color: #3498db;
+$image-loader-second-color: #f9c922;
+$image-loader-three-color: #e74c3c;
+//$splash-screen-background: #154B79;
+$splash-screen-background: darken($color-theme-background, 5%);
+$image-loader-background: darken($color-theme-background, 5%);
 //login
-$login-background-view:#1abc9c;
-$login-background-header:#106CC8;
-$login-background-footer:$login-background-header;
+//$login-background-view:#1abc9c;
+//$login-background-view: darken(#3A87AD, 10%);
+$login-background-view: rgba(0,0,0,0);
+$login-background-header: $color-theme-background;//#106CC8;
+$login-background-footer: $color-theme-background;
 $login-background-body: #fff;
-$login-background-body-light:lighten($login-background-body,3%);
-
+$login-background-body-light: lighten($login-background-body, 3%);
+//register
+$register-background-view: rgba(0,0,0,0);
+$register-background-header: $color-theme-background;
+$register-background-footer: $color-theme-background;
+$register-background-body: #fff;
+$register-background-body-light: lighten($login-background-body, 3%);
 
 //colors
-$hover-percent:10%;
+$hover-percent: 10%;
 
 $color-text-main: #fff;
 $color-background-main: #fff;
 
-$color-default:#BDC3C7;
-$color-default-dark:darken($color-default,$hover-percent);
+$color-default: #BDC3C7;
+$color-default-dark: darken($color-default, $hover-percent);
 
-$color-primary:#58D68D;
-$color-primary-dark:darken($color-primary,$hover-percent);
+$color-primary: #58D68D;
+$color-primary-dark: darken($color-primary, $hover-percent);
 
-$color-info:#3498DB;
-$color-info-dark:darken($color-info,$hover-percent);
+$color-info: #3498DB;
+$color-info-dark: darken($color-info, $hover-percent);
 
-$color-danger:#E74C3C;
-$color-danger-dark:darken($color-danger,$hover-percent);
+$color-danger: #E74C3C;
+$color-danger-dark: darken($color-danger, $hover-percent);
 
-$color-success:#2ECC71;
-$color-success-dark:darken($color-success,$hover-percent);
+$color-success: #2ECC71;
+$color-success-dark: darken($color-success, $hover-percent);
 
-$color-inverse:#F1C40F;
-$color-inverse-dark:darken($color-inverse,$hover-percent);
+$color-inverse: #F1C40F;
+$color-inverse-dark: darken($color-inverse, $hover-percent);
 
-$color-warning:#34495E;
-$color-warning-dark:darken($color-warning,$hover-percent);
+$color-warning: #34495E;
+$color-warning-dark: darken($color-warning, $hover-percent);
 
-$color-background-footer: darken(#106CC8,10%);
-$color-background-header: darken(#106CC8,10%);
+//
+$color-background-footer: darken(#106CC8, 10%);
+$color-background-header: darken(#106CC8, 10%);
 
-
-
-$principal-background:#154875;
-$principal-text:white;
-$principal-border-radius:6px;
-
+$principal-background: #154875;
+$principal-text: white;
+$principal-border-radius: 6px;
 
 $scrollBar_width: 8px;
 $scrollBar_height: 8px;
@@ -69,35 +84,29 @@ $adminBar_background: #154875;
 $adminBar_height: 170px;
 $buttons-transitions-time: .5s;
 
-
-
 //principal loader
-$image-loader-first-color:#3498db;
-$image-loader-second-color:#f9c922;
-$image-loader-three-color:#e74c3c;
-$image-loader-background: rgba(5,5,255,.2);
-$login-background: rgba(52, 73, 94,1);
+$image-loader-first-color: #3498db;
+$image-loader-second-color: #f9c922;
+$image-loader-three-color: #e74c3c;
+$image-loader-background: rgba(5, 5, 255, .2);
+$login-background: rgba(52, 73, 94, 1);
 //
 //login
-  $background-login-body:#2c3e50;
+$background-login-body: #2c3e50;
 //
-$planillas-font-size:10px;
+$planillas-font-size: 10px;
 
 ///
-$planillas-width-cuenta:100px;
-$planillas-width-grado:35px;
-$planillas-width-nombres:190px;
-$planillas-width-carrera:160px;
-$planillas-width-materia:165px;
-$planillas-width-tipo:70px;
-$planillas-width-horas:35px;
-$planillas-width-categoria:30px;
+$planillas-width-cuenta: 100px;
+$planillas-width-grado: 35px;
+$planillas-width-nombres: 190px;
+$planillas-width-carrera: 160px;
+$planillas-width-materia: 165px;
+$planillas-width-tipo: 70px;
+$planillas-width-horas: 35px;
+$planillas-width-categoria: 30px;
 
+$planillas-width-factura: 30px;
 
-$planillas-width-factura:30px;
-
-
-$planillas-padding-base-all:5px 3px 5px 3px;
-$planillas-height-row:45px;
-
-
+$planillas-padding-base-all: 5px 3px 5px 3px;
+$planillas-height-row: 45px;

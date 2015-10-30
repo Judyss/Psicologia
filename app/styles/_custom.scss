@@ -1,0 +1,67 @@
+md-toast {
+  position: fixed !important;
+  bottom: 15px !important;;
+  z-index: 1100000;
+}
+
+.md-datepicker-calendar-pane.md-pane-open{
+  background: #fff;
+  table{
+    tbody{
+      tr:first-child{
+        background: #E0E0E0;
+      }
+    }
+  }
+}
+
+//x-editable
+.editable-click, a.editable-click{
+  color: inherit !important;
+  border-bottom: dashed 1px #7f8c8d !important;
+}
+.editable-click:hover, a.editable-click:hover{
+  color: inherit !important;
+  border-bottom: dashed 1px darken(#7f8c8d, 10%) !important;
+}
+
+
+
+.md-select-menu-container{
+  md-select-menu{
+    max-height: none;
+    md-content{
+      max-height: none;
+      md-option{
+        height: 35px;
+        font-size: inherit;
+      }
+    }
+  }
+}
+
+.editable-bstime .editable-input i.icon-chevron-up:before {
+  content: '\e113';
+}
+.editable-bstime .editable-input i.icon-chevron-down:before {
+  content: '\e114';
+}
+.editable-bstime .editable-input i.icon-chevron-up,
+.editable-bstime .editable-input i.icon-chevron-down {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.glyphicon{
+  opacity: 0.4;
+  @include transition(0.3s all);
+}
+.glyphicon:hover{
+  opacity: 1;
+}

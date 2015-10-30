@@ -1,0 +1,39 @@
+<div data-ng-controller="LoginCtrl" class="view-login">
+  <div class="app-login">
+    <div class="login-header">
+      <img src="images/icono-emi.svg" class="hidden-xs">
+      <h3>SISTEMA DE PLANILLAS</h3>
+      <h4>INGRESO AL SISTEMA</h4>
+    </div>
+    <div class="login-body">
+      <form data-ng-submit="login(credentials)" class="form-login center-block">
+        <md-content layout-padding class="autoScroll">
+          <md-input-container class="md-icon-float">
+            <md-icon md-svg-src="images/icons/ic_account_circle_18px.svg"></md-icon>
+            <input data-ng-model="credentials.username" type="email" placeholder="Correo electronico" data-ng-required="true"
+                   required>
+          </md-input-container>
+          <md-input-container>
+              <md-icon md-svg-src="images/icons/ic_lock_24px.svg"></md-icon>
+            <!--<img src="images/icons/ic_lock_24px.svg">-->
+            <input data-ng-model="credentials.password" type="password" maxlength="15" placeholder="Contraseña"
+                   data-ng-required="true" required>
+          </md-input-container>
+        </md-content>
+        <!--<div class="form-group mV20">
+          <a href="/" data-ng-click="openModalRestartPassword()" class="pull-left">Olvido su contraseña?</a>
+        </div>-->
+        <span class="clearfix"></span>
+
+        <div class="form-group mT20">
+          <a href="#/Registro" class="text-center">Registrate ahora</a>
+          <i class="mate"></i>
+        </div>
+        <div class="form-group text-center mT20">
+          <button type="submit" class="btn btn-success"><b>Ingresar</b></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,90 @@
+@import "mixins";
+@import "variables";
+
+.splash-screen-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 100;
+  background: $splash-screen-background;
+  @include transition(0.5s all);
+  opacity: 1;
+  .loader {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border: 3px solid transparent;
+    border-top-color: $image-loader-first-color;
+    @include border-radius(50%);
+    @include animation(spin 2s linear infinite);
+    z-index: 5;
+  }
+
+  .loader-image {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    width: 85px;
+    margin: auto;
+    z-index: 15;
+  }
+
+  .loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: $image-loader-second-color;
+    @include animation(spin 3s linear infinite);
+  }
+
+  .loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: $image-loader-three-color;
+    @include animation(spin 1.5s linear infinite);
+    //background: $image-loader-background;
+  }
+}
+
+.splash-screen-loader.ng-hide{
+  opacity: 0;
+}
+@-webkit-keyframes spin {
+  0% {
+    @include rotate(0deg);
+  }
+  100% {
+    @include rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    @include rotate(0deg);
+  }
+  100% {
+    @include rotate(360deg);
+  }
+}

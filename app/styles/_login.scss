@@ -1,0 +1,68 @@
+@import "mixins";
+@import "variables";
+
+.view-login{
+  min-width: 100%;
+  min-height: 100%;
+  background-color: $login-background-view;
+  position: absolute;
+}
+@media (max-width: $xs-max) {
+  .app-login{
+    margin-top: 0 !important;
+  }
+}
+.app-login{
+  @include transition(all 0.5s);
+  @include border-radius(6px);
+  @include box-shadow(10px 10px 0px rgba(0, 0, 0, 0.15));
+  color: $principal-text;
+  collapse: green(#fff);
+  max-width: 600px;
+  margin: 50px auto 0 auto;
+//  border: 2px solid $login-background-header;
+  .login-header{
+    background-color: $login-background-header;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    img{
+      position: absolute;
+      max-width: 100px;
+      margin: 13px;
+      float: left;
+      left: 10px;
+    }
+    h3{
+      font-weight: bold;
+    }
+  }
+  .login-body{
+    background-color: $login-background-body;
+    padding: 20px 10px 20px 10px;
+    a{
+      display: block;
+      font-weight: bold;
+      color: #868686;
+      text-align: center;
+      outline: none;
+    }
+    a:hover{
+      color: darken(#868686,15%);
+    }
+    .form-login{
+      background-color: inherit;
+      max-width: 500px;
+    }
+  }
+  .login-footer{
+    background-color: $login-background-footer;
+    text-align: center;
+    padding: 15px;
+  }
+  .btn{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+

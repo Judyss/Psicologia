@@ -1,0 +1,34 @@
+<ng-include src="'views/includes/public_menu.html'"></ng-include>
+<div id="evaluaciones" class="full center-block">
+  <div class="btn-block pT40"></div>
+  <h1 class="mT40 text-center">Evaluaciones</h1>
+
+  <div class="container text-center pT20">
+    <hr>
+    <hr>
+    <p class="text-center mT20">Elija la evaluacion a realizar</p>
+
+    <div class="col-xs-12 col-md-2 text-center mT20" data-ng-repeat="mform in form">
+      <div href class="lista_evaluaciones">
+        <a href="#/Formulario/view/{{mform.id}}"><img ng-src="{{mform.image}}"></a>
+        <!--<img ng-src="images/{{evaluaciones[$index].imagen}}">-->
+        <h2>{{mform.name}}</h2>
+        <button class="btn btn-sm"
+          ng-show="currentUser.is_admin"
+          ><a href="#/Formulario/edit/{{mform.id}}">Editar</a></button>
+        <p>{{mform.description}}</p>
+      </div>
+      <span class="clearfix"></span>
+    </div>
+
+    <!--<div class="col-xs-12 col-md-2 text-center mT20" data-ng-repeat="evaluacion in evaluaciones">
+      <a href="#/Formulario/view/{{evaluacion.id}}" class="lista_evaluaciones">
+        <img ng-src="images/{{evaluacion.imagen}}">
+
+        <h2>{{evaluacion.nombre}}</h2>
+
+        <p>{{evaluacion.descripcion}}</p>
+      </a>
+    </div>-->
+  </div>
+</div>

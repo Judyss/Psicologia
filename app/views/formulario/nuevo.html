@@ -1,0 +1,119 @@
+<ng-include src="'../views/includes/public_menu.html'"></ng-include>
+<div class="container mT20" ng-controller="FormularioNuevoCtrl">
+  <!--<div text-angular ng-model="htmlVariable" ></div>-->
+  <!--{{Questions | json}}-->
+  <div id="page-content">
+    <nav id="menu-toolbar">
+      <div class="block-menu icon">
+        <img src="images/portfolio/test.png">
+      </div>
+      <div class="block-menu titles">
+        <div class="menu-title">
+          <h3 editable-text="form.name" buttons="no" ng-class="form.name?'':'none'">
+            {{form.name?form.name:'Nuevo Formulario'}}
+          </h3>
+        </div>
+        <div class="menu-items">
+          <ul class="nav nav-pills">
+            <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true"
+                 aria-expanded="false">
+                Archivo <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#/Formulario/nuevo" target="_blank"><span class="glyphicon glyphicon-file"></span> Nuevo</a></li>
+                <li><a href="" data-ng-click="saveForm(form)"><span class="glyphicon glyphicon-save-file"></span> Guardar</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-exclamation-sign"></span> Cerrar</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-download-alt"></span> Descargar</a></li>
+              </ul>
+            </li>
+            <li role="presentation"><a href="">
+              <span class="glyphicon glyphicon-globe"></span> Publicar</a>
+            </li>
+            <li role="presentation"><a href="">
+              <span class="glyphicon glyphicon-list-alt"></span> Ver respuestas</a>
+            </li>
+            <li role="presentation"><a href="">
+              <span class="glyphicon glyphicon-cog"></span> Estilo de presentacion</a>
+            </li>
+            <li role="presentation"><a href="" data-ng-click="print()">
+              <span class="glyphicon glyphicon-print"></span> Imprimir</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="pager-edit">
+      <!--{{Questions}}-->
+      <div class="table-responsive">
+        <table class="table table-hover" style="min-width: 580px">
+          <thead>
+          <tr>
+            <th style="width: 35px">#</th>
+            <th style="width: 400px">Pregunta</th>
+            <th style="width: 300px">Tipo</th>
+            <th style="width: 220px">Imagen Ayuda</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="question in Questions">
+            <td>{{$index + 1}}</td>
+            <td>
+              <div text-angular data-ng-model="question.question"
+                   ta-toolbar="[['h3','h4','p','bold','underline','italics','ul','ol','indent','outdent']]"></div>
+              <label ng-click="question.show_text_help = !question.show_text_help">
+                <span class="glyphicon glyphicon-question-sign"></span> Texto de ayuda
+              </label>
+                <textarea class="btn-block resize-v" placeholder="Texto de Ayuda" data-ng-model="question.text_help"
+                          data-ng-show="question.show_text_help">
+                </textarea>
+            </td>
+            <td>
+              <md-select data-ng-model="question.type_question" class="mV10">
+                <md-option data-ng-repeat="type in type_questions" value="{{type.id}}">
+                  {{type.name}}
+                </md-option>
+              </md-select>
+              <md-checkbox md-no-ink data-ng-model="question.required" class="md-primary">
+                Pregunta Obligatoria
+              </md-checkbox>
+              <div -type-question question="question" data-ng-model="question.type_question"
+                   question-values="question.values"></div>
+            </td>
+            <td>
+              <label data-ng-click="question.show_image = !question.show_image">
+                  <span class="glyphicon glyphicon-picture"></span>
+                Adjuntar imagen
+              </label>
+
+              <div data-ng-show="question.show_image">
+                <div>
+                  <label class="inline-block" for="upload_image{{$index}}">
+                    <img data-ng-src="{{question.image?question.image:'images/no-img-available.png'}}"
+                         class="image-preview">
+                  </label>
+                  <span class="btn-remove-image-preview glyphicon glyphicon-remove" data-ng-show="question.image"
+                        data-ng-click="question.image = '';question.show_image = !question.show_image"></span>
+                </div>
+                <input class="hidden-input-file"
+                       id="upload_image{{$index}}" image-preview="question.image" type="file"
+                       file-model="question.image" accept="image/jpeg,image/png,image/jpg">
+              </div>
+
+              <div class="btn-block">
+                <b>Tiempo:</b>
+                <h5 editable-number="question.time" buttons="no" e-min="30" class="inline-block">
+                  {{question.time?(question.time + ' Segundos'):'Sin Tiempo'}}</h5>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <button data-ng-click="newQuestion()">Aumentar</button>
+    </div>
+  </div>
+  <!--<div>
+
+  </div>-->
+</div>

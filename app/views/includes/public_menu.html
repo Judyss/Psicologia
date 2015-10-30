@@ -1,0 +1,81 @@
+<nav id="menuBar" class="navbar navbar-app">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="http://www.emi.edu.bo" target="_blank">
+      <img src="images/forms.png" class="iconLogo">
+    </a>
+    <!--<a class="navbar-brand center-block text-center">
+      <spam>{{GF.getFullGestionNamme()}}</spam>
+    </a>-->
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav ">
+      <li><a href="#/Portafolio" ><i class="glyphicon glyphicon-dashboard"></i> Home </a></li>
+
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i
+          class="glyphicon glyphicon-list"></i> Evaluaciones<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#/Formulario/nuevo" >
+            <i class="glyphicon glyphicon-list"></i>
+            <span class=""> Nuevo</span></a></li>
+          <li>
+
+          <li><a href="#/Formulario/list" >
+            <i class="glyphicon glyphicon-list"></i>
+            <span class=""> Lista de evaluaciones</span></a></li>
+          <li>
+
+        </ul>
+      </li>
+
+      <li><a href="#/Formulario/list" ><!--<i class="glyphicon glyphicon-warning-sign"></i>--> Evaluaciones</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" data-ng-if="currentUser">
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i
+          class="glyphicon glyphicon-user"></i> <span
+          class="hidden-sm hidden-md"> {{' '+GF.getFullName()}} </span><span class="caret"></span></a>
+
+        <ul class="dropdown-menu profile" role="menu">
+          <li>
+            <a href="" class="user">
+              <figure>
+                <img src="images/user_default.svg">
+                <label data-ng-bind="currentUser.username"></label>
+              </figure>
+              <p data-ng-bind="currentUser.People.first_name"></p>
+              <br>
+              <p data-ng-bind="currentUser.People.last_name"></p>
+              <hr>
+              <p data-ng-bind="currentUser.email"></p>
+              <hr>
+            </a>
+          </li>
+          <li><a href="" ng-click="logout()"><i class="glyphicon glyphicon-log-out"></i> Salir</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right" data-ng-if="!currentUser">
+      <li>
+        <a href="#/Login">
+          <i class="glyphicon glyphicon-log-in"></i>
+          <!--<img src="images/icons/ic_turned_in_not_24px.svg">-->
+          <span>Ingresar</span>
+        </a>
+      </li>
+    </ul>
+    <!--<ul class="nav navbar-nav navbar-right">
+      <li><a href="" ng-click="openModalAbout()">
+        <i class="glyphicon glyphicon-education"></i> <span class="hidden-sm hidden-md hidden-lg">About </span> </a></li>
+    </ul>-->
+  </div>
+</nav>

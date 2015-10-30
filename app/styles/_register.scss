@@ -4,30 +4,41 @@
 .view-register{
   min-width: 100%;
   min-height: 100%;
-  background-color: $login-background-view;
+  background-color: $register-background-view;
   position: absolute;
 }
 @media (max-width: $xs-max) {
-  .register{
+  .app-register{
     margin-top: 0 !important;
   }
 }
-.register{
+.app-register{
   @include transition(all 0.5s);
-  @include border-radius($principal-border-radius);
+  @include border-radius(6px);
   @include box-shadow(10px 10px 0px rgba(0, 0, 0, 0.15));
   color: $principal-text;
   collapse: green(#fff);
-  max-width: 600px;
+  max-width: 700px;
   margin: 50px auto 0 auto;
-//  border: 0px solid $login-background-header;
+//  border: 0px solid $register-background-header;
   .register-header{
-    background-color: $login-background-header;
+    background-color: $register-background-header;
     text-align: center;
     padding: 15px;
+    position: relative;
+    img{
+      position: absolute;
+      max-width: 100px;
+      margin: 13px;
+      float: left;
+      left: 10px;
+    }
+    h3{
+      font-weight: bold;
+    }
   }
   .register-body{
-    background-color: $login-background-body;
+    background-color: $register-background-body;
     padding: 20px 10px 20px 10px;
     a{
       display: block;
@@ -43,20 +54,41 @@
       background-color: inherit;
       max-width: 500px;
     }
-    .md-primary{
-      span, b{
-        color: #000000;
-      }
-    }
   }
   .register-footer{
-    background-color: $login-background-footer;
+    background-color: $register-background-footer;
     text-align: center;
     padding: 15px;
   }
   .btn{
     padding-left: 60px;
     padding-right: 60px;
+  }
+
+  .profile-image{
+    width: 200px;
+    height: 170px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    @include border-radius(10px);
+  }
+  .profile-image.thumb{
+    border: 3px dotted #ccc;
+  }
+  .profile-image.image{
+    border: 3px dotted #ccc;
+  }
+  .ua-image{
+    width: 240px;
+    height: 134px;
+    display: block;
+    margin: 0 auto;
+    @include border-radius(10px);
+  }
+  .hidden-input-file{
+    height: 1px;
+    opacity: 0;
   }
 }
 

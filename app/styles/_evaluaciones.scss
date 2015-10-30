@@ -1,8 +1,11 @@
 $color-fondo: #27ae60;
+.evaluaciones-background{
+  background: lighten($color-fondo,30%) !important;
+}
 #evaluaciones {
 //  width: 100%;
 //  height: 100%;
-  background: $color-fondo;
+//  background: $color-fondo;
   hr{
     margin: 5px;
   }

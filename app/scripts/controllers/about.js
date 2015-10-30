@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name psicologiaApp.controller:AboutCtrl
+ * @name emiApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the psicologiaApp
+ * Controller of the emiApp
  */
-angular.module('psicologiaApp')
+angular.module('emiApp')
   .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

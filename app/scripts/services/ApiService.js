@@ -11,7 +11,8 @@ angular.module('psicologiaApp')
   .service('$API', function ($q, $resource) {
     //var base_url = '/apiPlanillas/api/';
     //var base_url = 'http://localhost:8000/api/';
-    var base_url = 'http://localhost/apiPlanillas/api/';
+    //var base_url = 'http://localhost/apiPlanillas/api/';
+    var base_url = 'apiPsicologia/';
     return {
       usuarios: $resource(base_url + 'usuarios/:id', {id: '@id'}, {update: {method: 'PUT'}}),
       authenticate: $resource(base_url + 'authenticate/:id', {id: '@id'}, {update: {method: 'PUT'}}),

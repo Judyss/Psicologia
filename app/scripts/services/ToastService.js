@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name psicologiaApp.Toast
+ * @name emiApp.Toast
  * @description
  * # Toast
- * Service in the psicologiaApp.
+ * Service in the emiApp.
  */
-angular.module('psicologiaApp')
+angular.module('emiApp')
   .service('$Toast', function ($mdToast, $q) {
     var toastPosition = {
       bottom: true,
@@ -20,23 +20,22 @@ angular.module('psicologiaApp')
         })
         .join(' ');
     };
-
-    var showActionToast = function (text, action, noAutoHide) {
+    var showActionToast = function (text, action, autoHide) {
       var defer = $q.defer();
       var toast = $mdToast.simple()
         .content(text || 'Espere un momento por favor..')
         .position(getToastPosition());
       if (action) {
-        toast.action('Aceptar');
+        toast.action(action);
       }
-      if(noAutoHide || action){
+      if(autoHide || action){
         toast.hideDelay(null)
           .highlightAction(false);
       }
       $mdToast.show(toast).then(function () {
         defer.resolve();
       }, function () {
-        if(noAutoHide){
+        if(autoHide){
           defer.resolve();
         }else{
           defer.reject();
