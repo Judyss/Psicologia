@@ -7,6 +7,7 @@
  *
  * Main module of the application.
  */
+var MYHTTP = {};
 angular
   .module('emiApp', [
     'ngAnimate',
@@ -77,6 +78,7 @@ angular
         redirectTo: '/Portafolio'
       });
   }).run(function ($rootScope, $timeout, $http, $Toast, $location, AuthService) {
+    MYHTTP = $http;
     $rootScope.first_request = true;
     $timeout(function () {
       if ($rootScope.first_request == true) {

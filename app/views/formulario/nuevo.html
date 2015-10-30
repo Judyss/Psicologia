@@ -83,27 +83,51 @@
             <td>
               <label data-ng-click="question.show_image = !question.show_image">
                   <span class="glyphicon glyphicon-picture"></span>
-                Adjuntar imagen
+                {{question.show_image?'Remover imagen':'Adjuntar imagen'}}
               </label>
 
               <div data-ng-show="question.show_image">
                 <div>
                   <label class="inline-block" for="upload_image{{$index}}">
-                    <img data-ng-src="{{question.image?question.image:'images/no-img-available.png'}}"
+                    <img data-ng-src="
+                    {{question.image ? question.image :'images/no-img-available.png'}}"
                          class="image-preview">
                   </label>
-                  <span class="btn-remove-image-preview glyphicon glyphicon-remove" data-ng-show="question.image"
-                        data-ng-click="question.image = '';question.show_image = !question.show_image"></span>
+                  <span class="btn-remove-image-preview glyphicon glyphicon-remove"
+                        data-ng-show="question.image"
+                        data-ng-click="question.image = '';"></span>
                 </div>
+
                 <input class="hidden-input-file"
                        id="upload_image{{$index}}" image-preview="question.image" type="file"
                        file-model="question.image" accept="image/jpeg,image/png,image/jpg">
               </div>
 
+              <!--<div data-ng-show="question.show_image">
+                <div>
+                  <label class="inline-block" for="upload_image{{$index}}">
+                    <img data-ng-src="
+                    {{question.image_preview ? question.image_preview :
+                          (question.image?question.image:'images/no-img-available.png')}}"
+                         class="image-preview">
+                  </label>
+                  <span class="btn-remove-image-preview glyphicon glyphicon-remove"
+                        data-ng-show="question.image_preview || question.image"
+                        data-ng-click="question.image_preview = ''; question.image = '';"></span>
+                </div>
+                <span>inicia: {{question.image}}  :termina</span>
+                <div data-ng-show="typeof (question.image) == 'string'">
+
+                </div>
+                <input class="hidden-input-file"
+                       id="upload_image{{$index}}" image-preview="question.image_preview" type="file"
+                       file-model="question.image" accept="image/jpeg,image/png,image/jpg">
+              </div>-->
+
               <div class="btn-block">
                 <b>Tiempo:</b>
-                <h5 editable-number="question.time" buttons="no" e-min="30" class="inline-block">
-                  {{question.time?(question.time + ' Segundos'):'Sin Tiempo'}}</h5>
+                <h5 editable-number="question.time_question" buttons="no" e-min="30" class="inline-block">
+                  {{question.time_question?(question.time_question + ' Segundos'):'Sin Tiempo'}}</h5>
               </div>
             </td>
           </tr>
