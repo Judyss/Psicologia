@@ -6,12 +6,8 @@
  * # FormularioNuevoCtrl
  * Controller of the emiApp
  */
-var RESTANGULAR = {};
-var Q = {};
 angular.module('emiApp')
   .controller('FormularioNuevoCtrl', function ($scope, $ApiUrls, Restangular, $Toast, $routeParams, $location, JsonService, $q, RestFormService, $timeout) {
-    RESTANGULAR = Restangular;
-    Q = $q;
     if(!$scope.notRepeatRequests){
       $scope.notRepeatRequests = true;
       return;
@@ -44,7 +40,6 @@ angular.module('emiApp')
                 data[i].image_url = data[i].image;
                 data[i].image = '';
                 data[i].values = JsonService.decode_unicode(data[i].values);
-                console.log(i, data[i].values);
               }
               $scope.Questions = data;
               $timeout(function(){
@@ -84,16 +79,15 @@ angular.module('emiApp')
           console.log('several save', data);
           $Toast.show('Se guardado sus cambios');
         })
-      }, function (data) {
+      }, function () {
         $Toast.show('Ha ocurrido un error');
       });
     };
     $scope.changesPending = 0;
-    $scope.$watch('form', function (data1, data2) {
 
-    }, true);
     $scope.$watch('Questions', function (data1, data2) {
-      console.log(data1,data2);
+
+      return;
       if (!$scope.enable_auto_updated_questions) {
         return;
       }

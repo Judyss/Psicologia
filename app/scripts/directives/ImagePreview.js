@@ -13,7 +13,7 @@ angular.module('emiApp')
       scope:{
         imagePreview:'='
       },
-      link: function (scope, elem, attrs) {
+      link: function (scope, elem) {
         var reader = new FileReader();
         reader.onload = function (e) {
           scope.imagePreview = e.target.result;

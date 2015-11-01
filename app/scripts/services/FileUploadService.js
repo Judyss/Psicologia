@@ -27,5 +27,5 @@ angular.module('emiApp')
 
     return {
       uploadFile: uploadFileToUrl
-    }
+    };
   });

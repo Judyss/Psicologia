@@ -36,7 +36,7 @@ angular.module('emiApp')
       var response = id ? Restangular.all(url).get(id) : Restangular.all(url).getList();
       response
         .then(function (data) {
-          normalizeResponse(data);
+          data = normalizeResponse(data);
           defer.resolve(data);
         }, function (data) {
           defer.reject(data);
@@ -51,7 +51,7 @@ angular.module('emiApp')
         .withHttpConfig({transformRequest: angular.identity})
         .customPOST(myFormData, undefined, undefined, {'Content-Type': undefined})
         .then(function (data) {
-          normalizeResponse(data);
+          data = normalizeResponse(data);
           defer.resolve(data);
         }, function (data) {
           defer.reject(data);
@@ -66,7 +66,7 @@ angular.module('emiApp')
         .withHttpConfig({transformRequest: angular.identity})
         .customPUT(myFormData, undefined, undefined, {'Content-Type': undefined})
         .then(function (data) {
-          normalizeResponse(data);
+          data = normalizeResponse(data);
           defer.resolve(data);
         }, function (data) {
           defer.reject(data);
@@ -81,7 +81,7 @@ angular.module('emiApp')
         .withHttpConfig({transformRequest: angular.identity})
         .patch(myFormData, undefined, {'Content-Type': undefined})
         .then(function (data) {
-          normalizeResponse(data);
+          data = normalizeResponse(data);
           defer.resolve(data);
         }, function (data) {
           defer.reject(data);

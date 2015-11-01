@@ -7,7 +7,7 @@
  * Service in the emiApp.
  */
 angular.module('emiApp')
-  .service('AuthService', function (Restangular, $ApiUrls, TokenService, $q, $Toast) {
+  .service('AuthService', function (Restangular, $ApiUrls, TokenService, $q) {
     function login(credentials) {
       var data = {
         username: credentials ? credentials.username : '',
@@ -19,9 +19,9 @@ angular.module('emiApp')
           TokenService.set(data.token);
           var user = data.user;
           var totalPromises = 0;
-          if (data.user.info)totalPromises++;
-          if (data.user.student)totalPromises++;
-          if (!totalPromises) finishPromises(user);
+          if (data.user.info){totalPromises++;}
+          if (data.user.student){totalPromises++;}
+          if (!totalPromises){finishPromises(user);}
           if (data.user.info) {
             Restangular.one($ApiUrls.People, data.user.info).get().then(function (data) {
               user.People = data;

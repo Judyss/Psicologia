@@ -18,17 +18,16 @@ angular.module('emiApp')
         question: '=',
         questionValues:'='
       },
-      link: function postLink(scope, element, attrs) {
-        scope.$watch('question.type_question', function(oldValue, newValue){
+      link: function postLink(scope, element) {
+        scope.$watch('question.type_question', function(){
           refresh();
         });
-        refresh();
+
         function refresh(){
           var template = '',
             maxOptions = 10,
             baseTemplateUnique='<md-checkbox md-no-ink data-ng-model="question.other" class="inline-block">Añadir otros</md-checkbox>',
             baseTemplate = '' +
-//              '<div ng-repeat="item in questionValues track by $index">' +
               '<div ng-repeat="item in questionValues">' +
               '<figure class="input-option btn-block">' +
               //'<span class="number">{{$index + 1}}</span>' +
@@ -45,7 +44,6 @@ angular.module('emiApp')
               'data-ng-click="questionValues.length<'+maxOptions+'?questionValues.push({id: (questionValues.length+1),title:\'\'}):\'\'">' +
               '<md-icon md-svg-src="images/icons/ic_add_24px.svg"></md-icon>' +
               '</md-button>'+
-
               '';
           switch (scope.question.type_question){
             case "1":
@@ -81,6 +79,7 @@ angular.module('emiApp')
           element.html(template);
           $compile(element.contents())(scope);
         }
+        refresh();
       }
     };
   });
