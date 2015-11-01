@@ -84,7 +84,7 @@ angular
       if ($rootScope.first_request == true) {
         $rootScope.reloadApp();
       }
-    }, 10000);
+    }, 20000);
     $rootScope.reloadApp = function () {
       $Toast.show("Lo sentimos ha ocurrido un error, actualize la pagina", 'Aceptar').then(function () {
         location.reload();

@@ -5,6 +5,12 @@
 .fixed{
   position: fixed;
 }
+.rel{
+  position: relative;
+}
+.abs{
+  position: absolute;
+}
 .min-full{
   min-width: 100%;
   min-height: 100%;
@@ -33,6 +39,13 @@
 .pT30{padding-top: 30px !important;}
 .pT40{padding-top: 40px !important;}
 .pT80{padding-top: 80px !important;}
+
+.p10{padding: 10px !important;}
+.p15{padding: 15px !important;}
+.p20{padding: 20px !important;}
+.p30{padding: 30px !important;}
+.p40{padding: 40px !important;}
+.p80{padding: 80px !important;}
 
 .mnT10{
   margin-top: -10px !important;

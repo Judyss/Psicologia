@@ -12,14 +12,14 @@ angular.module('emiApp')
     var numberRequest =  0;
     return {
       'request': function(config) {
-        //console.log('request', numberRequest++, config);
+        //numberRequest++;
         if(TokenService.get()){
           config.headers.Authorization = TokenService.getTokenName() + ' ' + TokenService.get();
         }
         return config;
       },
       'response': function(config) {
-        //console.log('response', numberRequest--, config);
+        //numberRequest--;
         if(numberRequest == 0){
           $timeout(function(){
             $rootScope.first_request = false;

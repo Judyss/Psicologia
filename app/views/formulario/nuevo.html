@@ -2,10 +2,38 @@
 <div class="container mT20" ng-controller="FormularioNuevoCtrl">
   <!--<div text-angular ng-model="htmlVariable" ></div>-->
   <!--{{Questions | json}}-->
-  <div id="page-content">
+  <div class="visible-print">
+    <div>
+      <h1 class="text-center">{{form.name}}</h1>
+    </div>
+    <div class="pager-edit">
+      <div data-ng-repeat="question in Questions">
+        <h4 ng-bind-html="question.question"></h4>
+        <i>{{question.text_help}}</i>
+        <img ng-src="{{question.image}}" width="100px">
+        <ol>
+          <li ng-repeat="item in question.values">
+            {{item.title}}
+          </li>
+          <li ng-show="question.other">
+            Otro
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div id="page-content" class="hidden-print">
     <nav id="menu-toolbar">
       <div class="block-menu icon">
-        <img src="images/portfolio/test.png">
+        <!--<img src="images/portfolio/test.png">-->
+        <label class="inline-block" for="upload_image_title">
+          <img ng-src="{{form.image_url || 'images/portfolio/test.png'}}">
+        </label>
+
+        <input class="hidden-input-file hidden" id="upload_image_title"
+               image-preview="form.image_url" type="file"
+               file-model="form.image" accept="image/jpeg,image/png,image/jpg">
+
       </div>
       <div class="block-menu titles">
         <div class="menu-title">
@@ -21,9 +49,11 @@
                 Archivo <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="#/Formulario/nuevo" target="_blank"><span class="glyphicon glyphicon-file"></span> Nuevo</a></li>
-                <li><a href="" data-ng-click="saveForm(form)"><span class="glyphicon glyphicon-save-file"></span> Guardar</a></li>
-                <li><a href=""><span class="glyphicon glyphicon-exclamation-sign"></span> Cerrar</a></li>
+                <li><a href="#/Formulario/nuevo" target="_blank"><span class="glyphicon glyphicon-file"></span>
+                  Nuevo</a></li>
+                <li><a href="" data-ng-click="saveForm(form)"><span class="glyphicon glyphicon-save-file"></span>
+                  Guardar</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-exclamation-sign"></span> Definir estilo</a></li>
                 <li><a href=""><span class="glyphicon glyphicon-download-alt"></span> Descargar</a></li>
               </ul>
             </li>
@@ -38,6 +68,11 @@
             </li>
             <li role="presentation"><a href="" data-ng-click="print()">
               <span class="glyphicon glyphicon-print"></span> Imprimir</a>
+            </li>
+            <li role="presentation" class="pull-right p10">
+              <!--<a href="" data-ng-click="print()">-->
+              <i ng-bind="form.id?(changesPending?'Guardando cambios...':'Cambios guardados'):'Debe guardar el cuestionario'"></i>
+              <!--</a>-->
             </li>
           </ul>
         </div>
@@ -80,49 +115,46 @@
               <div -type-question question="question" data-ng-model="question.type_question"
                    question-values="question.values"></div>
             </td>
-            <td>
+            <td class="rel">
+
+              <md-menu md-position-mode="target-right target" class="pull-right p0 abs" style="right: 0;top: -15px;">
+                <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                  <md-icon md-menu-origin md-svg-icon="images/icons/ic_more_vert_48px.svg"></md-icon>
+                  <!--<img src="images/icons/ic_more_vert_48px.svg">-->
+                </md-button>
+                <md-menu-content width="4">
+                  <md-menu-item>
+                    <md-button ng-click="deleteQuestion(question, $index)">
+                      <div layout="row">
+                        <p flex>Eliminar</p>
+                        <md-icon md-menu-align-target md-svg-icon="images/icons/ic_delete_24px.svg" style="margin: auto 3px auto 0;"></md-icon>
+                      </div>
+                    </md-button>
+                  </md-menu-item>
+                </md-menu-content>
+              </md-menu>
+
               <label data-ng-click="question.show_image = !question.show_image">
-                  <span class="glyphicon glyphicon-picture"></span>
+                <span class="glyphicon glyphicon-picture"></span>
                 {{question.show_image?'Remover imagen':'Adjuntar imagen'}}
               </label>
 
               <div data-ng-show="question.show_image">
-                <div>
+                <div class="inline-block">
                   <label class="inline-block" for="upload_image{{$index}}">
                     <img data-ng-src="
-                    {{question.image ? question.image :'images/no-img-available.png'}}"
+                    {{question.image_url ? question.image_url :'images/no-img-available.png'}}"
                          class="image-preview">
                   </label>
                   <span class="btn-remove-image-preview glyphicon glyphicon-remove"
-                        data-ng-show="question.image"
-                        data-ng-click="question.image = '';"></span>
+                        data-ng-show="question.image_url"
+                        data-ng-click="question.image_url = '';"></span>
                 </div>
 
                 <input class="hidden-input-file"
-                       id="upload_image{{$index}}" image-preview="question.image" type="file"
+                       id="upload_image{{$index}}" image-preview="question.image_url" type="file"
                        file-model="question.image" accept="image/jpeg,image/png,image/jpg">
               </div>
-
-              <!--<div data-ng-show="question.show_image">
-                <div>
-                  <label class="inline-block" for="upload_image{{$index}}">
-                    <img data-ng-src="
-                    {{question.image_preview ? question.image_preview :
-                          (question.image?question.image:'images/no-img-available.png')}}"
-                         class="image-preview">
-                  </label>
-                  <span class="btn-remove-image-preview glyphicon glyphicon-remove"
-                        data-ng-show="question.image_preview || question.image"
-                        data-ng-click="question.image_preview = ''; question.image = '';"></span>
-                </div>
-                <span>inicia: {{question.image}}  :termina</span>
-                <div data-ng-show="typeof (question.image) == 'string'">
-
-                </div>
-                <input class="hidden-input-file"
-                       id="upload_image{{$index}}" image-preview="question.image_preview" type="file"
-                       file-model="question.image" accept="image/jpeg,image/png,image/jpg">
-              </div>-->
 
               <div class="btn-block">
                 <b>Tiempo:</b>

@@ -19,7 +19,6 @@ angular.module('emiApp')
         questionValues:'='
       },
       link: function postLink(scope, element, attrs) {
-        console.log(scope, scope.question);
         scope.$watch('question.type_question', function(oldValue, newValue){
           refresh();
         });
@@ -29,6 +28,7 @@ angular.module('emiApp')
             maxOptions = 10,
             baseTemplateUnique='<md-checkbox md-no-ink data-ng-model="question.other" class="inline-block">Añadir otros</md-checkbox>',
             baseTemplate = '' +
+//              '<div ng-repeat="item in questionValues track by $index">' +
               '<div ng-repeat="item in questionValues">' +
               '<figure class="input-option btn-block">' +
               //'<span class="number">{{$index + 1}}</span>' +
