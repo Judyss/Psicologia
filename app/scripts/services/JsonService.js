@@ -23,11 +23,11 @@ angular.module('emiApp')
 
     function encode_utf8(jsonObject) {
       var json = angular.toJson(jsonObject);
-      return unescape(encodeURIComponent(json));
+      return JSON.unescape(encodeURIComponent(json));
     }
 
     function decode_utf8(jsonString) {
-      var json = decodeURIComponent(escape(jsonString));
+      var json = decodeURIComponent(JSON.escape(jsonString));
       return angular.fromJson(json);
     }
 
@@ -36,5 +36,5 @@ angular.module('emiApp')
       decode_unicode: decode_unicode,
       encode_utf8: encode_utf8,
       decode_utf8: decode_utf8
-    }
+    };
   });

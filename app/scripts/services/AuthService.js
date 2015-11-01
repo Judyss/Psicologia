@@ -14,11 +14,19 @@ angular.module('emiApp')
         password: credentials ? credentials.password : ''
       };
       var defer = $q.defer();
+
       Restangular.all($ApiUrls.Login).post(data)
         .then(function (data) {
           TokenService.set(data.token);
           var user = data.user;
           var totalPromises = 0;
+
+          function finishPromises(data) {
+            totalPromises--;
+            if (totalPromises <= 0) {
+              defer.resolve(data);
+            }
+          }
           if (data.user.info){totalPromises++;}
           if (data.user.student){totalPromises++;}
           if (!totalPromises){finishPromises(user);}
@@ -31,14 +39,8 @@ angular.module('emiApp')
           if (data.user.student) {
             Restangular.one($ApiUrls.Student, data.user.student).get().then(function (data) {
               user.Student = data;
-              finishPromises(user)
+              finishPromises(user);
             });
-          }
-          function finishPromises(data) {
-            totalPromises--;
-            if (totalPromises <= 0) {
-              defer.resolve(data);
-            }
           }
         },
         function (data) {
@@ -71,7 +73,7 @@ angular.module('emiApp')
       logout: logout,
       autoLogin: login,
       isLogged: isLogged
-    }
+    };
   })
   .service('StudentService', function (Restangular, $ApiUrls, $q) {
     function register(accountInfo) {
@@ -111,5 +113,5 @@ angular.module('emiApp')
 
     return {
       register: register
-    }
+    };
   });

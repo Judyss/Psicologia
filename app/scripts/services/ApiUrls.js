@@ -21,5 +21,5 @@ angular.module('emiApp')
       Form: "Forms/Form",
       Question: "Forms/Question",
       FormQuestion: "Forms/FormQuestion"
-    }
+    };
   });

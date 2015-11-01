@@ -41,12 +41,10 @@ angular.module('emiApp')
       $Toast.show('Registrando...');
       console.log(accountInfo);
       StudentService.register(accountInfo)
-        .then(function (data) {
+        .then(function () {
           $Toast.show('Registrado');
           $location.url('/Login');
-          //console.log(data);
-        }, function (data) {
-          //console.log(data);
+        }, function () {
         });
     };
   });

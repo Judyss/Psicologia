@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * @ngdoc filter
  * @name emiApp.filter:SearchFilter
@@ -10,12 +9,12 @@
  */
 angular.module('emiApp')
   .filter('SearchFilter', function () {
-    return function (input, a,b) {
+    return function (input, a, b) {
       var ObjectResult = {};
       var flagFinish = false;
-      if(input){
-        for(var i = 0; i<input.length && !flagFinish;i++){
-          if(input[i][a]==b){
+      if (input) {
+        for (var i = 0; i < input.length && !flagFinish; i++) {
+          if (input[i][a] === b) {
             ObjectResult = input[i];
             flagFinish = true;
           }

@@ -20,12 +20,12 @@ angular.module('emiApp')
       },
       'response': function(config) {
         //numberRequest--;
-        if(numberRequest == 0){
+        if(numberRequest === 0){
           $timeout(function(){
             $rootScope.first_request = false;
           }, 500);
         }
         return config;
       }
-    }
+    };
   });

@@ -27,6 +27,6 @@ angular.module('emiApp')
               $Toast.show('Usuario o contraseña invalidos');
               break;
           }
-        })
-    }
+        });
+    };
   });

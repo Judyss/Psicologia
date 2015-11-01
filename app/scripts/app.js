@@ -81,7 +81,7 @@ angular
     MYHTTP = $http;
     $rootScope.first_request = true;
     $timeout(function () {
-      if ($rootScope.first_request == true) {
+      if ($rootScope.first_request) {
         $rootScope.reloadApp();
       }
     }, 20000);
@@ -103,12 +103,12 @@ angular
     if (AuthService.isLogged()) {
       AuthService.autoLogin().then(function (data) {
         $rootScope.currentUser = data;
-      })
+      });
     }
     $rootScope.logout = function () {
       AuthService.logout().then(function () {
         location.reload();
-      })
+      });
     };
     $rootScope.$on('$routeChangeStart', function () {
       var currentUrl = $location.url(),
@@ -119,7 +119,7 @@ angular
           $location.url('/Login');
         }
       }
-      if (currentUrl == ('Formulario/list')) {
+      if (currentUrl === 'Formulario/list') {
         $rootScope.formulario_list_class = true;
       } else {
         $rootScope.formulario_list_class = true;

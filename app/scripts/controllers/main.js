@@ -7,7 +7,6 @@
  * # MainCtrl
  * Controller of the emiApp
  */
-var GLOGAL = 3;
 angular.module('emiApp')
   .controller('MainCtrl', function () {
     this.awesomeThings = [

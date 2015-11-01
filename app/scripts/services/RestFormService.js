@@ -12,10 +12,10 @@ angular.module('emiApp')
     function normalizeRequest(data) {
       var myFormData = new FormData();
       angular.forEach(data, function (value, key) {
-        if (key == 'image_url' || key == '$$hashKey') {
+        if (key === 'image_url' || key === '$$hashKey') {
           return;
         }
-        if (key == 'values' && typeof (value) === 'object') {
+        if (key === 'values' && typeof (value) === 'object') {
           value = JsonService.encode_unicode(value);
         }
         myFormData.append(key, value);

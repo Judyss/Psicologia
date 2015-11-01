@@ -27,5 +27,5 @@ angular.module('psicologiaApp')
       razonamiento_numerico: $resource(base_url + 'cuestionario/razonamiento_numerico/:id', {id: '@id'}, {update: {method: 'PUT'}}),
       razonamiento_abstracto: $resource(base_url + 'cuestionario/razonamiento_abstracto/:id', {id: '@id'}, {update: {method: 'PUT'}}),
       razonamiento_mecanico: $resource(base_url + 'cuestionario/razonamiento_mecanico/:id', {id: '@id'}, {update: {method: 'PUT'}})
-    }
+    };
   });

@@ -135,8 +135,9 @@
                 </div>
 
                 <input class="hidden-input-file"
-                       id="uploadImage{{$index}}" image-preview="question.image_url" type="file"
-                       file-model="question.image"
+                       id="uploadImage{{$index}}" type="file"
+                       image-preview="question.image_url"
+                       file-model="QuestionsFiles[$index]"
                        accept="image/jpeg,image/png,image/jpg">
               </div>
 

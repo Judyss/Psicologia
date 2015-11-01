@@ -46,5 +46,5 @@ angular.module('emiApp')
 
     return {
       show: showActionToast
-    }
+    };
   });

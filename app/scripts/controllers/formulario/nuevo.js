@@ -6,6 +6,7 @@
  * # FormularioNuevoCtrl
  * Controller of the emiApp
  */
+Object.create(File.prototype);
 angular.module('emiApp')
   .controller('FormularioNuevoCtrl', function ($scope, $ApiUrls, Restangular, $Toast, $routeParams, $location, JsonService, $q, RestFormService, $timeout) {
     if(!$scope.notRepeatRequests){
@@ -31,6 +32,7 @@ angular.module('emiApp')
 
     if ($routeParams.id) {
       $scope.Questions = [];
+      $scope.QuestionsFiles = [];
       RestFormService.get($ApiUrls.Form, $routeParams.id)
         .then(function (data) {
           $scope.form = data;
@@ -42,6 +44,7 @@ angular.module('emiApp')
                 data[i].values = JsonService.decode_unicode(data[i].values);
               }
               $scope.Questions = data;
+              $scope.QuestionsFiles = angular.copy(data);
               $timeout(function(){
                 $scope.enable_auto_updated_questions = true;
               });
@@ -52,6 +55,7 @@ angular.module('emiApp')
     } else {
       $scope.enable_auto_updated_questions = true;
       $scope.Questions = [];
+      $scope.QuestionsFiles = [];
       $scope.form = Restangular.all($ApiUrls.Form);
       $scope.form.name = "";
       $scope.form.description = "";
@@ -84,10 +88,38 @@ angular.module('emiApp')
       });
     };
     $scope.changesPending = 0;
+    $scope.changeImage = function(question, data){
+      console.log(question,data);
+      RestFormService.patch($ApiUrls.Question, data, question.id )
+        .then(function(data){
+          console.log(data);
+        })
+    };
+    //Auto saving Form
+    /*$scope.$watchCollection('QuestionsFiles', function (data1, data2) {
+      console.log(data1);
+      console.log(data2);
+      var index = -1;
+      for (var i = 0; i < data1.length && index === -1; i++) {
+        console.log(i,data1[i], data2[i], angular.equals(data1[i], data2[i]));
+        if(data2[i] && !angular.equals(data1[i], data2[i])){
+          index = i;
+        }
+      }
+      console.log(index);
+      if(index == -1){
+        return;
+      }
+      console.log(data1[index]);
+      console.log($scope.Questions[index]);
+      RestFormService.patch($ApiUrls.Question, {image:data1[index]}, $scope.Questions[index].id )
+        .then(function(data){
+          $scope.QuestionsFiles [index] = data;
+        })
+    });
 
     $scope.$watch('Questions', function (data1, data2) {
-
-      return;
+      //return;
       if (!$scope.enable_auto_updated_questions) {
         return;
       }
@@ -112,6 +144,7 @@ angular.module('emiApp')
         var customQuestion = {};
         angular.forEach(data1[arrayIdChange[i]], function (value, key) {
           //console.log(data1[arrayIdChange[i]][key], data2[arrayIdChange[i]][key]);
+          if(key === 'image') return;
           if (data2[arrayIdChange[i]] && data2[arrayIdChange[i]] && !angular.equals(data1[arrayIdChange[i]][key], data2[arrayIdChange[i]][key])) {
             customQuestion[key] = value;
           }
@@ -124,7 +157,8 @@ angular.module('emiApp')
           saveQuestion(data1[arrayIdChange[i]]);
         }
       }
-    }, true);
+    }, 3);*/
+
     function saveQuestion(Question) {
       var defer = $q.defer();
       if (!$scope.form.id) {
