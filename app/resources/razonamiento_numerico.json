@@ -2,7 +2,7 @@
   {
     "id":1,
     "numero":"1",
-    "pregunta":"1 ¿Qué cifra debería reemplazar a la F en esta división cuyo resultado es correcto?",
+    "pregunta":"1 \u00bfQu\u00e9 cifra deber\u00eda reemplazar a la F en esta divisi\u00f3n cuyo resultado es correcto?",
     "imagen":"imagen1.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -88,7 +88,7 @@
   {
     "id":4,
     "numero":"4",
-    "pregunta":"4 ¿Qué cifra debería ir en lugar de la P en esta suma cuyo resultado es correcto?",
+    "pregunta":"4 \u00bfQu\u00e9 cifra deber\u00eda ir en lugar de la P en esta suma cuyo resultado es correcto?",
     "imagen":"imagen4.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -117,7 +117,7 @@
   {
     "id":5,
     "numero":"5",
-    "pregunta":"5 ¿Cúal es el resto de dividir 2480739 entre 20?",
+    "pregunta":"5 \u00bfC\u00faal es el resto de dividir 2480739 entre 20?",
     "imagen":"imagen5.jpg",
     "imgClass":"img-md",
     "incisos":[
@@ -146,7 +146,7 @@
   {
     "id":6,
     "numero":"6",
-    "pregunta":"6 ¿Qué número puede sustituir a la L para que la proporción sea correcta?",
+    "pregunta":"6 \u00bfQu\u00e9 n\u00famero puede sustituir a la L para que la proporci\u00f3n sea correcta?",
     "imagen":"imagen6.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -192,7 +192,7 @@
       {
         "id":3,
         "inciso":"c",
-        "opcion":"ademán - burla"
+        "opcion":"adem\u00e1n - burla"
       },
       {
         "id":4,
@@ -238,7 +238,7 @@
   {
     "id":9,
     "numero":"9",
-    "pregunta":"9 ¿Qué número debería sustituir a la K en esta división cuyo resultado es correcto?",
+    "pregunta":"9 \u00bfQu\u00e9 n\u00famero deber\u00eda sustituir a la K en esta divisi\u00f3n cuyo resultado es correcto?",
     "imagen":"imagen9.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -325,7 +325,7 @@
   {
     "id":12,
     "numero":"12",
-    "pregunta":"12 ¿Qué número debe sustituir a la N para que la proporción sea correcta?",
+    "pregunta":"12 \u00bfQu\u00e9 n\u00famero debe sustituir a la N para que la proporci\u00f3n sea correcta?",
     "imagen":"imagen12.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -383,7 +383,7 @@
   {
     "id":14,
     "numero":"14",
-    "pregunta":"14 ¿Qué suma es MAYOR que uno?",
+    "pregunta":"14 \u00bfQu\u00e9 suma es MAYOR que uno?",
     "imagen":"imagen14.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -412,7 +412,7 @@
   {
     "id":15,
     "numero":"15",
-    "pregunta":"15 ¿Qué cifra debe sustituir a la J en esta suma cuyo resultado es correcto?",
+    "pregunta":"15 \u00bfQu\u00e9 cifra debe sustituir a la J en esta suma cuyo resultado es correcto?",
     "imagen":"imagen15.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -441,7 +441,7 @@
   {
     "id":16,
     "numero":"16",
-    "pregunta":"16 ¿Qué número debería continuar la serie?",
+    "pregunta":"16 \u00bfQu\u00e9 n\u00famero deber\u00eda continuar la serie?",
     "imagen":"imagen16.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -470,7 +470,7 @@
   {
     "id":17,
     "numero":"17",
-    "pregunta":"17 ¿Cúal es el número MAS PEQUEÑO que es divisible exactamente por 2,4,7 y 21?",
+    "pregunta":"17 \u00bfC\u00faal es el n\u00famero MAS PEQUE\u00d1O que es divisible exactamente por 2,4,7 y 21?",
     "imagen":"imagen17.jpg",
     "imgClass":"img-md",
     "incisos":[
@@ -499,7 +499,7 @@
   {
     "id":18,
     "numero":"18",
-    "pregunta":"18 ¿Qué cifra debería sustituir a la N en esta resta cuyo resultado es correcto?",
+    "pregunta":"18 \u00bfQu\u00e9 cifra deber\u00eda sustituir a la N en esta resta cuyo resultado es correcto?",
     "imagen":"imagen18.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -586,7 +586,7 @@
   {
     "id":21,
     "numero":"21",
-    "pregunta":"21 ¿Qué cifra debe sustituir a la R en esta resta cuyo resultado es correcto?",
+    "pregunta":"21 \u00bfQu\u00e9 cifra debe sustituir a la R en esta resta cuyo resultado es correcto?",
     "imagen":"imagen21.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -615,7 +615,7 @@
   {
     "id":22,
     "numero":"22",
-    "pregunta":"22 ¿Qué número es divsible exactamente entre 3?",
+    "pregunta":"22 \u00bfQu\u00e9 n\u00famero es divsible exactamente entre 3?",
     "imagen":"imagen22.jpg",
     "imgClass":"img-md",
     "incisos":[
@@ -673,7 +673,7 @@
   {
     "id":24,
     "numero":"24",
-    "pregunta":"24 ¿Qué número continuaría la serie?",
+    "pregunta":"24 \u00bfQu\u00e9 n\u00famero continuar\u00eda la serie?",
     "imagen":"imagen24.jpg",
     "imgClass":"img-md",
     "incisos":[
@@ -702,7 +702,7 @@
   {
     "id":25,
     "numero":"25",
-    "pregunta":"25 ¿Qué es el millar más próximo al que podría redondearse 710 x 80?",
+    "pregunta":"25 \u00bfQu\u00e9 es el millar m\u00e1s pr\u00f3ximo al que podr\u00eda redondearse 710 x 80?",
     "imagen":"imagen25.jpg",
     "imgClass":"img-md",
     "incisos":[
@@ -731,7 +731,7 @@
   {
     "id":26,
     "numero":"26",
-    "pregunta":"26 ¿Qué cifra debería sustituir a la A en esta multiplicación cuyo resultado es correcto?",
+    "pregunta":"26 \u00bfQu\u00e9 cifra deber\u00eda sustituir a la A en esta multiplicaci\u00f3n cuyo resultado es correcto?",
     "imagen":"imagen26.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -818,7 +818,7 @@
   {
     "id":29,
     "numero":"29",
-    "pregunta":"29 ¿Qué número debe sustituir a la T para que la proporción sea correcta?",
+    "pregunta":"29 \u00bfQu\u00e9 n\u00famero debe sustituir a la T para que la proporci\u00f3n sea correcta?",
     "imagen":"imagen29.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -847,7 +847,7 @@
   {
     "id":30,
     "numero":"30",
-    "pregunta":"30 ¿Qué valores de x hacen que sea verdadera la expresión x + 3 >= 11?",
+    "pregunta":"30 \u00bfQu\u00e9 valores de x hacen que sea verdadera la expresi\u00f3n x + 3 >= 11?",
     "imagen":"imagen30.jpg",
     "imgClass":"img-md",
     "incisos":[
@@ -876,7 +876,7 @@
   {
     "id":31,
     "numero":"31",
-    "pregunta":"31 ¿Qué cifra debe sustituir a la F en la siguiente división cuyo resultado es correcto?",
+    "pregunta":"31 \u00bfQu\u00e9 cifra debe sustituir a la F en la siguiente divisi\u00f3n cuyo resultado es correcto?",
     "imagen":"imagen31.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -905,7 +905,7 @@
   {
     "id":32,
     "numero":"32",
-    "pregunta":"32 ¿Cúal de las siguientes expresiones vale uno?",
+    "pregunta":"32 \u00bfC\u00faal de las siguientes expresiones vale uno?",
     "imagen":"imagen32.jpg",
     "imgClass":"img-xg",
     "incisos":[
@@ -934,7 +934,7 @@
   {
     "id":33,
     "numero":"33",
-    "pregunta":"33 ¿Qué cifra debe sustituir a la J en esta multiplicación cuyo resultado es correcto?",
+    "pregunta":"33 \u00bfQu\u00e9 cifra debe sustituir a la J en esta multiplicaci\u00f3n cuyo resultado es correcto?",
     "imagen":"imagen33.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -963,7 +963,7 @@
   {
     "id":34,
     "numero":"34",
-    "pregunta":"Cúal es el resultado al número entero más próximo, de la siguiente operación",
+    "pregunta":"C\u00faal es el resultado al n\u00famero entero m\u00e1s pr\u00f3ximo, de la siguiente operaci\u00f3n",
     "imagen":"imagen34.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -992,7 +992,7 @@
   {
     "id":35,
     "numero":"35",
-    "pregunta":"Qué número debería sustituir a la H para que la proporción fuera correcto",
+    "pregunta":"Qu\u00e9 n\u00famero deber\u00eda sustituir a la H para que la proporci\u00f3n fuera correcto",
     "imagen":"imagen35.jpg",
     "imgClass":"img-lg",
     "incisos":[
@@ -1115,7 +1115,7 @@
   {
     "id":39,
     "numero":"39",
-    "pregunta":"39  Si introduce el número 8, ¿Cuántas veces pasará por el paso 4 para llegar al final?",
+    "pregunta":"39  Si introduce el n\u00famero 8, \u00bfCu\u00e1ntas veces pasar\u00e1 por el paso 4 para llegar al final?",
     "imagen":"imagen39.jpg",
     "imgClass":"img-md",
     "incisos":[
@@ -1144,7 +1144,7 @@
   {
     "id":40,
     "numero":"40",
-    "pregunta":"40  Si introduce el número 3, ¿Cúal será el número cuando llegue al final?",
+    "pregunta":"40  Si introduce el n\u00famero 3, \u00bfC\u00faal ser\u00e1 el n\u00famero cuando llegue al final?",
     "imagen":"imagen39.jpg",
     "imgClass":"img-md",
     "incisos":[

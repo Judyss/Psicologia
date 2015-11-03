@@ -22,7 +22,7 @@
       {
         "id": 4,
         "inciso": "d",
-        "opcion": "terminar - conclucion"
+        "opcion": "terminar - conclusi\u00f3n"
       },
       {
         "id": 5,
@@ -66,12 +66,12 @@
   {
     "id": 3,
     "numero": "3",
-    "pregunta": "... es a pent�gono como diez  es a...",
+    "pregunta": "... es a pent\u00e1gono como diez  es a...",
     "incisos": [
       {
         "id": 1,
         "inciso": "a",
-        "opcion": "poligono - doble"
+        "opcion": "pol\u00edgono - doble"
       },
       {
         "id": 2,
@@ -98,7 +98,7 @@
   {
     "id": 4,
     "numero": "4",
-    "pregunta": "... es a mano como calcet�n es a...",
+    "pregunta": "... es a mano como calcet\u00edn es a...",
     "incisos": [
       {
         "id": 1,
@@ -130,12 +130,12 @@
   {
     "id": 5,
     "numero": "5",
-    "pregunta": "... es a ara�ar como avispa es a...",
+    "pregunta": "... es a ara\u00f1ar como avispa es a...",
     "incisos": [
       {
         "id": 1,
         "inciso": "a",
-        "opcion": "u�a - aguij�n"
+        "opcion": "u\u00f1a - aguij\u00f3n"
       },
       {
         "id": 2,
@@ -145,12 +145,12 @@
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "morder - ara�a"
+        "opcion": "morder - ara\u00f1a"
       },
       {
         "id": 4,
         "inciso": "d",
-        "opcion": "u�a - tela"
+        "opcion": "u\u00f1a - tela"
       },
       {
         "id": 5,
@@ -194,7 +194,7 @@
   {
     "id": 7,
     "numero": "7",
-    "pregunta": "... es a boca como gru�o es a...",
+    "pregunta": "... es a boca como gru\u00f1o es a...",
     "incisos": [
       {
         "id": 1,
@@ -209,7 +209,7 @@
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "adem�n - burla"
+        "opcion": "adem\u00e1n - burla"
       },
       {
         "id": 4,
@@ -236,7 +236,7 @@
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "lago - bah�a"
+        "opcion": "lago - bah\u00eda"
       },
       {
         "id": 3,
@@ -251,7 +251,7 @@
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "r�o - bah�a "
+        "opcion": "r\u00edo - bah\u00eda "
       }
     ]
   },
@@ -263,7 +263,7 @@
       {
         "id": 1,
         "inciso": "a",
-        "opcion": "temprano - numero"
+        "opcion": "temprano - n\u00famero"
       },
       {
         "id": 2,
@@ -273,24 +273,24 @@
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "ma�ana - pronto"
+        "opcion": "ma\u00f1ana - pronto"
       },
       {
         "id": 4,
         "inciso": "d",
-        "opcion": "temprano - ultimo"
+        "opcion": "temprano - \u00faltimo"
       },
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "segundo - ultimo "
+        "opcion": "segundo - \u00faltimo "
       }
     ]
   },
   {
     "id": 10,
     "numero": "10",
-    "pregunta": "... es a red como eslab�n es a...",
+    "pregunta": "... es a red como eslab\u00f3n es a...",
     "incisos": [
       {
         "id": 1,
@@ -364,7 +364,7 @@
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "c�scara - uva"
+        "opcion": "c\u00e1scara - uva"
       },
       {
         "id": 3,
@@ -433,17 +433,17 @@
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "buque - ejercito"
+        "opcion": "buque - ej\u00e9rcito"
       },
       {
         "id": 4,
         "inciso": "d",
-        "opcion": "mar - infanter�a"
+        "opcion": "mar - infanter\u00eda"
       },
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "armada - capitan"
+        "opcion": "armada - capit\u00e1sn"
       }
     ]
   },
@@ -455,12 +455,12 @@
       {
         "id": 1,
         "inciso": "a",
-        "opcion": "educaci�n - salud"
+        "opcion": "educaci\u00f3n - salud"
       },
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "profesor - m�dico"
+        "opcion": "profesor - m\u00e9dico"
       },
       {
         "id": 3,
@@ -475,7 +475,7 @@
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "profesor - ni�o"
+        "opcion": "profesor - ni\u00f1o"
       }
     ]
   },
@@ -497,12 +497,12 @@
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "destino - elecci�n"
+        "opcion": "destino - elecci\u00f3n"
       },
       {
         "id": 4,
         "inciso": "d",
-        "opcion": "suerte - m�rito"
+        "opcion": "suerte - m\u00e9rito"
       },
       {
         "id": 5,
@@ -514,7 +514,7 @@
   {
     "id": 17,
     "numero": "17",
-    "pregunta": "... es a muelle como avi�n  es a...",
+    "pregunta": "... es a muelle como avi\u00f3n  es a...",
     "incisos": [
       {
         "id": 1,
@@ -524,7 +524,7 @@
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "mercanc�a - nave"
+        "opcion": "mercanc\u00eda - nave"
       },
       {
         "id": 3,
@@ -588,7 +588,7 @@
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "resolver - s�mbolo"
+        "opcion": "resolver - s\u00edmbolo"
       },
       {
         "id": 3,
@@ -598,7 +598,7 @@
       {
         "id": 4,
         "inciso": "d",
-        "opcion": "inc�gnita - descifrar"
+        "opcion": "inc\u00f3gnita - descifrar"
       },
       {
         "id": 5,
@@ -642,12 +642,12 @@
   {
     "id": 21,
     "numero": "21",
-    "pregunta": "... es a avi�n como timonel es a...",
+    "pregunta": "... es a avi\u00f3n como timonel es a...",
     "incisos": [
       {
         "id": 1,
         "inciso": "a",
-        "opcion": "motor - h�lice"
+        "opcion": "motor - h\u00e9lice"
       },
       {
         "id": 2,
@@ -657,34 +657,34 @@
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "piloto - embarcaci�n"
+        "opcion": "piloto - embarcaci\u00f3n"
       },
       {
         "id": 4,
         "inciso": "d",
-        "opcion": "piloto - capit�n"
+        "opcion": "piloto - capit\u00e1n"
       },
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "embarcaci�n - tim�n"
+        "opcion": "embarcaci\u00f3n - tim\u00f3n"
       }
     ]
   },
   {
     "id": 22,
     "numero": "22",
-    "pregunta": "... es a copia como creacion es a...",
+    "pregunta": "... es a copia como creaci\u00f3n es a...",
     "incisos": [
       {
         "id": 1,
         "inciso": "a",
-        "opcion": "original - reproducci�n"
+        "opcion": "original - reproducci\u00f3n"
       },
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "aut�ntico - invenci�n"
+        "opcion": "aut\u00e9ntico - invenci\u00f3n"
       },
       {
         "id": 3,
@@ -699,14 +699,14 @@
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "imitaci�n - fraude"
+        "opcion": "imitaci\u00f3n - fraude"
       }
     ]
   },
   {
     "id": 23,
     "numero": "23",
-    "pregunta": "... es a cort�s como tosco es a...",
+    "pregunta": "... es a cort\u00e9s como tosco es a...",
     "incisos": [
       {
         "id": 1,
@@ -758,7 +758,7 @@
       {
         "id": 4,
         "inciso": "d",
-        "opcion": "sue�o - alimento"
+        "opcion": "sue\u00f1o - alimento"
       },
       {
         "id": 5,
@@ -785,7 +785,7 @@
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "rapi�a - zorro"
+        "opcion": "rapi\u00f1a - zorro"
       },
       {
         "id": 4,
@@ -866,17 +866,17 @@
   {
     "id": 28,
     "numero": "28",
-    "pregunta": "... es a caliente como g�lido es a...",
+    "pregunta": "... es a caliente como g\u00e9lido es a...",
     "incisos": [
       {
         "id": 1,
         "inciso": "a",
-        "opcion": "hirviente - t�rrido"
+        "opcion": "hirviente - t\u00f3rrido"
       },
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "t�rrido - fr�o"
+        "opcion": "t\u00f3rrido - fr\u00edo"
       },
       {
         "id": 3,
@@ -891,14 +891,14 @@
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "fuego - fr�o"
+        "opcion": "fuego - fr\u00edo"
       }
     ]
   },
   {
     "id": 29,
     "numero": "29",
-    "pregunta": "... es a aceptaci�n como proyecto es a...",
+    "pregunta": "... es a aceptaci\u00f3n como proyecto es a...",
     "incisos": [
       {
         "id": 1,
@@ -913,7 +913,7 @@
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "propuesta - ejecuci�n"
+        "opcion": "propuesta - ejecuci\u00f3n"
       },
       {
         "id": 4,
@@ -923,7 +923,7 @@
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "contrato - obligaci�n"
+        "opcion": "contrato - obligaci\u00f3n"
       }
     ]
   },
@@ -945,7 +945,7 @@
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "consejo - r�plica"
+        "opcion": "consejo - r\u00e9plica"
       },
       {
         "id": 4,
@@ -955,7 +955,7 @@
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "opini�n - disputar"
+        "opcion": "opini\u00f3n - disputar"
       }
     ]
   },
@@ -1019,14 +1019,14 @@
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "golpe - da�o"
+        "opcion": "golpe - da\u00f1o"
       }
     ]
   },
   {
     "id": 33,
     "numero": "33",
-    "pregunta": "... es a �rbol como manantial es a...",
+    "pregunta": "... es a \u00e1rbol como manantial es a...",
     "incisos": [
       {
         "id": 1,
@@ -1046,7 +1046,7 @@
       {
         "id": 4,
         "inciso": "d",
-        "opcion": "tallo - r�o"
+        "opcion": "tallo - r\u00edo"
       },
       {
         "id": 5,
@@ -1063,7 +1063,7 @@
       {
         "id": 1,
         "inciso": "a",
-        "opcion": "unir - cercan�a"
+        "opcion": "unir - cercan\u00eda"
       },
       {
         "id": 2,
@@ -1083,7 +1083,7 @@
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "cercan�a - amistad"
+        "opcion": "cercan\u00eda - amistad"
       }
     ]
   },
@@ -1164,17 +1164,17 @@
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "escritura - m�sica"
+        "opcion": "escritura - m\u00fasica"
       },
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "p�rrafo - escritura"
+        "opcion": "p\u00e1rrafo - escritura"
       },
       {
         "id": 4,
         "inciso": "d",
-        "opcion": "adjetivo - ortograf�a"
+        "opcion": "adjetivo - ortograf\u00eda"
       },
       {
         "id": 5,
@@ -1191,17 +1191,17 @@
       {
         "id": 1,
         "inciso": "a",
-        "opcion": "atenci�n - so�ar"
+        "opcion": "atenci\u00f3n - so\u00f1ar"
       },
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "sue�o - velar"
+        "opcion": "sue\u00f1o - velar"
       },
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "noche - so�ar"
+        "opcion": "noche - so\u00f1ar"
       },
       {
         "id": 4,
@@ -1218,7 +1218,7 @@
   {
     "id": 39,
     "numero": "39",
-    "pregunta": "... es a labranza como m�quina es a...",
+    "pregunta": "... es a labranza como m\u00e1quina es a...",
     "incisos": [
       {
         "id": 1,
@@ -1228,7 +1228,7 @@
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "tierra - producci�n"
+        "opcion": "tierra - producci\u00f3n"
       },
       {
         "id": 3,
@@ -1238,12 +1238,12 @@
       {
         "id": 4,
         "inciso": "d",
-        "opcion": "apero - mec�nico"
+        "opcion": "apero - mec\u00e1nico"
       },
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "apero - fabricaci�n"
+        "opcion": "apero - fabricaci\u00f3n"
       }
     ]
   },
@@ -1255,7 +1255,7 @@
       {
         "id": 1,
         "inciso": "a",
-        "opcion": "polic�a - crimen"
+        "opcion": "polic\u00eda - crimen"
       },
       {
         "id": 2,
@@ -1275,7 +1275,7 @@
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "cereza - persuasi�n"
+        "opcion": "cereza - persuasi\u00f3n"
       }
     ]
   }

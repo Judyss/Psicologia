@@ -4,8 +4,6 @@
     "numero":"1",
     "pregunta":"1",
     "imagen":"imagen1.jpg",
-    "imagen1":"imagen1_1.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -31,11 +29,9 @@
   },
   {
     "id":2,
-    "numero":"2",
+    "numero":"2",s
     "pregunta":"2",
     "imagen":"imagen2.jpg",
-    "imagen1":"imagen2_2.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -63,8 +59,6 @@
     "id":3,
     "numero":"3",
     "imagen":"imagen3.jpg",
-    "imagen1":"imagen3_3.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -93,8 +87,6 @@
     "numero":"4",
     "pregunta":"4",
     "imagen":"imagen4.jpg",
-    "imagen1":"imagen4_4.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -123,8 +115,6 @@
     "numero":"5",
     "pregunta":"5",
     "imagen":"imagen5.jpg",
-    "imagen1":"imagen5_5.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -153,8 +143,6 @@
     "numero":"6",
     "pregunta":"6",
     "imagen":"imagen6.jpg",
-    "imagen1":"imagen6_6.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -183,8 +171,6 @@
     "numero":"7",
     "pregunta":"",
     "imagen":"imagen7.jpg",
-    "imagen1":"imagen7_7.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -218,8 +204,6 @@
     "numero":"8",
     "pregunta":"8",
     "imagen":"imagen8.jpg",
-    "imagen1":"imagen8_8.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -248,8 +232,6 @@
     "numero":"9",
     "pregunta":"9",
     "imagen":"imagen9.jpg",
-    "imagen1":"imagen9_9.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -278,8 +260,6 @@
     "numero":"10",
     "pregunta":"10",
     "imagen":"imagen10.jpg",
-    "imagen1":"imagen10_10.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -308,8 +288,6 @@
     "numero":"11",
     "pregunta":"11",
     "imagen":"imagen11.jpg",
-    "imagen1":"imagen11_11.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -338,8 +316,6 @@
     "numero":"12",
     "pregunta":"12",
     "imagen":"imagen12.jpg",
-    "imagen1":"imagen12_12.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -368,8 +344,6 @@
     "numero":"13",
     "pregunta":"13",
     "imagen":"imagen13.jpg",
-    "imagen1":"imagen13_13.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -398,8 +372,6 @@
     "numero":"14",
     "pregunta":"14",
     "imagen":"imagen14.jpg",
-    "imagen1":"imagen14_14.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -428,8 +400,6 @@
     "numero":"15",
     "pregunta":"15",
     "imagen":"imagen15.jpg",
-    "imagen1":"imagen15_15.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -458,8 +428,6 @@
     "numero":"16",
     "pregunta":"16",
     "imagen":"imagen16.jpg",
-    "imagen1":"imagen16_16.jpg",
-    "imgClass":"img-lg",
     "incisos":[
       {
         "id":1,
@@ -488,8 +456,6 @@
     "numero":"17",
     "pregunta":"17",
     "imagen":"imagen17.jpg",
-    "imagen1":"imagen17_17.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -518,8 +484,6 @@
     "numero":"18",
     "pregunta":"18",
     "imagen":"imagen18.jpg",
-    "imagen1":"imagen18_18.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -548,8 +512,6 @@
     "numero":"19",
     "pregunta":"19",
     "imagen":"imagen19.jpg",
-    "imagen1":"imagen19_19.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -578,8 +540,6 @@
     "numero":"20",
     "pregunta":"20",
     "imagen":"imagen20.jpg",
-    "imagen1":"imagen20_20.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -608,8 +568,6 @@
     "numero":"21",
     "pregunta":"21",
     "imagen":"imagen21.jpg",
-    "imagen1":"imagen21_21.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -638,8 +596,6 @@
     "numero":"22",
     "pregunta":"22",
     "imagen":"imagen22.jpg",
-    "imagen1":"imagen22_22.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -668,8 +624,6 @@
     "numero":"23",
     "pregunta":"23",
     "imagen":"imagen23.jpg",
-    "imagen1":"imagen23_23.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -698,8 +652,6 @@
     "numero":"24",
     "pregunta":"24",
     "imagen":"imagen24.jpg",
-    "imagen1":"imagen24_24.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -728,8 +680,6 @@
     "numero":"25",
     "pregunta":"25",
     "imagen":"imagen25.jpg",
-    "imagen1":"imagen25_25.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -758,8 +708,6 @@
     "numero":"26",
     "pregunta":"26",
     "imagen":"imagen26.jpg",
-    "imagen1":"imagen26_26.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -788,8 +736,6 @@
     "numero":"27",
     "pregunta":"27",
     "imagen":"imagen27.jpg",
-    "imagen1":"imagen27_27.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -818,8 +764,6 @@
     "numero":"28",
     "pregunta":"28",
     "imagen":"imagen28.jpg",
-    "imagen1":"imagen28_28.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -848,8 +792,6 @@
     "numero":"29",
     "pregunta":"29",
     "imagen":"imagen29.jpg",
-    "imagen1":"imagen29_29.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -878,8 +820,6 @@
     "numero":"30",
     "pregunta":"30",
     "imagen":"imagen30.jpg",
-    "imagen1":"imagen30_30.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -908,8 +848,6 @@
     "numero":"31",
     "pregunta":"31",
     "imagen":"imagen31.jpg",
-    "imagen1":"imagen31_31.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -938,8 +876,6 @@
     "numero":"32",
     "pregunta":"32",
     "imagen":"imagen32.jpg",
-    "imagen1":"imagen32_32.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -968,8 +904,6 @@
     "numero":"33",
     "pregunta":"33",
     "imagen":"imagen33.jpg",
-    "imagen1":"imagen33_33.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -998,8 +932,6 @@
     "numero":"34",
     "pregunta":"34",
     "imagen":"imagen34.jpg",
-    "imagen1":"imagen34_34.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -1028,8 +960,6 @@
     "numero":"35",
     "pregunta":"35",
     "imagen":"imagen35.jpg",
-    "imagen1":"imagen35_35.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -1058,8 +988,6 @@
     "numero":"36",
     "pregunta":"36",
     "imagen":"imagen36.jpg",
-    "imagen1":"imagen36_36.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -1088,8 +1016,6 @@
     "numero":"37",
     "pregunta":"37",
     "imagen":"imagen37.jpg",
-    "imagen1":"imagen37_37.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -1118,8 +1044,6 @@
     "numero":"38",
     "pregunta":"38",
     "imagen":"imagen38.jpg",
-    "imagen1":"imagen38_38.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -1148,8 +1072,6 @@
     "numero":"39",
     "pregunta":"39",
     "imagen":"imagen39.jpg",
-    "imagen1":"imagen39_39.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,
@@ -1178,8 +1100,6 @@
     "numero":"40",
     "pregunta":"40",
     "imagen":"imagen39.jpg",
-    "imagen1":"imagen39_39.jpg",
-    "imgClass":"",
     "incisos":[
       {
         "id":1,

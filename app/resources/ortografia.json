@@ -1,0 +1,1082 @@
+[
+  {
+    "id": 1,
+    "numero": "1",
+    "pregunta": "1",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "absurdo"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "solemnidad"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "subrrepticio"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "deshacer"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "numero": "2",
+    "pregunta": "2",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "inmediato"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "herrage"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "proyecto"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "borde"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "numero": "3",
+    "pregunta": "3",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "ambibalente"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "reanudar"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "bet\u00fan"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "obvio"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "numero": "4",
+    "pregunta": "4",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "escurrir"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "variar"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "pabor"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "sobrecoger"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "numero": "5",
+    "pregunta": "5",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "recolecci\u00f3n"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "enmoecer"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "rojizo"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "humeante"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "numero": "6",
+    "pregunta": "6",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "desv\u00e1n"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "hoguera"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "hyedra"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "aspecto"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "numero": "7",
+    "pregunta": "7",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "hierba"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "bicho"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "mensagero"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "guijarro"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "numero": "8",
+    "pregunta": "8",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "enagerar"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "tranquilizar"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "ayuda"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "r\u00edo"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "numero": "9",
+    "pregunta": "9",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "adoptar"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "quehacer"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "ohasis"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "abombar"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "numero": "10",
+    "pregunta": "10",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "pertinad"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "colmillo"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "coordinar"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "probar"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "numero": "11",
+    "pregunta": "11",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "deshonesto"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "ojival"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "fragil"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "combinaci\u00f3n"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "numero": "12",
+    "pregunta": "12",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "mordad"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "esbozo"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "estructura"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "v\u00edctima"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "numero": "13",
+    "pregunta": "13",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "arduo"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "injenio"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "hervir"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "brizna"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "numero": "14",
+    "pregunta": "14",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "afanar"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "capataz"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "urtar"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "inhalar"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "numero": "15",
+    "pregunta": "15",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "auje"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "mesilla"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "trillo"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "labio"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "numero": "16",
+    "pregunta": "16",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "sorbo"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "enredo"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "exhortar"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "explotar"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "numero": "17",
+    "pregunta": "17",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "inofensivo"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "invernar"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "ficci\u00f3n"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "ortelano"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "numero": "18",
+    "pregunta": "18",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "obstinado"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "coibido"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "esquirla"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "intuici\u00f3n"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "numero": "19",
+    "pregunta": "19",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "adiacente"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "follaje"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "hinchaz\u00f3n"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "bagaleta"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "numero": "20",
+    "pregunta": "20",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "esquisito"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "inexorable"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "ondular"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "b\u00f3veda"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "numero": "21",
+    "pregunta": "21",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "exageraci\u00f3n"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "diobtr\u00eda"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "honroso"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "vetusto"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "numero": "22",
+    "pregunta": "22",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "cavidad"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "latitud"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "adversario"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "optener"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "numero": "23",
+    "pregunta": "23",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "sequedad"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "hidrograf\u00eda"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "voluptuoso"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "espropiar"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "numero": "24",
+    "pregunta": "24",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "hormiga"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "bellota"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "dib\u00e1n"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "g\u00e9lido"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "numero": "25",
+    "pregunta": "25",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "veterano"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "bamboleo"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "estridencia"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "desnuded"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "numero": "26",
+    "pregunta": "26",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "reojo"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "husmear"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "botella"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "ecatombe"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "numero": "27",
+    "pregunta": "27",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "enervado"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "aviso"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "estruendo"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "bagabundo"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "numero": "28",
+    "pregunta": "28",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "metehoro"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "intervalo"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "abollado"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "holgado"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "numero": "29",
+    "pregunta": "29",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "sugestivo"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "caracter"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "esbelto"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "\u00e1spid"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "numero": "30",
+    "pregunta": "30",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "tibio"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "extraer"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "optuso"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "roer"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "numero": "31",
+    "pregunta": "31",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "c\u00f3ncabo"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "hematoma"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "estribo"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "dehesa"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "numero": "32",
+    "pregunta": "32",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "saya"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "ausencia"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "arrodillar"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "crugido"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "numero": "33",
+    "pregunta": "33",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "deshollinador"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "rectil"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "truh\u00e1n"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "inmobiliario"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "numero": "34",
+    "pregunta": "34",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "hondonaria"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "testura"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "esp\u00e9ctaculo"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "bienestar"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "numero": "35",
+    "pregunta": "35",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "extra\u00f1o"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "abutarda"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "umbral"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "presb\u00edtero"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "numero": "36",
+    "pregunta": "36",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "luci\u00e9rnaga"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "bolsillo"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "prever"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "cerragero"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "numero": "37",
+    "pregunta": "37",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "actualidad"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "exhaustivo"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "ejecutar"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "escased"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "numero": "38",
+    "pregunta": "38",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "alhel\u00ed"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "hast\u00edo"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "alcallata"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "tatuaje"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "numero": "39",
+    "pregunta": "39",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "hoquedad"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "hatillo"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "ahuyentar"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "vereda"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "numero": "40",
+    "pregunta": "40",
+    "incisos": [
+      {
+        "id": 1,
+        "inciso": "a",
+        "opcion": "extremecer"
+      },
+      {
+        "id": 2,
+        "inciso": "b",
+        "opcion": "inspecci\u00f3n"
+      },
+      {
+        "id": 3,
+        "inciso": "c",
+        "opcion": "prez"
+      },
+      {
+        "id": 4,
+        "inciso": "d",
+        "opcion": "aut\u00f3ctono"
+      }
+    ]
+  }
+]
