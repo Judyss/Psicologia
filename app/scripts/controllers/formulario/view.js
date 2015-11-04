@@ -7,117 +7,98 @@
  * Controller of the emiApp
  */
 angular.module('emiApp')
-  .controller('FormularioViewCtrl', function ($scope, $rootScope, $http, $routeParams, Restangular, $ApiUrls, $mdDialog, $timeout) {
-    console.log($routeParams);
-    if ($routeParams.id) {
-      $scope.Questions = [];
-      Restangular.all($ApiUrls.Form).get($routeParams.id)
+  .controller('FormularioViewCtrl', function ($scope, $rootScope, $http, $interval, $routeParams, Restangular, $ApiUrls, $mdDialog, $timeout, RestFormService, JsonService) {
+
+    //initial params
+    $scope.form = {};
+    $scope.seconds = 60;
+    $scope.Questions = [];
+    $scope.currentFormId = $routeParams.id;
+    $scope.current_question = 0;
+
+    //get Form instance
+    if ($scope.currentFormId) {
+      Restangular.all($ApiUrls.Form).get($scope.currentFormId)
         .then(function (data) {
           $scope.form = data;
-          switch (data.id) {
-            case 1:
-              $http.get('resources/razonamiento_verbal.json')
-                .success(function (data) {
-                  $rootScope.currentTest = data;
-                });
-              break;
-            case 2:
-              $http.get('resources/razonamiento_numerico.json')
-                .success(function (data) {
-                  $rootScope.currentTest = data;
-                });
-              break;
-            case 3:
-              $http.get('resources/razonamiento_abstracto.json')
-                .success(function (data) {
-                  $rootScope.currentTest = data;
-                });
-              break;
-          }
-          Restangular.all($ApiUrls.FormQuestion).get(data.id)
+          RestFormService.get($ApiUrls.FormQuestion, data.id)
             .then(function (data) {
-              console.log(3232323);
+              for (var i = 0; i < data.length; i++) {
+                data[i].image_url = data[i].image;
+                data[i].image = '';
+                data[i].values = JsonService.decode_unicode(data[i].values);
+              }
               $scope.Questions = data;
+              $scope.openInstructions();
             })
         }, function () {
           $location.url('/Formulario/list');
+          $Toast.show('No hemos podido encontrar el test');
         })
+    } else {
+      $location.url('/Formulario/list');
     }
-    $scope.segundos = 0;
-    $scope.minutos = 0;
-    $scope.data = {};
-    $scope.startTime = function () {
-      $scope.segundos = 59;
-      $scope.minutos = 2;
-      function loopTime() {
-        var flag = true;
-        if ($scope.segundos - 1 >= 0) {
-          $scope.segundos--;
-        } else {
-          if ($scope.minutos - 1 >= 0) {
-            $scope.minutos--;
-            $scope.segundos = 59;
-          } else {
-            flag = false;
-            $scope.finishTest();
-          }
-        }
-        if (flag) {
-          $timeout(function () {
-            loopTime()
-          }, 1000);
-        }
-      }
 
-      loopTime();
+    //time interval
+    $scope.startTime = function () {
+      var intervalTime = $interval(function () {
+        $scope.seconds--;
+        if ($scope.seconds <= 0) {
+          $interval.cancel(intervalTime);
+          $scope.finishTest();
+        }
+      }, 1000);
     };
+
     $scope.finishTest = function () {
-      var resp = new $API.razonamiento_verbal;
-      console.log($scope.data);
-      var data = [];
-      for (var i = 0; i < $rootScope.currentTest.length; i++) {
-        data.push($rootScope.currentTest.respuesta);
+      var Questions = angular.copy($scope.Questions),
+        Answers = [], i;
+      for (i = 0; i < Questions.length; i++) {
+        Answers.push(
+          {
+            question: Questions[i].id,
+            answer: Questions[i].answer
+          }
+        );
       }
-      console.log(data);
-      resp.id_users = $rootScope.currentUser.id;
-      resp.respuestas = base64.encode(angular.toJson(data));
-      resp.$save(function (data) {
-        console.log(data);
-      });
+      console.log(Questions);
+      console.log(Answers);
     };
-    $scope.openInstrucciones = function (ev) {
+
+    $scope.openInstructions = function (ev) {
       $mdDialog.show({
-        controller: 'RazonamientoVerbalModalCtrl',
-        templateUrl: 'razonamientoVerbalModal.html',
-        parent: angular.element(document.body),
-        targetEvent: ev,
-        clickOutsideToClose: true
-      })
+          controller: 'RazonamientoVerbalModalCtrl',
+          templateUrl: 'razonamientoVerbalModal.html',
+          parent: angular.element(document.body),
+          targetEvent: ev,
+          clickOutsideToClose: true
+        })
         .then(function (answer) {
           $scope.startTime();
         }, function () {
           $scope.startTime();
         });
     };
-    $scope.openInstrucciones();
-    $scope.pregunta_actual = 0;
-    $scope.setPregunta = function (index) {
-      if (index >= $rootScope.currentTest.length) {
+
+    //Pagination Questions
+    $scope.setQuestion = function (index) {
+      if (index >= $scope.Questions.length) {
         index = 0;
       }
       if (index < 0) {
-        index = $rootScope.currentTest.length - 1;
+        index = $scope.Questions.length - 1;
       }
-      $scope.pregunta_actual = index;
+      $scope.current_question = index;
     };
+
   }).controller('RazonamientoVerbalModalCtrl', function ($scope, $mdDialog) {
-    $scope.hide = function () {
-      $mdDialog.hide();
-    };
-    $scope.cancel = function () {
-      $mdDialog.cancel();
-    };
-    $scope.answer = function (answer) {
-      $mdDialog.hide(answer);
-    };
-  });
+  $scope.hide = function () {
+    $mdDialog.hide();
+  };
+  $scope.cancel = function () {
+    $mdDialog.cancel();
+  };
+  $scope.answer = function (answer) {
+    $mdDialog.hide(answer);
+  };
+});

@@ -131,13 +131,13 @@
                   </label>
                   <span class="btn-remove-image-preview glyphicon glyphicon-remove"
                         data-ng-show="question.image_url"
-                        data-ng-click="question.image_url = '';"></span>
+                        data-ng-click="question.show_image = false;"></span>
                 </div>
 
                 <input class="hidden-input-file"
                        id="uploadImage{{$index}}" type="file"
                        image-preview="question.image_url"
-                       file-model="QuestionsFiles[$index]"
+                       file-model="question.image"
                        accept="image/jpeg,image/png,image/jpg">
               </div>
 

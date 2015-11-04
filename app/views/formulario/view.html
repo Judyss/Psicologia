@@ -1,5 +1,5 @@
 <div class="pT40"></div>
-<div id="razonamiento-verbal" class="razonamiento-verbal">
+<div id="razonamiento-verbal" class="razonamiento-verbal rel">
 
   <div class="menu-content-eval fixed" style="max-width: 150px;right: 20px">
     <button class="btn btn-info btn-block" data-ng-click="finishTest()">
@@ -9,57 +9,43 @@
   </div>
 
   <div class="header">
-    <h1 class="text-center">
-      {{form.name}} - {{minutos}}:{{segundos}}
-    </h1>
+    <h1 class="text-center" data-ng-bind="form.name"></h1>
+    <figure class="clock position" data-ng-bind="seconds | timeFormatting"></figure>
   </div>
   <hr>
-
-  <section data-ng-repeat="pregunta in currentTest" data-ng-show="pregunta_actual == $index">
-    <h2 ng-bind-html="pregunta.pregunta" class="title"></h2>
-    <figure data-ng-show="pregunta.imagen" class="text-center">
-      <img ng-src="images/evaluaciones/razonamiento_numerico/{{pregunta.imagen}}"
-           ng-class="pregunta.imgClass? pregunta.imgClass: 'img-md'">
+  <div class="flex">
+    <section data-ng-repeat="question in Questions" data-ng-show="current_question == $index">
+    <h2 ng-bind-html="question.question" class="title"></h2>
+    <figure data-ng-show="question.show_image" class="left">
+      <img data-ng-src="{{question.image_url}}"
+           data-ng-class="question.img_class ? question.img_class: 'img-md'">
     </figure>
     <div class="text-center">
-      <div data-ng-repeat="inciso in pregunta.incisos" class="lista-respuestas text-left btn-block"  style="{{pregunta.imagen?'display: inline !important':''}}">
-        <md-radio-group ng-model="pregunta.respuesta">
-          <md-radio-button value="{{inciso.inciso}}" class="md-primary"  style="{{pregunta.imagen?'display: inline !important':''}}">{{inciso.inciso}}) {{inciso.opcion}}
-          </md-radio-button>
-        </md-radio-group>
-      </div>
+
+      <div type-answer data-ng-model="question.answer" question="question" class="type-answers left"></div>
+
     </div>
   </section>
+  </div>
 </div>
+
 <div class="container navigation-quiz pT40">
   <section class="cubes text-center">
-    <figure class="cube-btn" data-ng-click="setPregunta(pregunta_actual - 1)">
-      Anterior
+    <figure class="cube-btn" data-ng-click="setQuestion(current_question - 1)"> << </figure>
+    <figure data-ng-repeat="question in Questions" class="cube"
+            data-ng-class="current_question == $index ? 'current':''"
+            data-ng-click="setQuestion($index)"> {{$index + 1}}
       <md-tooltip class="tooltip-text">
-        Anterior
+        <span ng-bind-html="question.question">
       </md-tooltip>
     </figure>
-    <figure data-ng-repeat="pregunta in currentTest"
-            class="cube"
-            data-ng-class="pregunta_actual == $index ? 'current':''"
-            data-ng-click="setPregunta($index)">
-      {{$index + 1}}
-      <md-tooltip class="tooltip-text">
-        {{pregunta.pregunta}}
-      </md-tooltip>
-    </figure>
-    <figure class="cube-btn" data-ng-click="setPregunta(pregunta_actual + 1)">
-      Siguiente
-      <md-tooltip class="tooltip-text">
-        Siguiente
-      </md-tooltip>
-    </figure>
+    <figure class="cube-btn" data-ng-click="setQuestion(current_question + 1)"> >> </figure>
   </section>
 </div>
 
 
 <script type="text/ng-template" id="razonamientoVerbalModal.html">
-  <md-dialog aria-label="Mango (Fruit)"  ng-cloak>
+  <md-dialog aria-label="Mango (Fruit)" ng-cloak>
     <form>
       <md-toolbar>
         <div class="md-toolbar-tools">
@@ -73,14 +59,16 @@
       <md-dialog-content style="max-width:800px;max-height:810px;">
         <div class="md-dialog-content">
           <img style="margin: auto; max-width: 100%;" alt="EMI" src="images/emi.jpg" width="200" class="center">
+
           <p>
-            Debe completar las preguntas en el tiempo establecido, una vez finalizado el tiempo se enviaran las respuestas automaticamente
+            Debe completar las preguntas en el tiempo establecido, una vez finalizado el tiempo se enviaran las
+            respuestas automaticamente
           </p>
         </div>
       </md-dialog-content>
       <div class="md-actions" layout="row">
         <span flex></span>
-        <md-button ng-click="answer('useful')" style="margin-right:20px;" >
+        <md-button ng-click="answer('useful')" style="margin-right:20px;">
           Aceptar
         </md-button>
       </div>
