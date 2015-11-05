@@ -15,23 +15,21 @@
   <hr>
   <div class="flex">
     <section data-ng-repeat="question in Questions" data-ng-show="current_question == $index">
-    <h2 ng-bind-html="question.question" class="title"></h2>
-    <figure data-ng-show="question.show_image" class="left">
-      <img data-ng-src="{{question.image_url}}"
-           data-ng-class="question.img_class ? question.img_class: 'img-md'">
-    </figure>
-    <div class="text-center">
-
-      <div type-answer data-ng-model="question.answer" question="question" class="type-answers left"></div>
-
-    </div>
-  </section>
+      <h4 ng-bind-html="question.question" class="title"></h4>
+      <figure data-ng-show="question.show_image" class="left">
+        <img data-ng-src="{{question.image_url}}"
+             data-ng-class="question.img_class ? question.img_class: 'img-md'">
+      </figure>
+      <div class="text-center">
+        <div type-answer data-ng-model="question.answer" question="question" class="type-answers left"></div>
+      </div>
+    </section>
   </div>
 </div>
 
 <div class="container navigation-quiz pT40">
   <section class="cubes text-center">
-    <figure class="cube-btn" data-ng-click="setQuestion(current_question - 1)"> << </figure>
+    <figure class="cube-btn" data-ng-click="setQuestion(current_question - 1)"> <<</figure>
     <figure data-ng-repeat="question in Questions" class="cube"
             data-ng-class="current_question == $index ? 'current':''"
             data-ng-click="setQuestion($index)"> {{$index + 1}}
@@ -39,7 +37,7 @@
         <span ng-bind-html="question.question">
       </md-tooltip>
     </figure>
-    <figure class="cube-btn" data-ng-click="setQuestion(current_question + 1)"> >> </figure>
+    <figure class="cube-btn" data-ng-click="setQuestion(current_question + 1)"> >></figure>
   </section>
 </div>
 
@@ -58,7 +56,7 @@
       </md-toolbar>
       <md-dialog-content style="max-width:800px;max-height:810px;">
         <div class="md-dialog-content">
-          <img style="margin: auto; max-width: 100%;" alt="EMI" src="images/emi.jpg" width="200" class="center">
+          <img src="images/emi.jpg" style="margin: auto; max-width: 100%;" alt="EMI" width="200" class="center">
 
           <p>
             Debe completar las preguntas en el tiempo establecido, una vez finalizado el tiempo se enviaran las

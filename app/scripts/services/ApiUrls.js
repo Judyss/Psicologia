@@ -20,6 +20,7 @@ angular.module('emiApp')
       Account: "Account",
       Form: "Forms/Form",
       Question: "Forms/Question",
-      FormQuestion: "Forms/FormQuestion"
+      FormQuestion: "Forms/FormQuestion",
+      Answer: "Forms/Answer"
     };
   });

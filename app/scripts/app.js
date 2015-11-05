@@ -74,6 +74,11 @@ angular
         controller: 'FormularioListCtrl',
         controllerAs: 'Formulario/list'
       })
+      .when('/Formulario/answer', {
+        templateUrl: 'views/formulario/answer.html',
+        controller: 'FormularioAnswerCtrl',
+        controllerAs: 'Formulario/answer'
+      })
       .otherwise({
         redirectTo: '/Portafolio'
       });

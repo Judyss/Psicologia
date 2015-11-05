@@ -7,34 +7,28 @@
  * Controller of the emiApp
  */
 angular.module('emiApp')
-  .controller('FormularioViewCtrl', function ($scope, $rootScope, $http, $interval, $routeParams, Restangular, $ApiUrls, $mdDialog, $timeout, RestFormService, JsonService) {
+  .controller('FormularioViewCtrl', function ($scope, $rootScope, $http, $interval, $routeParams, Restangular, $ApiUrls, $mdDialog, $location, $timeout, RestFormService, JsonService, AnswerService, QuestionService) {
 
     //initial params
     $scope.form = {};
-    $scope.seconds = 60;
+    $scope.seconds = 10;
+    $scope.seconds_solved_test = 0;
     $scope.Questions = [];
     $scope.currentFormId = $routeParams.id;
     $scope.current_question = 0;
-
+    var intervalTimeSolved;
     //get Form instance
     if ($scope.currentFormId) {
-      Restangular.all($ApiUrls.Form).get($scope.currentFormId)
-        .then(function (data) {
-          $scope.form = data;
-          RestFormService.get($ApiUrls.FormQuestion, data.id)
-            .then(function (data) {
-              for (var i = 0; i < data.length; i++) {
-                data[i].image_url = data[i].image;
-                data[i].image = '';
-                data[i].values = JsonService.decode_unicode(data[i].values);
-              }
-              $scope.Questions = data;
-              $scope.openInstructions();
-            })
-        }, function () {
+      QuestionService.getDetail($scope.currentFormId)
+        .then(function(data){
+          $scope.form = data[0];
+          $scope.Questions = data[1];
+          $scope.openInstructions();
+          console.log(data);
+        }, function(){
           $location.url('/Formulario/list');
           $Toast.show('No hemos podido encontrar el test');
-        })
+        });
     } else {
       $location.url('/Formulario/list');
     }
@@ -48,21 +42,18 @@ angular.module('emiApp')
           $scope.finishTest();
         }
       }, 1000);
+
+      intervalTimeSolved = $interval(function () {
+        $scope.seconds_solved_test++;
+      }, 1000);
     };
 
     $scope.finishTest = function () {
-      var Questions = angular.copy($scope.Questions),
-        Answers = [], i;
-      for (i = 0; i < Questions.length; i++) {
-        Answers.push(
-          {
-            question: Questions[i].id,
-            answer: Questions[i].answer
-          }
-        );
-      }
-      console.log(Questions);
-      console.log(Answers);
+      $interval.cancel(intervalTimeSolved);
+      AnswerService.add($scope.Questions, $scope.currentFormId, $scope.seconds_solved_test)
+        .then(function (data) {
+          console.log(data);
+        });
     };
 
     $scope.openInstructions = function (ev) {
