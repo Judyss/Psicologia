@@ -7,7 +7,7 @@
  * Controller of the emiApp
  */
 angular.module('emiApp')
-  .controller('FormularioViewCtrl', function ($scope, $rootScope, $http, $interval, $routeParams, Restangular, $ApiUrls, $mdDialog, $location, $timeout, RestFormService, JsonService, AnswerService) {
+  .controller('FormularioViewCtrl', function ($scope, $rootScope, $http, $interval, $routeParams, Restangular, $ApiUrls, $mdDialog, $location, $timeout, RestFormService, JsonService, AnswerService, QuestionService) {
 
     //initial params
     $scope.form = {};
@@ -19,23 +19,16 @@ angular.module('emiApp')
     var intervalTimeSolved;
     //get Form instance
     if ($scope.currentFormId) {
-      Restangular.all($ApiUrls.Form).get($scope.currentFormId)
-        .then(function (data) {
-          $scope.form = data;
-          RestFormService.get($ApiUrls.FormQuestion, data.id)
-            .then(function (data) {
-              for (var i = 0; i < data.length; i++) {
-                data[i].image_url = data[i].image;
-                data[i].image = '';
-                data[i].values = JsonService.decode_unicode(data[i].values);
-              }
-              $scope.Questions = data;
-              $scope.openInstructions();
-            })
-        }, function () {
+      QuestionService.getDetail($scope.currentFormId)
+        .then(function(data){
+          $scope.form = data[0];
+          $scope.Questions = data[1];
+          $scope.openInstructions();
+          console.log(data);
+        }, function(){
           $location.url('/Formulario/list');
           $Toast.show('No hemos podido encontrar el test');
-        })
+        });
     } else {
       $location.url('/Formulario/list');
     }

@@ -8,7 +8,7 @@
  */
 Object.create(File.prototype);
 angular.module('emiApp')
-  .controller('FormularioNuevoCtrl', function ($scope, $ApiUrls, Restangular, $Toast, $routeParams, $location, JsonService, $q, RestFormService, $timeout) {
+  .controller('FormularioNuevoCtrl', function ($scope, $ApiUrls, Restangular, $Toast, $routeParams, $location, JsonService, $q, RestFormService, $timeout, QuestionService) {
     if (!$scope.notRepeatRequests) {
       $scope.notRepeatRequests = true;
       return;
@@ -33,25 +33,19 @@ angular.module('emiApp')
     if ($routeParams.id) {
       $scope.Questions = [];
       $scope.QuestionsFiles = [];
-      RestFormService.get($ApiUrls.Form, $routeParams.id)
+      QuestionService.getDetail($routeParams.id)
         .then(function (data) {
-          $scope.form = data;
-          Restangular.all($ApiUrls.FormQuestion).get(data.id)
-            .then(function (data) {
-              for (var i = 0; i < data.length; i++) {
-                data[i].image_url = data[i].image;
-                data[i].image = '';
-                data[i].values = JsonService.decode_unicode(data[i].values);
-              }
-              $scope.Questions = data;
-              $scope.QuestionsFiles = angular.copy(data);
-              $timeout(function () {
-                $scope.enable_auto_updated_questions = true;
-              });
-            })
+          $scope.form = data[0];
+          $scope.Questions = data[1];
+          $scope.QuestionsFiles = angular.copy(data);
+          console.log(data);
+          $timeout(function () {
+            $scope.enable_auto_updated_questions = true;
+          });
         }, function () {
-          $location.url('/Formulario/nuevo')
-        })
+          $location.url('/Formulario/nuevo');
+          $Toast.show('No hemos podido encontrar el test');
+        });
     } else {
       $scope.enable_auto_updated_questions = true;
       $scope.Questions = [];
