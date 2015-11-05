@@ -76,12 +76,12 @@
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "cinco - dec�logo"
+        "opcion": "cinco - dec\u00e1logo"
       },
       {
         "id": 3,
         "inciso": "c",
-        "opcion": "�ngulo - dec�logo"
+        "opcion": "\u00e1ngulo - dec\u00e1logo"
       },
       {
         "id": 4,
@@ -91,7 +91,7 @@
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "dec�metro - doble"
+        "opcion": "dec\u00e1metro - doble"
       }
     ]
   },

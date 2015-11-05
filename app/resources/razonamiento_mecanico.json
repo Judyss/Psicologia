@@ -42,7 +42,7 @@
   {
     "id":3,
     "numero":"3",
-    "pregunta":"\u00bfQu\u00e9 peso se levantar\u00e1 con m\u00e1s facilidad? (si no hay diferencia marque la C)"
+    "pregunta":"3 \u00bfQu\u00e9 peso se levantar\u00e1 con m\u00e1s facilidad? (si no hay diferencia marque la C)",
     "imagen":"imagen3.jpg",
     "incisos":[
       {
@@ -82,7 +82,7 @@
   {
     "id":5,
     "numero":"5",
-    "pregunta":"5. Si el eje Y  gira en la direccion que se indica en que direcci\u00f3n girar\u00e1 el X? (Si en cualquiera de las dos marque C)",
+    "pregunta":"5 Si el eje Y  gira en la direccion que se indica en que direcci\u00f3n girar\u00e1 el X? (Si en cualquiera de las dos marque C)",
     "imagen":"imagen5.jpg",
     "incisos":[
       {
@@ -127,15 +127,15 @@
     "incisos":[
       {
         "id":1,
-        "inciso":"a",
+        "inciso":"a"
       },
       {
         "id":2,
-        "inciso":"b",
+        "inciso":"b"
       },
       {
         "id":3,
-        "inciso":"c",
+        "inciso":"c"
       }
       
     ]
@@ -183,7 +183,7 @@
   {
     "id":10,
     "numero":"10",
-    "pregunta":"10. Cuando el manubrio se mueva en la direcci\u00f3n indicada \u00bfEn qu\u00e9 direcci\u00f3n se movera el piñon X? (Si alternativamente en las dos direcci\u00f3nes, marque la C)",
+    "pregunta":"10 Cuando el manubrio se mueva en la direcci\u00f3n indicada \u00bfEn qu\u00e9 direcci\u00f3n se movera el piñon X? (Si alternativamente en las dos direcci\u00f3nes, marque la C)",
     "imagen":"imagen10.jpg",
     "incisos":[
       {
@@ -243,7 +243,7 @@
   {
     "id":13,
     "numero":"13",
-    "pregunta":"13. Si el eje X gira en la direcci\u00f3n indicada \u00bfEn qu\u00e9 direcci\u00f3n girar\u00e1n las aspas del ventilador? (Si en cualquiera de las dos, marque la C)",
+    "pregunta":"13 Si el eje X gira en la direcci\u00f3n indicada \u00bfEn qu\u00e9 direcci\u00f3n girar\u00e1n las aspas del ventilador? (Si en cualquiera de las dos, marque la C)",
     "imagen":"imagen13.jpg",
     "incisos":[
       {
@@ -363,7 +363,7 @@
   {
     "id":19,
     "numero":"19",
-    "pregunta":"\u00bfEn qu\u00e9 desague es menos probable que se produzcan fugas? (Si no hay diferencia, marque la C)",
+    "pregunta":"19 \u00bfEn qu\u00e9 desague es menos probable que se produzcan fugas? (Si no hay diferencia, marque la C)",
     "imagen":"imagen19.jpg",
     "incisos":[
       {
@@ -383,7 +383,7 @@
   {
     "id":20,
     "numero":"20",
-    "pregunta":"Cuando el coche se mueve a velocidad constante \u00bfQu\u00e9 par de ruedas giraran mas deprisa? (si no hay diferencia, marque la C)",
+    "pregunta":"20 Cuando el coche se mueve a velocidad constante \u00bfQu\u00e9 par de ruedas giraran mas deprisa? (si no hay diferencia, marque la C)",
     "imagen":"imagen20.jpg",
     "incisos":[
       {
@@ -543,7 +543,7 @@
   {
     "id":28,
     "numero":"28",
-    "pregunta":"\u00bfEn cu\u00e1l de los bloques de madera ser\u00e1 mas dificil de separar las dos partes ensambladas? (si no hay diferencia, marque la C",
+    "pregunta":"28 \u00bfEn cu\u00e1l de los bloques de madera ser\u00e1 mas dificil de separar las dos partes ensambladas? (si no hay diferencia, marque la C)",
     "imagen":"imagen28.jpg",
     "incisos":[
       {
@@ -664,7 +664,7 @@
   {
     "id":34,
     "numero":"34",
-    "pregunta":"Si las fuerza ascendente y descendente en el globo son exactamente iguales \u00bfhacia d\u00f3nde se movera? (Si ninguna de las dos, marque la C)",
+    "pregunta":"34 Si las fuerza ascendente y descendente en el globo son exactamente iguales \u00bfhacia d\u00f3nde se movera? (Si ninguna de las dos, marque la C)",
     "imagen":"imagen34.jpg",
     "incisos":[
       {
@@ -684,7 +684,7 @@
   {
     "id":35,
     "numero":"35",
-    "pregunta":"\u00bfQu\u00e9 tim\u00f3n de las barcas se puede mover m\u00e1s facilmente? (Si no hay diferencia, marque la C)",
+    "pregunta":"35 \u00bfQu\u00e9 tim\u00f3n de las barcas se puede mover m\u00e1s facilmente? (Si no hay diferencia, marque la C)",
     "imagen":"imagen35.jpg",
     "incisos":[
       {
@@ -884,7 +884,7 @@
   {
     "id":45,
     "numero":"45",
-    "pregunta":"45 Caundo se coloquen las pesas \u00bfCu\u00e1l de los muelles se estirar\u00e1 m\u00e1s? (Si no hay diferencia, marque la C)",
+    "pregunta":"45 Cuando se coloquen las pesas \u00bfCu\u00e1l de los muelles se estirar\u00e1 m\u00e1s? (Si no hay diferencia, marque la C)",
     "imagen":"imagen44.jpg",
     "incisos":[
       {
