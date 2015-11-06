@@ -3,14 +3,14 @@
     "id":1,
     "tipo":1,
     "nombre":"Razonamiento verbal",
-    "descripcion": "Esta prueba consta de frases o proposiciones a las que faltan la primera y Ia última palabras.",
+    "descripcion": "Esta prueba consta de frases o proposiciones a las que faltan la primera y Ia \u00faltima palabras.",
     "imagen":"evaluaciones/verbal.png"
   },
   {
     "id":2,
     "tipo":2,
     "nombre":"Razonamiento numerico",
-    "descripcion": "Esta prueba intenta comprobar su eapacidad para razonar con núméros.",
+    "descripcion": "Esta prueba intenta comprobar su eapacidad para razonar con n\u00fameros.",
     "imagen":"evaluaciones/numerico.png"
   },
   {
@@ -24,21 +24,21 @@
     "id":4,
     "tipo":4,
     "nombre":"Razonamiento Mecanico",
-    "descripcion": "En esta prueba hay un cierto número de dibujos sobre los cuales se hacen algunas preguntas",
+    "descripcion": "En esta prueba hay un cierto n\u00famero de dibujos sobre los cuales se hacen algunas preguntas",
     "imagen":"evaluaciones/mecanico.png"
   },
   {
     "id":5,
     "tipo":5,
     "nombre":"Relaciones espaciales",
-    "descripcion": "Esta prueba presenta un modelo o patrón en el que algunas zonas están sombreadas y en otras aparecen pequeños dibujos.",
+    "descripcion": "Esta prueba presenta un modelo o patr\u00f3n en el que algunas zonas est\u00e1n sombreadas y en otras aparecen peque\u00f1os dibujos.",
     "imagen":"evaluaciones/espacial.png"
   },
   {
     "id":6,
     "tipo":6,
     "nombre":"Ortografia",
-    "descripcion": "En esta prueba se presentan grupos de cuatro palabras entre las cuales hay una que está mal escrita.",
+    "descripcion": "En esta prueba se presentan grupos de cuatro palabras entre las cuales hay una que est\u00e1 mal escrita.",
     "imagen":"evaluaciones/ortografia.png"
   }
 ]
