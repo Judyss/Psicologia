@@ -19,14 +19,14 @@
       <tr>
         <th>N</th>
         <th>Estudiante</th>
-        <th>Evaluacion</th>
+        <th>Semestre</th>
         <th>Tiempo</th>
         <th>Fecha</th>
         <th>Respuestas</th>
       </tr>
       </thead>
       <tbody>
-      <tr ng-repeat="answers in list_answer | filter:searchName">
+      <tr ng-repeat="answers in list_answer | filter:searchName" ng-show="answers.form== form.id">
         <td>{{$index+1}}</td>
         <td>
           <img ng-src="{{answers.owner.image}}" class="inline-block"
@@ -35,7 +35,7 @@
           <p class="inline-block">{{answers.owner.info.first_name+' '+answers.owner.info.last_name}}
           </p>
         </td>
-        <td>{{form.name}}</td>
+        <td>{{answers.owner.student.semester +' '+answers.owner.student.parallel}}</td>
         <td>{{answers.time +' Segundos'}}</td>
         <td>{{answers.created_at}}</td>
         <td><a href="">Ver respuestas</a></td>
