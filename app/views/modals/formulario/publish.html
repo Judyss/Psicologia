@@ -1,0 +1,68 @@
+<md-dialog aria-label="Publicar"  ng-cloak>
+
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Parametros de publicacion</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="image/icons/ic_close_24px.svg" aria-label="Cerrar"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content style="min-width:600px;max-width:800px;min-height:400px; ">
+      <div class="md-dialog-content">
+        <p>
+          **Ingrese parametros bajo el cual se realizara la publicacion del cuestionario
+        </p>
+        <div class="row">
+          <md-checkbox ng-model="params_publish.enabled" aria-label="Todos">
+            Publicar para todos
+          </md-checkbox>
+          <md-checkbox ng-model="params_publish.auth" aria-label="Todos">
+            Requiere autenticacion
+          </md-checkbox>
+          <p><b>Enlace de acceso: </b></p>
+          <p><a href="" ng-href="{{params_publish.url}}" target="_blank" ng-bind="params_publish.url"></a></p>
+          <md-input-container data-ng-show="!params_publish.enabled">
+            <label>Numero de respuestas por usuario</label>
+            <md-select ng-model="params_publish.max_answer">
+              <md-option value="1">1</md-option>
+              <md-option value="2">2</md-option>
+              <md-option value="3">3</md-option>
+              <md-option value="4">4</md-option>
+              <md-option value="5">5</md-option>
+              <md-option value="0">Ilimitado</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+
+        <div class="row" data-ng-show="!params_publish.enabled">
+          <hr>
+          <h5>Ingrese lista de usuarios con acceso: </h5>
+          <!--<p>{{peoples}}</p>-->
+          <md-content class="md-padding autocomplete" layout="column">
+            <md-contact-chips
+              ng-model="params_publish.peoples"
+              md-contacts="querySearch($query)"
+              md-contact-name="name"
+              md-contact-image="image"
+              md-contact-email="email"
+              md-require-match="true"
+              md-highlight-flags="i"
+              filter-selected="filterSelected"
+              placeholder="Estudiante">
+            </md-contact-chips>
+          </md-content>
+        </div>
+      </div>
+    </md-dialog-content>
+    <div class="md-actions" layout="row">
+      <span flex></span>
+      <md-button data-ng-click="cancel()">
+        Cancelar
+      </md-button>
+      <md-button class="mR20" data-ng-click="publish(params_publish)">
+        Publicar
+      </md-button>
+    </div>
+</md-dialog>

@@ -11,7 +11,7 @@ angular.module('emiApp')
   .service('QuestionService', function (Restangular, $ApiUrls, RestFormService, $location, $q, JsonService) {
     function getDetail(formId) {
       var defer = $q.defer();
-      Restangular.all($ApiUrls.Form).get(formId)
+      RestFormService.get($ApiUrls.Form, formId)
         .then(function (dataForm) {
           RestFormService.get($ApiUrls.FormQuestion, dataForm.id)
             .then(function (data) {
@@ -21,7 +21,7 @@ angular.module('emiApp')
                 data[i].values = JsonService.decode_unicode(data[i].values);
               }
               defer.resolve([dataForm, data]);
-            }, function(data){
+            }, function (data) {
               defer.reject(data);
             });
         }, function (data) {

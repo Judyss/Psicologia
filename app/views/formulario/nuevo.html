@@ -1,7 +1,5 @@
 <ng-include src="'../views/includes/public_menu.html'"></ng-include>
 <div class="container mT20" ng-controller="FormularioNuevoCtrl">
-  <!--<div text-angular ng-model="htmlVariable" ></div>-->
-  <!--{{Questions | json}}-->
   <div class="visible-print">
     <div>
       <h1 class="text-center">{{form.name}}</h1>
@@ -37,9 +35,10 @@
       </div>
       <div class="block-menu titles">
         <div class="menu-title">
-          <h3 editable-text="form.name" buttons="no" ng-class="form.name?'':'none'">
+          <h3 editable-text="form.name" buttons="no" ng-class="form.name?'':'none'" class="inline-block">
             {{form.name ? form.name : 'Nuevo Formulario'}}
           </h3>
+          <h5 class="inline-block" editable-number="form.time" buttons="no">{{form.time ? form.time+' Segundos': 'Sin Tiempo'}}</h5>
         </div>
         <div class="menu-items">
           <ul class="nav nav-pills">
@@ -57,9 +56,15 @@
                 <li><a href=""><span class="glyphicon glyphicon-download-alt"></span> Descargar</a></li>
               </ul>
             </li>
-            <li role="presentation"><a href="">
+            <li role="presentation"><a href="" data-ng-click="publish($event)">
               <span class="glyphicon glyphicon-globe"></span> Publicar</a>
             </li>
+
+            <!--
+            <md-button class="md-primary md-raised" ng-click="showConfirm($event)" flex-sm="100" flex-md="100" flex-gt-md="auto">
+              Confirm Dialog
+            </md-button>
+            -->
             <li role="presentation"><a href="">
               <span class="glyphicon glyphicon-list-alt"></span> Ver respuestas</a>
             </li>

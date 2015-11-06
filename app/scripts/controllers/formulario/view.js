@@ -7,25 +7,39 @@
  * Controller of the emiApp
  */
 angular.module('emiApp')
-  .controller('FormularioViewCtrl', function ($scope, $rootScope, $http, $interval, $routeParams, Restangular, $ApiUrls, $mdDialog, $location, $timeout, RestFormService, JsonService, AnswerService, QuestionService) {
+  .controller('FormularioViewCtrl', function ($scope, $rootScope, $http, $interval, $routeParams, Restangular, $ApiUrls, $mdDialog, $location, $timeout, RestFormService, JsonService, AnswerService, QuestionService, $Toast) {
 
     //initial params
     $scope.form = {};
-    $scope.seconds = 10;
+    $scope.seconds = 120;
     $scope.seconds_solved_test = 0;
     $scope.Questions = [];
     $scope.currentFormId = $routeParams.id;
     $scope.current_question = 0;
+
+    $scope.statusForm = 0;//cargando
+    $scope.autorized = false;
     var intervalTimeSolved;
     //get Form instance
     if ($scope.currentFormId) {
       QuestionService.getDetail($scope.currentFormId)
-        .then(function(data){
-          $scope.form = data[0];
-          $scope.Questions = data[1];
-          $scope.openInstructions();
-          console.log(data);
-        }, function(){
+        .then(function (data) {
+            Restangular.all($ApiUrls.FormEnabled, data[0].form_enabled)
+            .then(function (dataEnabled) {
+              dataEnabled = dataEnabled.data;
+              console.log(dataEnabled);
+              if (dataEnabled.enabled) {
+                $scope.form = data[0];
+                $scope.Questions = data[1];
+                $scope.openInstructions();
+                $scope.statusForm = 2;//cargado y llenar
+                $scope.seconds = $scope.form.time;
+              } else {
+                $scope.statusForm = 3;//inhabilitado
+                $Toast.show("El cuestionario no esta disponible");
+              }
+            });
+        }, function () {
           $location.url('/Formulario/list');
           $Toast.show('No hemos podido encontrar el test');
         });

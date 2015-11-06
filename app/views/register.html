@@ -95,7 +95,7 @@
 
           </div>
           <div class="col-xs-12 col-sm-6">
-            <img class="ua-image" src="{{  (AcademicUnit | SearchFilter:'id':account.academicUnit).image}}">
+            <img class="ua-image" ng-src="{{  (AcademicUnit | SearchFilter:'id':account.academicUnit).image}}">
             <md-input-container class="col-xs-12" flex>
               <label>Unidad Academica</label>
               <md-select ng-model="account.academicUnit">

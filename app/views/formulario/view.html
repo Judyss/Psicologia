@@ -1,44 +1,64 @@
 <div class="pT40"></div>
-<div id="razonamiento-verbal" class="razonamiento-verbal rel">
+<div data-ng-show="statusForm === 1">
+  <section class="ctnr">
+    <div class="ldr">
+      <div class="ldr-blk"></div>
+      <div class="ldr-blk an_delay"></div>
+      <div class="ldr-blk an_delay"></div>
+      <div class="ldr-blk"></div>
+    </div>
+  </section>
+</div>
+<div data-ng-show="statusForm === 2">
+  <div id="razonamiento-verbal" class="razonamiento-verbal rel">
 
-  <div class="menu-content-eval fixed" style="max-width: 150px;right: 20px">
-    <button class="btn btn-info btn-block" data-ng-click="finishTest()">
-      Enviar
-      <span class="glyphicon glyphicon-send"></span>
-    </button>
+    <div class="menu-content-eval fixed" style="max-width: 150px;right: 20px">
+      <button class="btn btn-info btn-block" data-ng-click="finishTest()">
+        Enviar
+        <span class="glyphicon glyphicon-send"></span>
+      </button>
+    </div>
+
+    <div class="header">
+      <h1 class="text-center" data-ng-bind="form.name"></h1>
+      <figure class="clock position" data-ng-bind="seconds | timeFormatting"></figure>
+    </div>
+    <hr>
+    <div class="flex">
+      <section data-ng-repeat="question in Questions" data-ng-show="current_question == $index">
+        <h4 ng-bind-html="question.question" class="title"></h4>
+        <figure data-ng-show="question.show_image" class="left">
+          <img data-ng-src="{{question.image_url}}"
+               data-ng-class="question.img_class ? question.img_class: 'img-md'">
+        </figure>
+        <div class="text-center">
+          <div type-answer data-ng-model="question.answer" question="question" class="type-answers left"></div>
+        </div>
+      </section>
+    </div>
   </div>
 
-  <div class="header">
-    <h1 class="text-center" data-ng-bind="form.name"></h1>
-    <figure class="clock position" data-ng-bind="seconds | timeFormatting"></figure>
-  </div>
-  <hr>
-  <div class="flex">
-    <section data-ng-repeat="question in Questions" data-ng-show="current_question == $index">
-      <h4 ng-bind-html="question.question" class="title"></h4>
-      <figure data-ng-show="question.show_image" class="left">
-        <img data-ng-src="{{question.image_url}}"
-             data-ng-class="question.img_class ? question.img_class: 'img-md'">
+  <div class="container navigation-quiz pT40">
+    <section class="cubes text-center">
+      <figure class="cube-btn" data-ng-click="setQuestion(current_question - 1)"> <<</figure>
+      <figure data-ng-repeat="question in Questions" class="cube"
+              data-ng-class="current_question == $index ? 'current':''"
+              data-ng-click="setQuestion($index)"> {{$index + 1}}
+        <md-tooltip class="tooltip-text">
+        <span ng-bind-html="question.question">
+        </md-tooltip>
       </figure>
-      <div class="text-center">
-        <div type-answer data-ng-model="question.answer" question="question" class="type-answers left"></div>
-      </div>
+      <figure class="cube-btn" data-ng-click="setQuestion(current_question + 1)"> >></figure>
     </section>
   </div>
 </div>
-
-<div class="container navigation-quiz pT40">
-  <section class="cubes text-center">
-    <figure class="cube-btn" data-ng-click="setQuestion(current_question - 1)"> <<</figure>
-    <figure data-ng-repeat="question in Questions" class="cube"
-            data-ng-class="current_question == $index ? 'current':''"
-            data-ng-click="setQuestion($index)"> {{$index + 1}}
-      <md-tooltip class="tooltip-text">
-        <span ng-bind-html="question.question">
-      </md-tooltip>
-    </figure>
-    <figure class="cube-btn" data-ng-click="setQuestion(current_question + 1)"> >></figure>
-  </section>
+<div data-ng-show="statusForm === 3">
+  <div class="container p20">
+    <p class="bg-danger" style="    border: 1px red solid;border-radius: 10px;padding: 30px;">
+      El cuestionario no esta diponible..<br>
+    <a href="#Formulario/list"> Volver a lista de formularios</a>
+    </p>
+  </div>
 </div>
 
 

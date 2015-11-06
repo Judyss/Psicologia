@@ -6,9 +6,8 @@
  * # FormularioNuevoCtrl
  * Controller of the emiApp
  */
-Object.create(File.prototype);
 angular.module('emiApp')
-  .controller('FormularioNuevoCtrl', function ($scope, $ApiUrls, Restangular, $Toast, $routeParams, $location, JsonService, $q, RestFormService, $timeout, QuestionService) {
+  .controller('FormularioNuevoCtrl', function ($scope, $rootScope, $ApiUrls, Restangular, $Toast, $routeParams, $location, JsonService, $q, RestFormService, $timeout, QuestionService, $mdDialog) {
     if (!$scope.notRepeatRequests) {
       $scope.notRepeatRequests = true;
       return;
@@ -30,18 +29,23 @@ angular.module('emiApp')
       $scope.Questions.push(angular.copy(modelQuestion));
     };
 
-    if ($routeParams.id) {
+    $scope.currentFormId = $routeParams.id;
+    if ($scope.currentFormId) {
       $scope.Questions = [];
       $scope.QuestionsFiles = [];
-      QuestionService.getDetail($routeParams.id)
+      QuestionService.getDetail($scope.currentFormId)
         .then(function (data) {
           $scope.form = data[0];
           $scope.Questions = data[1];
           $scope.QuestionsFiles = angular.copy(data);
-          console.log(data);
           $timeout(function () {
-            $scope.enable_auto_updated_questions = true;
+            $scope.enable_auto_updated_questions = false;
           });
+
+          Restangular.all($ApiUrls.FormEnabled).get($scope.form.form_enabled)
+            .then(function (data) {
+              $scope.form_enabled = data;
+            })
         }, function () {
           $location.url('/Formulario/nuevo');
           $Toast.show('No hemos podido encontrar el test');
@@ -60,6 +64,7 @@ angular.module('emiApp')
         name: form.name || '',
         description: form.description || '',
         theme: form.theme || '--',
+        time: form.time || 0,
         image: form.image || '',
         image_url: form.image_url || null
       };
@@ -74,7 +79,6 @@ angular.module('emiApp')
           promisesSaveQuestions.push(saveQuestion($scope.Questions[i]));
         }
         $q.all(promisesSaveQuestions).then(function (data) {
-          console.log('several save', data);
           $Toast.show('Se guardado sus cambios');
         })
       }, function () {
@@ -176,7 +180,6 @@ angular.module('emiApp')
       return defer.promise;
     }
 
-
     $scope.deleteQuestion = function (Question, index) {
       Restangular.one($ApiUrls.Question, Question.id).remove()
         .then(function (data) {
@@ -198,5 +201,111 @@ angular.module('emiApp')
     //menu Options
     $scope.print = function () {
       print();
+    };
+
+    $scope.publish = function (ev) {
+      if (!$scope.currentFormId) {
+        $Toast.show("Primero debe guardar el cuestionario");
+        return;
+      }
+      $rootScope.tempFormId = $scope.currentFormId;
+      $rootScope.tempFormEnabled = $scope.form_enabled;
+      $mdDialog.show({
+          controller: 'PublishModalController',
+          templateUrl: 'views/modals/formulario/publish.html',
+          parent: angular.element(document.body),
+          targetEvent: ev,
+          clickOutsideToClose: true
+        })
+        .then(function (data) {
+          $scope.form_enabled = data;
+          //$scope.$aply
+          $Toast.show("Ha sido publicado con exito");
+        }, function () {
+          $scope.status = 'You cancelled the dialog.';
+        });
     }
+  })
+  .controller('PublishModalController', function ($scope, $rootScope, $mdDialog, $timeout, $q, Restangular, $ApiUrls) {
+
+    $scope.cancel = function () {
+      $mdDialog.cancel();
+    };
+    $scope.answer = function (params_publish) {
+      $mdDialog.hide(params_publish);
+    };
+
+    $scope.publish = function (params_publish) {
+      var myFormData = new FormData(), i;
+      myFormData.append("enabled", params_publish.enabled);
+      myFormData.append("auth", params_publish.auth);
+      myFormData.append("max_answer", params_publish.max_answer);
+      for (i = 0; i < params_publish.peoples.length; i++) {
+        myFormData.append("accounts", params_publish.peoples[i].id);
+      }
+      Restangular.one($ApiUrls.FormEnabled, $scope.form_enabled.id)
+        .withHttpConfig({transformRequest: angular.identity})
+        .patch(myFormData, undefined, {'Content-Type': undefined})
+        .then(function (data) {
+          $mdDialog.hide(data);
+        }, function (data) {
+
+        });
+    };
+
+    /*$scope.params_publish = {
+      all: false,
+      auth: true,
+      max_answer: 1,
+      url: location.origin + "/#/Formulario/view/" + $scope.currentFormId,
+      peoples: []
+    };*/
+    $scope.params_publish = {};
+    $scope.currentFormId = angular.copy($rootScope.tempFormId);
+    $scope.form_enabled = angular.copy($rootScope.tempFormEnabled);
+    $scope.params_publish = $scope.form_enabled;
+    $scope.params_publish.url = location.origin + "/#/Formulario/view/" + $scope.currentFormId;
+    console.log($scope.params_publish);
+
+
+    $scope.all_people = [];
+    $scope.filterSelected = true;
+    $scope.querySearch = function (query) {
+      var results = query ?
+        $scope.all_people.filter(createFilterFor(query)) : [];
+      return results;
+    };
+
+    function createFilterFor(query) {
+      return function filterFn(contact) {
+        return (contact.name.toLowerCase().indexOf(query.toLowerCase()) != -1);
+      };
+    }
+
+    function loadContacts() {
+      $scope.params_publish.peoples = [];
+      var accounts = $scope.form_enabled.accounts, i, j, peoples = [];
+      Restangular.all($ApiUrls.People).getList().then(function (data) {
+        for (i = 0; i < data.length; i++) {
+          data[i].full_name = data[i].first_name + " " + data[i].last_name;
+
+          for (j = 0; j < accounts.length; j++) {
+            if (data[i].id === accounts[j]) {
+              peoples.push(data[i]);
+            }
+          }
+        }
+        var mapping = [], peoples2 = [];
+        data.map(function (c, index) {
+          mapping.push({name: c.full_name, image: c.image, id: c.id});
+        });
+        peoples.map(function (c, index) {
+          peoples2.push({name: c.full_name, image: c.image, id: c.id});
+        });
+        $scope.all_people = mapping;
+        $scope.params_publish.peoples = peoples2;
+      });
+    }
+
+    loadContacts();
   });

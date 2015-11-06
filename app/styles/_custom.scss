@@ -65,3 +65,10 @@ md-toast {
 .glyphicon:hover{
   opacity: 1;
 }
+
+// List chips
+.md-autocomplete-suggestions li:not(.md-not-found-wrapper) {
+  img{
+    vertical-align: top;
+  }
+}
