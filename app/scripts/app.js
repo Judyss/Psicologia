@@ -73,7 +73,7 @@ angular
         controller: 'FormularioListCtrl',
         controllerAs: 'Formulario/list'
       })
-      .when('/Formulario/answer', {
+      .when('/Formulario/answer/:id', {
         templateUrl: 'views/formulario/answer.html',
         controller: 'FormularioAnswerCtrl',
         controllerAs: 'Formulario/answer'

@@ -1,4 +1,46 @@
 <ng-include src="'views/includes/public_menu.html'"></ng-include>
 <div id="answer">
 
+
+  <div class="container" style="background: #fff">
+    <br>
+
+    <h2 class="pull-left">{{form.name}}</h2>
+
+    <div class="pull-right">
+      Buscar:
+      <div class="m10">
+        <input class="form-control" ng-model="searchName">
+      </div>
+    </div>
+    <br>
+    <table class="table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>N</th>
+        <th>Estudiante</th>
+        <th>Evaluacion</th>
+        <th>Tiempo</th>
+        <th>Fecha</th>
+        <th>Respuestas</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="answers in list_answer | filter:searchName">
+        <td>{{$index+1}}</td>
+        <td>
+          <img ng-src="{{answers.owner.image}}" class="inline-block"
+               style="width: 50px;height: 40px;border-radius: 40%">
+
+          <p class="inline-block">{{answers.owner.info.first_name+' '+answers.owner.info.last_name}}
+          </p>
+        </td>
+        <td>{{form.name}}</td>
+        <td>{{answers.time +' Segundos'}}</td>
+        <td>{{answers.created_at}}</td>
+        <td><a href="">Ver respuestas</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

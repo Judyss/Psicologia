@@ -24,16 +24,26 @@ angular.module('emiApp')
     if ($scope.currentFormId) {
       QuestionService.getDetail($scope.currentFormId)
         .then(function (data) {
-            Restangular.all($ApiUrls.FormEnabled, data[0].form_enabled)
+          Restangular.all($ApiUrls.FormEnabled).get(data[0].form_enabled)
             .then(function (dataEnabled) {
-              dataEnabled = dataEnabled.data;
-              console.log(dataEnabled);
-              if (dataEnabled.enabled) {
+              console.log(dataEnabled.accounts, $rootScope.currentUser.id);
+              function accountEnabledForm(list, id) {
+                var flag = false;
+                for (var i = 0; i < list.length && !flag; i++) {
+                  if (list[i] == id) {
+                    flag = true;
+                  }
+                }
+                return flag;
+              }
+
+              if (dataEnabled.enabled || accountEnabledForm(dataEnabled.accounts, $rootScope.currentUser.id)) {
                 $scope.form = data[0];
                 $scope.Questions = data[1];
                 $scope.openInstructions();
-                $scope.statusForm = 2;//cargado y llenar
                 $scope.seconds = $scope.form.time;
+
+                $scope.statusForm = 2;//cargado y llenar
               } else {
                 $scope.statusForm = 3;//inhabilitado
                 $Toast.show("El cuestionario no esta disponible");
@@ -64,6 +74,7 @@ angular.module('emiApp')
 
     $scope.finishTest = function () {
       $interval.cancel(intervalTimeSolved);
+      $rootScope.finishFormMessage();
       AnswerService.add($scope.Questions, $scope.currentFormId, $scope.seconds_solved_test)
         .then(function (data) {
           console.log(data);
@@ -96,14 +107,40 @@ angular.module('emiApp')
       $scope.current_question = index;
     };
 
+
+
+    $rootScope.finishFormMessage = function(){
+      $mdDialog.show({
+          controller: 'FinishFormModalController',
+          templateUrl: 'views/modals/formulario/finish_form.html',
+          parent: angular.element(document.body),
+          //targetEvent: ,
+          clickOutsideToClose: true
+        })
+        .then(function (data) {
+          $location.url("/Formulario/list");
+        }, function () {
+          $location.url("/Formulario/list");
+        });
+    }
+
   }).controller('RazonamientoVerbalModalCtrl', function ($scope, $mdDialog) {
-  $scope.hide = function () {
-    $mdDialog.hide();
-  };
-  $scope.cancel = function () {
-    $mdDialog.cancel();
-  };
-  $scope.answer = function (answer) {
-    $mdDialog.hide(answer);
-  };
-});
+    $scope.hide = function () {
+      $mdDialog.hide();
+    };
+    $scope.cancel = function () {
+      $mdDialog.cancel();
+    };
+    $scope.answer = function (answer) {
+      $mdDialog.hide(answer);
+    };
+  })
+  .controller('FinishFormModalController', function ($scope, $rootScope, $mdDialog) {
+    $scope.cancel = function () {
+      $mdDialog.cancel();
+    };
+    $scope.answer = function (data) {
+      $mdDialog.hide(data);
+    };
+  });
+
