@@ -1,0 +1,120 @@
+<ng-include src="'../views/includes/public_menu.html'"></ng-include>
+
+<div class="container mT10">
+  <div id="page-content" class="hidden-print">
+    <nav id="menu-toolbar">
+      <div class="block-menu icon">
+        <label class="inline-block">
+          <img ng-src="images/icono-emi.svg">
+        </label>
+      </div>
+      <div class="block-menu titles">
+        <div class="menu-title">
+          <h3> Lista de estudiantes <i>{{saved_list.period+' - '+saved_list.year}}</i></h3>
+          <h5 class="inline-block">
+            <i>**Los estudiantes de esta lista deberan realizar el test</i>
+          </h5>
+        </div>
+        <div class="menu-items">
+          <ul class="nav nav-pills">
+            <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true"
+                 aria-expanded="false">
+                <span class="glyphicon glyphicon-save-file"></span> Guardar lista Como..<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href=""> Word</a>
+                </li>
+                <li>
+                  <a href=""> Excel</a>
+                </li>
+                <li>
+                  <a href=""> PDF</a>
+                </li>
+              </ul>
+            </li>
+
+            <li role="presentation"><a href="" data-ng-click="actualizar_lista()">
+              <span class="glyphicon glyphicon-globe"></span> Enviar a Psicologia</a>
+            </li>
+
+
+            <li role="presentation"><a href="" data-ng-click="print()">
+              <span class="glyphicon glyphicon-print"></span> Imprimir</a>
+            </li>
+
+            <!--<li role="presentation" class="pull-right p10">
+              <i
+                ng-bind="form.id?(changesPending?'Guardando cambios...':'Cambios guardados'):'Debe guardar el cuestionario'"></i>
+            </li>-->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="pager-edit">
+      <div class="row" data-ng-show="!params_publish.enabled">
+        <hr>
+        <h5>Lista de estudiantes a realizar las evaluaciones</h5>
+        <!--<p>{{peoples}}</p>-->
+        <div class="col-xs-9">
+          <md-content class="md-padding autocomplete" layout="column">
+            <md-contact-chips
+              ng-model="peoples"
+              md-contacts="querySearch($query)"
+              md-contact-name="full_name"
+              md-contact-image="image"
+              md-contact-email="email"
+              md-require-match="true"
+              md-highlight-flags="i"
+              filter-selected="filterSelected"
+              placeholder="Estudiante">
+            </md-contact-chips>
+          </md-content>
+        </div>
+        <div class="col-xs-3">
+          <button data-ng-click="add_list(peoples)" class="btn btn-success btn-sm">
+            Agregar a lista
+          </button>
+        </div>
+      </div>
+<!--
+      <div class="row">
+        {{list_people_answers}}
+      </div>-->
+      <div class="row">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr>
+            <td>#</td>
+            <td>Estudiante</td>
+            <td>Semestre</td>
+            <td>Paralelo</td>
+            <td>Carrera</td>
+            <td>+/-</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="student in list_people_answers track by $index">
+            <td data-ng-bind="$index + 1">
+
+            </td>
+            <td>
+              <img data-ng-src="{{student.image}}" height="50" class="inline-block">
+
+              <p data-ng-bind="student.full_name" class="inline-block"></p>
+            </td>
+            <td data-ng-bind="student.student.semester + ' Semestre'"></td>
+            <td data-ng-bind="student.student.parallel"></td>
+            <td data-ng-bind="student.student.specialty.name"></td>
+            <td>
+              <button class="btn btn-sm btn-danger" data-ng-click="delete_list($index)">Eliminar de lista</button>
+            </td>
+          </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

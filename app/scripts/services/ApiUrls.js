@@ -18,11 +18,13 @@ angular.module('emiApp')
       Student: "Student",
       People: "People",
       Account: "Account",
+      AccountDetail: "AccountDetail",
       Form: "Forms/Form",
       Question: "Forms/Question",
       FormQuestion: "Forms/FormQuestion",
       FormEnabled: "Forms/FormEnabled",
       Answer: "Forms/Answer",
-      AnswerDetail: "Forms/AnswerDetail"
+      AnswerDetail: "Forms/AnswerDetail",
+      SendList: "Forms/SendList"
     };
   });

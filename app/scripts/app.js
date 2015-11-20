@@ -78,6 +78,11 @@ angular
         controller: 'FormularioAnswerCtrl',
         controllerAs: 'Formulario/answer'
       })
+      .when('/Administrador/Enviar', {
+        templateUrl: 'views/admin/sendlist.html',
+        controller: 'AdminSendListCtrl',
+        controllerAs: 'admin/SendList'
+      })
       .otherwise({
         redirectTo: '/Portafolio'
       });
