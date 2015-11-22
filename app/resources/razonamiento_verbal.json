@@ -332,7 +332,7 @@
       {
         "id": 2,
         "inciso": "b",
-        "opcion": "com�n - caracter�stico"
+        "opcion": "com\u00fan - caracter\u00edstico"
       },
       {
         "id": 3,
@@ -347,7 +347,7 @@
       {
         "id": 5,
         "inciso": "e",
-        "opcion": "raro . espec�fico"
+        "opcion": "raro . espec\u00edfico"
       }
     ]
   },
