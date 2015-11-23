@@ -1,3 +1,4 @@
+<ng-include src="'views/includes/public_menu.html'"></ng-include>
 <div data-ng-controller="RegisterCtrl" class="view-register">
   <div class="app-register">
     <div class="register-header">
@@ -98,6 +99,7 @@
             <img class="ua-image" ng-src="{{  (AcademicUnit | SearchFilter:'id':account.academicUnit).image}}">
             <md-input-container class="col-xs-12" flex>
               <label>Unidad Academica</label>
+
               <md-select ng-model="account.academicUnit">
                 <md-option ng-repeat="academicUnit in AcademicUnit" value="{{academicUnit.id}}">
                   {{academicUnit.name}}

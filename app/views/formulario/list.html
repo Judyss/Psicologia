@@ -13,7 +13,12 @@
         <a href="#/Formulario/view/{{mform.id}}"><img ng-src="{{mform.image}}"></a>
         <!--<img ng-src="images/{{evaluaciones[$index].imagen}}">-->
         <h2>{{mform.name}}</h2>
-        <a href="#/Formulario/edit/{{mform.id}}">Editar</a>
+        <a href="#/Formulario/edit/{{mform.id}}" data-ng-show="currentUser.is_psicologa">
+          <span class="glyphicon glyphicon-edit"></span> Editar</a>
+        <!--<a href="#/Formulario/edit/{{mform.id}}" data-ng-show="currentUser.is_psicologa">Editar</a>-->
+        <a ng-href="{{mform.id?'#Formulario/answer/'+mform.id:''}}" target="_blank"
+           data-ng-show="currentUser.is_psicologa">
+          <span class="glyphicon glyphicon-list-alt"></span> Respuestas</a>
         <p>{{mform.description}}</p>
       </div>
       <span class="clearfix"></span>

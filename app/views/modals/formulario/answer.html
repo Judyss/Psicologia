@@ -1,0 +1,36 @@
+<md-dialog aria-label="Publicar" ng-cloak>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Respuestas de formulario</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon md-svg-src="image/icons/ic_close_24px.svg" aria-label="Cerrar"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content style="min-width:600px;max-width:800px;min-height:400px; ">
+    <div class="md-dialog-content">
+      <img src="images/icono-emi.svg" width="200" class="pull-right">
+      <p>
+        **Resultado obtenido por parte del estudiante
+      </p>
+
+      <div class="row">
+        <div><label>Correctas: </label>{{ good}}</div>
+        <div><label>Incorrectas: </label>{{ err}}</div>
+        <br>
+
+        <div><h4>El resultado es: {{ good*100/(good+err) + '%' }}</h4></div>
+      </div>
+    </div>
+  </md-dialog-content>
+  <div class="md-actions" layout="row">
+    <span flex></span>
+    <!--<md-button data-ng-click="cancel()">
+      Cancelar
+    </md-button>
+    <md-button class="mR20" data-ng-click="$dismis">
+      Aceptar
+    </md-button>-->
+  </div>
+</md-dialog>

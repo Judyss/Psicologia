@@ -17,12 +17,17 @@
         <div class="row">
           <md-checkbox ng-model="params_publish.enabled" aria-label="Todos">
             Publicar para todos
+            <!--{{send_list}}-->
           </md-checkbox>
           <md-checkbox ng-model="params_publish.auth" aria-label="Todos">
             Requiere autenticacion
           </md-checkbox>
           <p><b>Enlace de acceso: </b></p>
           <p><a href="" ng-href="{{params_publish.url}}" target="_blank" ng-bind="params_publish.url"></a></p>
+
+          <p data-ng-show="send_list.length > 0">Se ha recivido lista en fecha: <i class="badge">{{(send_list[0].updated_at).split('T')[0]}}</i>:
+            <a href="" data-ng-click="copy_sendList()"> Agregar lista</a>
+          </p>
           <md-input-container data-ng-show="!params_publish.enabled">
             <label>Numero de respuestas por usuario</label>
             <md-select ng-model="params_publish.max_answer">

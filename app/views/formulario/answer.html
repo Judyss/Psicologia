@@ -7,18 +7,23 @@
 
     <h2 class="pull-left">{{form.name}}</h2>
 
-    <div class="pull-right">
+    <div class="pull-right" data-ng-show="list_answer.length > 0">
       Buscar:
       <div class="m10">
         <input class="form-control" ng-model="searchName">
       </div>
     </div>
     <br>
-    <table class="table table-bordered table-striped">
+    <span class="clearfix"></span>
+    <div class="row text-center pT20" data-ng-show="list_answer.length == 0">
+      <i>No se han encontrado respuestas</i>
+    </div>
+    <table class="table table-bordered table-striped" data-ng-show="list_answer.length > 0">
       <thead>
       <tr>
         <th>N</th>
         <th>Estudiante</th>
+        <th>Carnet</th>
         <th>Semestre</th>
         <th>Tiempo</th>
         <th>Fecha</th>
@@ -35,10 +40,11 @@
           <p class="inline-block">{{answers.owner.info.first_name+' '+answers.owner.info.last_name}}
           </p>
         </td>
+        <td>{{answers.owner.info.ci}}</td>
         <td>{{answers.owner.student.semester +' '+answers.owner.student.parallel}}</td>
         <td>{{answers.time +' Segundos'}}</td>
-        <td>{{answers.created_at}}</td>
-        <td><a href="">Ver respuestas</a></td>
+        <td>{{(answers.created_at).split('T')[0]}}</td>
+        <td><a href="" data-ng-click="show_answers(answers.owner.id, form_id)">Ver resultado</a></td>
       </tr>
       </tbody>
     </table>

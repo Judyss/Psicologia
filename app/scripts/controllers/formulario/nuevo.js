@@ -33,6 +33,7 @@ angular.module('emiApp')
     if ($scope.currentFormId) {
       $scope.Questions = [];
       $scope.QuestionsFiles = [];
+      $Toast.show("Espere un momento por favor. Cargando...");
 
       QuestionService.getDetail($scope.currentFormId)
         .then(function (data) {
@@ -47,6 +48,7 @@ angular.module('emiApp')
             .then(function (data) {
               console.log(data);
               $scope.form_enabled = data;
+              $Toast.show("Ahora puede editar");
             })
         }, function () {
           $location.url('/Formulario/nuevo');
@@ -167,6 +169,31 @@ angular.module('emiApp')
       $mdDialog.hide(params_publish);
     };
 
+    $scope.send_list = [];
+
+    $scope.loadSend_list = function () {
+      Restangular.all($ApiUrls.SendList).getList()
+        .then(function (data) {
+          $scope.send_list = data;
+        })
+    }();
+
+    $scope.copy_sendList = function () {
+      console.log($scope.send_list);
+      console.log($scope.all_people);
+      console.log($scope.params_publish.peoples);
+      var list_received = $scope.send_list[0].list;
+      var temp_list = [];
+      for (var i = 0; i < $scope.all_people.length; i++) {
+        for (var j = 0; j < list_received.length; j++) {
+          if ($scope.all_people[i].id == list_received[j]) {
+            temp_list.push($scope.all_people[i]);
+          }
+        }
+      }
+      $scope.params_publish.peoples = temp_list;
+    };
+
     $scope.publish = function (params_publish) {
       var myFormData = new FormData(), i;
       myFormData.append("enabled", params_publish.enabled);
@@ -220,7 +247,6 @@ angular.module('emiApp')
       Restangular.all($ApiUrls.People).getList().then(function (data) {
         for (i = 0; i < data.length; i++) {
           data[i].full_name = data[i].first_name + " " + data[i].last_name;
-
           for (j = 0; j < accounts.length; j++) {
             if (data[i].id === accounts[j]) {
               peoples.push(data[i]);

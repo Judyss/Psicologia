@@ -265,6 +265,7 @@ $nav-bar-theme-color-text: $color-theme-text;
 .input-option {
   display: inline-block;
   margin-left: 13px;
+  position: relative;
   .number {
     font-size: 12px;
     margin-right: -20px;
@@ -279,11 +280,16 @@ $nav-bar-theme-color-text: $color-theme-text;
     padding: 5px 25px 5px 25px;
     width: 100%;
   }
-  .glyphicon {
+  .glyphicon.glyphicon-remove {
     margin-left: -25px;
     cursor: pointer;
     vertical-align: middle;
     display: none;
+    color: red;
+  }
+  .glyphicon.glyphicon-ok{
+    color: green;
+    cursor: pointer;
   }
 }
 
@@ -293,3 +299,14 @@ $nav-bar-theme-color-text: $color-theme-text;
   }
 }
 
+.badge-is-answer {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  z-index: 10;
+  cursor: pointer;
+  i{
+    color: green;
+    opacity: 1 !important;
+  }
+}

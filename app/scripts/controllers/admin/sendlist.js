@@ -10,6 +10,21 @@
 angular.module('emiApp')
   .controller('AdminSendListCtrl', function ($scope, $rootScope, $timeout, $q, Restangular, $ApiUrls, $Toast) {
 
+    $scope.exportAction = function (typ) {
+      switch (typ) {
+        case 'pdf':
+          $scope.$broadcast('export-pdf', {});
+          break;
+        case 'excel':
+          $scope.$broadcast('export-excel', {});
+          break;
+        case 'doc':
+          $scope.$broadcast('export-doc', {});
+          break;
+        default:
+          console.log('no event caught');
+      }
+    };
     $scope.list_people_answers = [];
 
     $scope.all_people = [];
@@ -29,18 +44,25 @@ angular.module('emiApp')
         return (contact.info.full_name.toLowerCase().indexOf(query.toLowerCase()) != -1);
       };
     }
+    $scope.print = function(){
+      print();
+    };
 
     $scope.saved_list = {};
     function loadContacts() {
 
       Restangular.all($ApiUrls.SendList).getList()
         .then(function (data) {
+          console.log(data);
           $scope.saved_list = data[0];
           var accounts = $scope.saved_list.list, i, j, peoples = [];
           Restangular.all($ApiUrls.AccountDetail).getList().then(function (data) {
             for (i = 0; i < data.length; i++) {
               data[i].info.full_name = data[i].info.first_name + " " + data[i].info.last_name;
-
+              /*if (data.student) {
+                data.splice(i,1);
+                continue;
+              }*/
               for (j = 0; j < accounts.length; j++) {
                 if (data[i].id === accounts[j]) {
                   peoples.push(data[i]);
@@ -67,7 +89,19 @@ angular.module('emiApp')
     loadContacts();
 
     $scope.add_list = function (list) {
-      $scope.list_people_answers = $scope.list_people_answers.concat(list);
+      console.log($scope.list_people_answers, list);
+      for (var i = 0; i < list.length; i++) {
+        var exist = true;
+        for (var j = 0; j < $scope.list_people_answers.length; j++) {
+          if ($scope.list_people_answers[j].id === list[i].id) {
+            exist = false;
+          }
+        }
+        if (exist) {
+          $scope.list_people_answers.push(list[i]);
+        }
+      }
+//      $scope.list_people_answers = $scope.list_people_answers.concat(list);
     };
 
     $scope.delete_list = function (index) {

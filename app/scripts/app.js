@@ -24,6 +24,7 @@ angular
   ])
   .config(function ($routeProvider, $httpProvider, RestangularProvider) {
     RestangularProvider.setBaseUrl('http://127.0.0.1:8000');
+    //RestangularProvider.setBaseUrl('https://psicologia-app.herokuapp.com/');
     RestangularProvider.setRequestSuffix('/');
     $httpProvider.interceptors.push('InterceptorService');
     $routeProvider

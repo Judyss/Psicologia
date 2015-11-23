@@ -62,6 +62,10 @@ angular.module('emiApp')
                 //'<span class="number">{{$index + 1}}</span>' +
               '<span class="number">- </span>' +
               '<input class="buttons" placeholder="Opcion {{$index + 1}}" ng-model="item.title">' +
+              '<figure class="badge-is-answer" data-ng-click="question.is_answer = $index">' +
+              '<i class="glyphicon" data-ng-class="(question.is_answer == $index) ?' + "'glyphicon-ok':" + "'glyphicon-minus'" + '"></i>' +
+              '<md-tooltip  md-direction="top">Es respuesta correcta</md-tooltip>' +
+              '</figure>' +
               '<span class="glyphicon glyphicon-remove" data-ng-show="questionValues.length>1" data-ng-click="questionValues.splice($index,1)"> </span>  ' +
               '</figure>' +
               '</div>' +

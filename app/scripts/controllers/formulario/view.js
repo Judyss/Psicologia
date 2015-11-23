@@ -7,8 +7,7 @@
  * Controller of the emiApp
  */
 angular.module('emiApp')
-  .controller('FormularioViewCtrl', function ($scope, $rootScope, $http, $interval, $routeParams, Restangular, $ApiUrls, $mdDialog, $location, $timeout, RestFormService, JsonService, AnswerService, QuestionService, $Toast) {
-
+  .controller('FormularioViewCtrl', function ($scope, $rootScope, $http, $interval, $routeParams, Restangular, $ApiUrls, $mdDialog, $location, $timeout, RestFormService, JsonService, AnswerService, QuestionService, $Toast, AuthService) {
     //initial params
     $scope.form = {};
     $scope.seconds = 120;
@@ -22,11 +21,32 @@ angular.module('emiApp')
     var intervalTimeSolved;
     //get Form instance
     if ($scope.currentFormId) {
+      AuthService.login().then(function(){
+        Restangular.all($ApiUrls.Answer).getList()
+          .then(function (data) {
+            var exist = false;
+            for(var i = 0; i < data.length;i++){
+              if($rootScope.currentUser.id == data[i].owner){
+                exist = true;
+              }
+            }
+            if(!exist){
+              loadForm();
+            }else{
+              $scope.statusForm = 4;
+            }
+          }, function (data) {
+
+          });
+      });
+    } else {
+      $location.url('/Formulario/list');
+    }
+    function loadForm(){
       QuestionService.getDetail($scope.currentFormId)
         .then(function (data) {
           Restangular.all($ApiUrls.FormEnabled).get(data[0].form_enabled)
             .then(function (dataEnabled) {
-              console.log(dataEnabled.accounts, $rootScope.currentUser.id);
               function accountEnabledForm(list, id) {
                 var flag = false;
                 for (var i = 0; i < list.length && !flag; i++) {
@@ -53,8 +73,6 @@ angular.module('emiApp')
           $location.url('/Formulario/list');
           $Toast.show('No hemos podido encontrar el test');
         });
-    } else {
-      $location.url('/Formulario/list');
     }
 
     //time interval
@@ -77,7 +95,7 @@ angular.module('emiApp')
       $rootScope.finishFormMessage();
       AnswerService.add($scope.Questions, $scope.currentFormId, $scope.seconds_solved_test)
         .then(function (data) {
-          console.log(data);
+          //console.log(data);
         });
     };
 

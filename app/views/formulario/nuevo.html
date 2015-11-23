@@ -5,9 +5,9 @@
     <div>
       <h1 class="text-center">{{form.name}}</h1>
     </div>
-    <div class="pager-edit">
+    <div>
       <div data-ng-repeat="question in Questions">
-        <h4 ng-bind-html="question.question"></h4>
+        <h5><strong ng-bind-html="$index+1 +')'+question.question"></strong></h5>
         <i>{{question.text_help}}</i>
         <img ng-src="{{question.image}}" width="100px">
         <ol>
@@ -43,7 +43,7 @@
         </div>
         <div class="menu-items">
           <ul class="nav nav-pills">
-            <li role="presentation" class="dropdown">
+            <!--<li role="presentation" class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true"
                  aria-expanded="false">
                 Archivo <span class="caret"></span>
@@ -56,6 +56,9 @@
                 <li><a href=""><span class="glyphicon glyphicon-exclamation-sign"></span> Definir estilo</a></li>
                 <li><a href=""><span class="glyphicon glyphicon-download-alt"></span> Descargar</a></li>
               </ul>
+            </li>-->
+            <li role="presentation">
+              <a href="" data-ng-click="saveForm(form)"><span class="glyphicon glyphicon-save-file"></span> Guardar</a>
             </li>
             <li role="presentation"><a href="" data-ng-click="publish($event)">
               <span class="glyphicon glyphicon-globe"></span> Publicar</a>
@@ -69,9 +72,9 @@
             <li role="presentation"><a ng-href="{{form.id?'#Formulario/answer/'+form.id:''}}" target="_blank" >
               <span class="glyphicon glyphicon-list-alt"></span> Ver respuestas</a>
             </li>
-            <li role="presentation"><a href="#/Formulario/answer">
+            <!--<li role="presentation"><a href="#/Formulario/answer">
               <span class="glyphicon glyphicon-cog"></span> Estilo de presentacion</a>
-            </li>
+            </li>-->
             <li role="presentation"><a href="" data-ng-click="print()">
               <span class="glyphicon glyphicon-print"></span> Imprimir</a>
             </li>
@@ -127,8 +130,11 @@
                 <span class="glyphicon glyphicon-picture"></span>
                 {{question.show_image?'Remover imagen':'Adjuntar imagen'}}
               </label>
+
               <label class="pull-right">
-                <span class="glyphicon glyphicon-remove-sign" data-ng-click="deleteQuestion(question, $index)"></span>
+                <span class="glyphicon glyphicon-remove-sign" data-ng-click="deleteQuestion(question, $index)">
+                  <md-tooltip md-direction="top">Eliminar</md-tooltip>
+                </span>
               </label>
 
               <div data-ng-show="question.show_image">
