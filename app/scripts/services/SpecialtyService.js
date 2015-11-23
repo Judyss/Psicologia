@@ -16,7 +16,7 @@ angular.module('emiApp')
       Restangular.all($ApiUrls.Specialty).getList().then(function (data) {
         Specialty = data;
         defer.resolve(data);
-      }, function () {
+      }, function (data) {
         defer.reject(data);
       });
       return defer.promise;
