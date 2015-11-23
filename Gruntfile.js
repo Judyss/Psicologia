@@ -271,7 +271,7 @@ module.exports = function (grunt) {
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
-      js: ['<%= yeoman.dist %>/scripts/{,*/}*.js'],
+      //js: ['<%= yeoman.dist %>/scripts/{,*/}*.js'],
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>',
@@ -310,12 +310,12 @@ module.exports = function (grunt) {
     //   dist: {}
     // },
 
-    imagemin: {
+    /*imagemin: {
       dist: {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg,gif}',
+          src: '{,*!/}*.{png,jpg,jpeg,gif}',
           dest: '<%= yeoman.dist %>/images'
         }]
       }
@@ -326,11 +326,11 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.svg',
+          src: '{,*!/}*.svg',
           dest: '<%= yeoman.dist %>/images'
         }]
       }
-    },
+    },*/
 
     htmlmin: {
       dist: {
@@ -426,9 +426,9 @@ module.exports = function (grunt) {
         'compass'
       ],
       dist: [
-        'compass:dist',
-        'imagemin',
-        'svgmin'
+        'compass:dist'
+        //'imagemin',
+        //'svgmin'
       ]
     },
 
@@ -478,8 +478,8 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'autoprefixer',
     'ngtemplates',
-    'concat',
-    'ngAnnotate',
+    //'concat',
+    //'ngAnnotate',
     'copy:dist',
     'cdnify',
     'cssmin',

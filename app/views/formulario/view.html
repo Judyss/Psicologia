@@ -40,15 +40,15 @@
 
   <div class="container navigation-quiz pT40">
     <section class="cubes text-center">
-      <figure class="cube-btn" data-ng-click="setQuestion(current_question - 1)"> <<</figure>
+      <figure class="cube-btn" data-ng-click="setQuestion(current_question - 1)"> Ant. </figure>
       <figure data-ng-repeat="question in Questions" class="cube"
               data-ng-class="current_question == $index ? 'current':''"
               data-ng-click="setQuestion($index)"> {{$index + 1}}
         <md-tooltip class="tooltip-text">
-        <span ng-bind-html="question.question">
+        <span ng-bind-html="question.question"></span>
         </md-tooltip>
       </figure>
-      <figure class="cube-btn" data-ng-click="setQuestion(current_question + 1)"> >></figure>
+      <figure class="cube-btn" data-ng-click="setQuestion(current_question + 1)"> Sig. </figure>
     </section>
   </div>
 </div>
