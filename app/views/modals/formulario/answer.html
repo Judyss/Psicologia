@@ -1,4 +1,4 @@
-<md-dialog aria-label="Publicar" ng-cloak>
+<md-dialog aria-label="Publicar" ng-cloak class="hidden-print">
   <md-toolbar>
     <div class="md-toolbar-tools">
       <h2>Respuestas de formulario</h2>
@@ -8,29 +8,141 @@
       </md-button>
     </div>
   </md-toolbar>
-  <md-dialog-content style="min-width:600px;max-width:800px;min-height:400px; ">
+  <md-dialog-content style="min-width:900px;max-width:1000px;min-height:600px; ">
     <div class="md-dialog-content">
+
       <img src="images/icono-emi.svg" width="200" class="pull-right">
       <p>
-        **Resultado obtenido por parte del estudiante
+        **Resultado obtenido por parte del estudiante:
       </p>
 
+      <div class="row">
+        <div class="col-xs-2">
+          <img ng-src="{{studentInfo.image}}" width="70" height="70">
+        </div>
+        <div class="col-xs-9">
+          <p>
+            <b>{{studentInfo.info.first_name + ' '+studentInfo.info.last_name}}</b></p>
+
+          <p>
+            con carnet de identidad:<br>
+            <i>{{studentInfo.info.ci}}</i>
+          </p>
+        </div>
+      </div>
       <div class="row">
         <div><label>Correctas: </label>{{ good}}</div>
         <div><label>Incorrectas: </label>{{ err}}</div>
         <br>
-
         <div><h4>El resultado es: {{ good*100/(good+err) + '%' }}</h4></div>
+        <button ng-class="btn btn-success" ng-click="printtAnswer()">Imprimir</button>
+      </div>
+
+      <div class="row">
+        <div></div>
+        <table class="table-bordered">
+          <thead>
+          <tr>
+            <td><b>#</b></td>
+            <td><b>Pregunta</b></td>
+            <td><b>Respondio</b></td>
+            <td><b>Correcto</b></td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="mform in form">
+            <td>{{$index + 1}}</td>
+            <td>
+              <div ng-bind-html="mform.question"></div>
+            </td>
+            <td
+              data-ng-class="
+            answeres.values[$index].answer_array.length == 0?'No answer_none':
+              'answer_respond'"
+            >{{
+              answeres.values[$index].answer_array.length == 0?'No respondio':
+              ( mform.values[ answeres.values[$index].answer_array[0] - 1 ].title)}}
+            </td>
+            <td data-ng-class="
+            answeres.values[$index].answer_array.length == 0?'answer_none':
+              ( answeres.values[$index].answer_array[0]  - 1== mform.is_answer ? 'answer_correct':'answer_incorrect' )
+            ">
+              {{answeres.values[$index].answer_array.length == 0?'--':
+              ( answeres.values[$index].answer_array[0] - 1== mform.is_answer ? 'Correcto':'Incorrecto' )}}
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <!--      <pre> {{form}}</pre>
+              <hr>
+              <pre> {{answeres}}</pre>-->
       </div>
     </div>
   </md-dialog-content>
   <div class="md-actions" layout="row">
     <span flex></span>
-    <!--<md-button data-ng-click="cancel()">
-      Cancelar
-    </md-button>
-    <md-button class="mR20" data-ng-click="$dismis">
-      Aceptar
-    </md-button>-->
   </div>
 </md-dialog>
+
+
+<div class="visible-print">
+  <center>
+    <h1>Resutados de evaluacion</h1>
+
+    <div class="row">
+      <div class="col-xs-2">
+        <img ng-src="{{studentInfo.image}}" width="70" height="70">
+      </div>
+      <div class="col-xs-9">
+        <p>
+          <b>{{studentInfo.info.first_name + ' '+studentInfo.info.last_name}}</b></p>
+
+        <p>
+          con carnet de identidad:<br>
+          <i>{{studentInfo.info.ci}}</i>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div><label>Correctas: </label>{{ good}}</div>
+      <div><label>Incorrectas: </label>{{ err}}</div>
+      <br>
+
+      <div><h4>El resultado es: {{ good*100/(good+err) + '%' }}</h4></div>
+      <button ng-class="btn btn-success" ng-click="printtAnswer()">Imprimir</button>
+    </div>
+  </center>
+  <table class="table-bordered">
+    <thead>
+    <tr>
+      <td><b>#</b></td>
+      <td><b>Pregunta</b></td>
+      <td><b>Respondio</b></td>
+      <td><b>Correcto</b></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="mform in form">
+      <td>{{$index + 1}}</td>
+      <td>
+        <div ng-bind-html="mform.question"></div>
+      </td>
+      <td
+        data-ng-class="
+            answeres.values[$index].answer_array.length == 0?'No answer_none':
+              'answer_respond'"
+      >{{
+        answeres.values[$index].answer_array.length == 0?'No respondio':
+        ( mform.values[ answeres.values[$index].answer_array[0] - 1 ].title)}}
+      </td>
+      <td data-ng-class="
+            answeres.values[$index].answer_array.length == 0?'answer_none':
+              ( answeres.values[$index].answer_array[0]  - 1== mform.is_answer ? 'answer_correct':'answer_incorrect' )
+            ">
+        {{answeres.values[$index].answer_array.length == 0?'--':
+        ( answeres.values[$index].answer_array[0] - 1== mform.is_answer ? 'Correcto':'Incorrecto' )}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

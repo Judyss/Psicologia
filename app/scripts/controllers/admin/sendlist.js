@@ -35,6 +35,14 @@ angular.module('emiApp')
     $scope.querySearch = function (query) {
       var results = query ?
         $scope.all_people.filter(createFilterFor(query)) : [];
+
+      var anotherResults = [];
+      for(var  i = 0 ; i < results.length; i++){
+        if(results[i].student != null){
+          anotherResults.push(results[i]);
+        }
+      }
+      results = anotherResults;
       return results;
     };
 
@@ -50,24 +58,21 @@ angular.module('emiApp')
 
     $scope.saved_list = {};
     function loadContacts() {
-
       Restangular.all($ApiUrls.SendList).getList()
         .then(function (data) {
-          console.log(data);
+          //console.log(data);
           $scope.saved_list = data[0];
           var accounts = $scope.saved_list.list, i, j, peoples = [];
           Restangular.all($ApiUrls.AccountDetail).getList().then(function (data) {
             for (i = 0; i < data.length; i++) {
-              data[i].info.full_name = data[i].info.first_name + " " + data[i].info.last_name;
-              /*if (data.student) {
-                data.splice(i,1);
-                continue;
-              }*/
-              for (j = 0; j < accounts.length; j++) {
-                if (data[i].id === accounts[j]) {
-                  peoples.push(data[i]);
+             // if(data[i].student != null){
+                data[i].info.full_name = data[i].info.first_name + " " + data[i].info.last_name;
+                for (j = 0; j < accounts.length; j++) {
+                  if (data[i].id === accounts[j]) {
+                    peoples.push(data[i]);
+                  }
                 }
-              }
+              //}
             }
             var mapping = [], peoples2 = [];
             data.map(function (account, index) {

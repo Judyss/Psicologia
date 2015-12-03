@@ -90,3 +90,8 @@ body {
 .an_delay {
   animation-delay: 0.75s;
 }
+
+.answer_respond{background-color: lighten(#8c8c8c,20%);}
+.answer_none{background-color: lighten(blue,30%);}
+.answer_correct{background-color: lighten(green,30%);}
+.answer_incorrect{background-color: lighten(red,30%);}

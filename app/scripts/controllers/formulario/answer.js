@@ -26,9 +26,11 @@ angular.module('emiApp')
       $location.url('/Formulario/list');
     }
 
-    $scope.show_answers = function (idAccount, formId) {
+    $scope.show_answers = function (idAccount, formId, person) {
       $rootScope.idAccount = idAccount;
       $rootScope.formId = formId;
+      $rootScope.formPersonCurrentFormView = person;
+      //$rootScope.formId = formId;
       $mdDialog.show({
           controller: 'FormularioAnswerModalCtrl',
           templateUrl: 'views/modals/formulario/answer.html',
@@ -47,6 +49,11 @@ angular.module('emiApp')
   .controller('FormularioAnswerModalCtrl', function ($scope, $rootScope, Restangular, $ApiUrls, $routeParams, $location, RestFormService, $mdDialog, JsonService) {
     $scope.form = {};
     $scope.idAccountStudent = $rootScope.idAccount;
+    $scope.studentInfo = $rootScope.formPersonCurrentFormView;
+
+    $scope.printtAnswer = function(){
+      print();
+    };
     function normalizeResponse(data) {
       data.image_url = data.image;
       data.image = '';

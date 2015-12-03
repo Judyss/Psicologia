@@ -43,7 +43,7 @@
         <td>{{answers.owner.student.semester +' '+answers.owner.student.parallel}}</td>
         <td>{{answers.time +' Segundos'}}</td>
         <td>{{(answers.created_at).split('T')[0]}}</td>
-        <td><a href="" data-ng-click="show_answers(answers.owner.id, form_id)">Ver resultado</a></td>
+        <td><a href="" data-ng-click="show_answers(answers.owner.id, form_id, answers.owner)">Ver resultado</a></td>
       </tr>
       </tbody>
     </table>
