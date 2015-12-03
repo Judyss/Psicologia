@@ -1,5 +1,5 @@
+<div class="pT40"></div>
 <div data-ng-show="statusForm === 1">
-  <div class="pT40"></div>
   <section class="ctnr">
     <div class="ldr">
       <div class="ldr-blk"></div>
@@ -40,20 +40,19 @@
 
   <div class="container navigation-quiz pT40">
     <section class="cubes text-center">
-      <figure class="cube-btn" data-ng-click="setQuestion(current_question - 1)"> Ant. </figure>
+      <figure class="cube-btn" data-ng-click="setQuestion(current_question - 1)"> <<</figure>
       <figure data-ng-repeat="question in Questions" class="cube"
               data-ng-class="current_question == $index ? 'current':''"
               data-ng-click="setQuestion($index)"> {{$index + 1}}
         <md-tooltip class="tooltip-text">
-        <span ng-bind-html="question.question"></span>
+        <span ng-bind-html="question.question">
         </md-tooltip>
       </figure>
-      <figure class="cube-btn" data-ng-click="setQuestion(current_question + 1)"> Sig. </figure>
+      <figure class="cube-btn" data-ng-click="setQuestion(current_question + 1)"> >></figure>
     </section>
   </div>
 </div>
 <div data-ng-show="statusForm === 3">
-  <ng-include src="'../views/includes/public_menu.html'"></ng-include>
   <div class="container p20">
     <p class="bg-danger" style="    border: 1px red solid;border-radius: 10px;padding: 30px;">
       El cuestionario no esta diponible..<br>
@@ -62,16 +61,7 @@
   </div>
 </div>
 
-<div data-ng-show="statusForm === 4">
-  <ng-include src="'../views/includes/public_menu.html'"></ng-include>
-  <div class="container p20">
-    <p class="bg-danger" style="    border: 1px red solid;border-radius: 10px;padding: 30px;">
-      Usted ya ha realizado la evaluacion<br>
-      <a href="#Formulario/list"> Volver a lista de formularios</a>
-    </p>
-  </div>
-</div>
-
+<!-- Razonamiento Verbal-->
 <script type="text/ng-template" id="razonamientoVerbalModal.html">
   <md-dialog aria-label="Mango (Fruit)" ng-cloak>
     <form>
@@ -87,10 +77,29 @@
       <md-dialog-content style="max-width:800px;max-height:810px;">
         <div class="md-dialog-content">
           <img src="images/emi.jpg" style="margin: auto; max-width: 100%;" alt="EMI" width="200" class="center">
-
           <p>
-            Debe completar las preguntas en el tiempo establecido, una vez finalizado el tiempo se enviaran las
-            respuestas automaticamente
+            <br/>
+            Debe completar las preguntas en el tiempo establecido, una vez finalizado el tiempo se enviaran las respuestas automaticamente y debe seleccionar solo una opci\u00f3n como respuesta.
+            <br/>
+            Su tarea consiste en encontrar las palabras que faltan de modo que,:cuanddo se haya completado, la relaci\u00f3n entre la primera y la segunda parte de cada frase sea semejante y la frase resulte verdadera y consentido.
+            Para ello ha de elegir entre los 5 pares de palabras que se proponen como opciones de respuesta. La primera palabra del par debe ir al principio de la frase y la segunda al final.
+            Cuando haya elegido el par, que, a su juicio, completa mejor la frase.
+            <br/><br/>
+            F\u00edjese el Ejemplo E1:
+          </p>
+          <img src="images/ejemplo1.jpg" />
+            <p>
+            Para elegir Ia respuesta correcta al ejemplo E1, examine atentamente cada par de palabras.
+              <br/>
+            S\u00f3lo uno de esos pares completar\u00e1 la frase de modo que los dos t\u00e9rminos de la primera parte se relacionen entre s\u00ed de forma an\u00e1loga a como se relacionan los de la segunda.
+              <br/>
+            La respuesta A es incorrecta porque ladrar y maullar no se relacionan de la "misrna manera que perro y cachorro.
+              <br/>
+            Lo mismo puede decirse de las respuestas D y E Tampoco la respuesta C es buena, porque aunque el gato ma\u00falla y el pero muerde, las acciones son de distinto tipo.
+              <br/>
+            La respuesta correcta es la B, porque gato y maullar se relacionan de modo semejante a como lo hacen perro y ladrar.
+              <br/>
+            Por eso, frente al Ejemplo E1 se ha de seleccionar la opci\u00f3n B.
           </p>
         </div>
       </md-dialog-content>
@@ -103,3 +112,232 @@
     </form>
   </md-dialog>
 </script>
+
+<!-- Raxonamiento num\u00e9rico
+<script type="text/ng-template" id="razonamientoVerbalModal.html">
+  <md-dialog aria-label="Mango (Fruit)" ng-cloak>
+    <form>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>Lea atentamente las instrucciones</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-dialog-content style="max-width:800px;max-height:810px;">
+        <div class="md-dialog-content">
+          <img src="images/emi.jpg" style="margin: auto; max-width: 100%;" alt="EMI" width="200" class="center">
+          <p>
+            <br/>
+            Debe completar las preguntas en el tiempo establecido, una vez finalizado el tiempo se enviaran las respuestas automaticamente y debe seleccionar solo una opci\u00f3n como respuesta.
+            <br/>
+            Esta prueba intenta comprobar su capacidad para razonar con los n\u00fameros. Lea cada ejercicio y posibles respuestas que se ofrecen y decida cu\u00e1l de ellas es la mejor.Si necesita hacer c\u00e1lculos,utilice la hoja en blanco, pero no use calculadora.
+            <br/><br/>
+            F\u00edjese en el Ejemplo El:
+          </p>
+          <img src="images/ejemplo2.jpg" />
+          <p>
+            En el Ejemplo El la respuesta correcta es 10 porque es el n\u00famero que sigue al 8 en la secuencia. Por eso, se selecciona
+              la opci\u00f3n B.
+          </p>
+        </div>
+      </md-dialog-content>
+      <div class="md-actions" layout="row">
+        <span flex></span>
+        <md-button ng-click="answer('useful')" style="margin-right:20px;">
+          Aceptar
+        </md-button>
+      </div>
+    </form>
+  </md-dialog>
+</script>
+-->
+
+<!-- Raxonamiento abstracto
+<script type="text/ng-template" id="razonamientoVerbalModal.html">
+  <md-dialog aria-label="Mango (Fruit)" ng-cloak>
+    <form>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>Lea atentamente las instrucciones</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-dialog-content style="max-width:800px;max-height:810px;">
+        <div class="md-dialog-content">
+          <img src="images/emi.jpg" style="margin: auto; max-width: 100%;" alt="EMI" width="200" class="center">
+          <p>
+            <br/>
+            En esta prueba se trata de apreciar la capacidad para razonar con figuras o dibujos. En cada
+            fila hay cuatro figuras llamadas PROBLEMA y cinco llamadas RESPUESTA. Las figuras PROBLEMA
+            forman una serie porque est\u00e1n ordenadas siguiendo una ley. Su tarea consiste en elegir,
+            entre las figuras RESPUESTA, la que debiera ir a continuaci\u00f3n (es decir, la que ser\u00eda la n\u00famero
+            cinco de la serie).
+            <br/><br/>
+            F\u00edjese en el Ejemplo El:
+          </p>
+          <img src="images/ejemplo3.jpg" />
+          <p>
+          En el Ejemplo E1 puede ver que Ia flecha gira 90°, en ei sentido de las agujas del reloj, de un recuadro a otro. \u00bfCu\u00e1l deber\u00eda ser la pr\u00f3xima figura (la n\u00famero cinco) de la serie?
+            <br/>
+            La respuesta correcta es A porque la posici\u00f3n siguiente de la flecha deber\u00eda ser vertical hacia arriba.
+            <br/>
+            Por eso, se selecciona el recuadro que est\u00e1 debajo de la A.
+          </p>
+        </div>
+      </md-dialog-content>
+      <div class="md-actions" layout="row">
+        <span flex></span>
+        <md-button ng-click="answer('useful')" style="margin-right:20px;">
+          Aceptar
+        </md-button>
+      </div>
+    </form>
+  </md-dialog>
+</script>
+-->
+
+
+
+<!-- Raxonamiento mec\u00e1nico
+<script type="text/ng-template" id="razonamientoVerbalModal.html">
+  <md-dialog aria-label="Mango (Fruit)" ng-cloak>
+    <form>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>Lea atentamente las instrucciones</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-dialog-content style="max-width:800px;max-height:810px;">
+        <div class="md-dialog-content">
+          <img src="images/emi.jpg" style="margin: auto; max-width: 100%;" alt="EMI" width="200" class="center">
+          <p>
+            <br/>
+            En esta prueba hay un cierto n\u00famero de dibujos sobre los cuales se hacen algunas preguntas.
+            <br/>
+            Lea atentamente cada pregunta, observe la figura o figuras y elija cu\u00e1l de las tres respuestas A,
+            B o C, es Ia mejor.
+            <br/><br/>
+            F\u00edjese en el Ejemplo El:
+          </p>
+          <img src="images/ejemplo4.jpg" />
+          <p>
+          El Ejemplo E1 presenta dos dibujos que parecen similares; pero tienen una peque\u00f1a diferencia:
+          en el dibujo A la pala golpea la parte inferior de la pelota y en el B, la parte superior.
+          <br/>
+          La pelota A subir\u00e1 m\u00e1s porque la pala la golpea desde abajo. Por eso, la respuesta ser\u00e1 letra A en la l\u00ednea que corresponde al Ejemplo E1.
+          </p>
+        </div>
+      </md-dialog-content>
+      <div class="md-actions" layout="row">
+        <span flex></span>
+        <md-button ng-click="answer('useful')" style="margin-right:20px;">
+          Aceptar
+        </md-button>
+      </div>
+    </form>
+  </md-dialog>
+</script>
+-->
+
+
+<!-- Relaciones Espaciales
+<script type="text/ng-template" id="razonamientoVerbalModal.html">
+  <md-dialog aria-label="Mango (Fruit)" ng-cloak>
+    <form>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>Lea atentamente las instrucciones</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-dialog-content style="max-width:800px;max-height:810px;">
+        <div class="md-dialog-content">
+          <img src="images/emi.jpg" style="margin: auto; max-width: 100%;" alt="EMI" width="200" class="center">
+          <p>
+            <br/>
+            En cada uno de ellos se presenta un modelo o patr\u00f3n en
+            el que algunas zonas est\u00e1n sombreadas y en otras aparecen peque\u00f1os dibujos. Ala derecha de cada
+            modelo se ofrecen cuatro figuras de tres dimensiones. Su tarea consiste en averiguar cu\u00e1l de esas
+            frguras es la \u00fanica que ha podido formarse a partir del modelo. \u00e9ste siempre presenta la parte
+            exterior de la figura.
+            <br/><br/>
+            F\u00edjese en el Ejemplo El:
+          </p>
+          <img src="images/ejemplo5.jpg" />
+          <p>
+          En el Ejemplo El el modelo formar\u00e1 un caja rectangular con ]as dos caras mayores y una de
+          las peque\u00f1as laterales sombreadas. F\u00edjese en las respuestas A, B, C y D. Las respuestas A y C son
+          incorrectas porque la cara superior no est\u00e1 sombreada. La respuesta B, tampoco es correcta porque
+          tiene sombreados uno de los laterales largos.
+          <br/>
+          La respuesta correcta es D porque Ia cara superior y uno de los laterales cortos est\u00e1n sombreados.
+          La cara inferior est\u00e1 oculta a la vista. Por eso,se selecciona la letra D.
+          </p>
+        </div>
+      </md-dialog-content>
+      <div class="md-actions" layout="row">
+        <span flex></span>
+        <md-button ng-click="answer('useful')" style="margin-right:20px;">
+          Aceptar
+        </md-button>
+      </div>
+    </form>
+  </md-dialog>
+</script>
+-->
+
+
+<!-- Ortograf\u00eda
+<script type="text/ng-template" id="razonamientoVerbalModal.html">
+  <md-dialog aria-label="Mango (Fruit)" ng-cloak>
+    <form>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>Lea atentamente las instrucciones</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-dialog-content style="max-width:800px;max-height:810px;">
+        <div class="md-dialog-content">
+          <img src="images/emi.jpg" style="margin: auto; max-width: 100%;" alt="EMI" width="200" class="center">
+          <p>
+            <br/>
+            En esta prueba se presentan grupos de cuatro palabras entre las cuales hay una que est\u00e1
+            mal escrita. Su tarea consiste en descubrir cu\u00e1l es la palabra en la que intencionadamente se ha
+            cometido una falta de ortograf\u00eda.
+            <br/><br/>
+            F\u00edjese en el Ejemplo El:
+          </p>
+          <img src="images/ejemplo6.jpg" />
+          <p>
+          En el Ejemplo E1, la palabra ben\u00e9bolo no est\u00e1 escrita correctamente; deb\u00eda haberse escrito
+          ben\u00e9volo. Por eso, frente al Ejemplo E1, se selecciona la opci\u00f3n B.
+          </p>
+        </div>
+      </md-dialog-content>
+      <div class="md-actions" layout="row">
+        <span flex></span>
+        <md-button ng-click="answer('useful')" style="margin-right:20px;">
+          Aceptar
+        </md-button>
+      </div>
+    </form>
+  </md-dialog>
+</script>
+-->
