@@ -1,4 +1,13 @@
 <div class="pT40"></div>
+
+<div data-ng-show="!statusForm">
+  <div class="container p20">
+    <p class="bg-info" style="    border: 1px red solid;border-radius: 10px;padding: 30px;">
+      <img src="images/loading.gif" width="20%" style="margin-right: 50px">
+      <span style="font-size: 18px">Espere un momento por favor, estamos cargando la evaluacion...</span>
+    </p>
+  </div>
+</div>
 <div data-ng-show="statusForm === 1">
   <section class="ctnr">
     <div class="ldr">
@@ -55,8 +64,10 @@
 <div data-ng-show="statusForm === 3">
   <div class="container p20">
     <p class="bg-danger" style="    border: 1px red solid;border-radius: 10px;padding: 30px;">
-      El cuestionario no esta diponible..<br>
-    <a href="#Formulario/list"> Volver a lista de formularios</a>
+      <img src="images/not_found.png" width="20%" style="margin-right: 50px">
+      <span style="font-size: 18px">Usted ya realizo el cuestionario o no se encuetra diponible..</span>
+      <br>
+      <a href="#Formulario/list" style="font-size: 18px"> Volver a lista de formularios</a>
     </p>
   </div>
 </div>
@@ -183,7 +194,7 @@
           </p>
           <img src="images/ejemplo3.jpg" />
           <p>
-          En el Ejemplo E1 puede ver que Ia flecha gira 90°, en ei sentido de las agujas del reloj, de un recuadro a otro. \u00bfCu\u00e1l deber\u00eda ser la pr\u00f3xima figura (la n\u00famero cinco) de la serie?
+          En el Ejemplo E1 puede ver que Ia flecha gira 90ï¿½, en ei sentido de las agujas del reloj, de un recuadro a otro. \u00bfCu\u00e1l deber\u00eda ser la pr\u00f3xima figura (la n\u00famero cinco) de la serie?
             <br/>
             La respuesta correcta es A porque la posici\u00f3n siguiente de la flecha deber\u00eda ser vertical hacia arriba.
             <br/>

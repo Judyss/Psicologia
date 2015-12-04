@@ -1,4 +1,4 @@
-<md-dialog aria-label="Publicar" ng-cloak class="hidden-print">
+<md-dialog aria-label="Publicar" ng-cloak class="hidden-print" style="overflow: hidden">
   <md-toolbar>
     <div class="md-toolbar-tools">
       <h2>Respuestas de formulario</h2>
@@ -8,8 +8,15 @@
       </md-button>
     </div>
   </md-toolbar>
-  <md-dialog-content style="min-width:900px;max-width:1000px;min-height:600px; ">
-    <div class="md-dialog-content">
+  <md-dialog-content style="min-width:700px;max-width:1000px;min-height:600px; ">
+
+    <div class="md-dialog-content" data-ng-show="statusCharge == 0">
+      <p class="bg-info" style="border: 1px red solid;border-radius: 10px;padding: 30px;">
+        <img src="images/loading.gif" width="10%" style="margin-right: 30px">
+        <span style="font-size: 18px">Espere un momento por favor, estamos cargando resultados de la evaluacion...</span>
+      </p>
+    </div>
+    <div class="md-dialog-content" data-ng-show="statusCharge == 1">
 
       <img src="images/icono-emi.svg" width="200" class="pull-right">
       <p>
@@ -35,7 +42,7 @@
         <div><label>Incorrectas: </label>{{ err}}</div>
         <br>
         <div><h4>El resultado es: {{ good*100/(good+err) + '%' }}</h4></div>
-        <button ng-class="btn btn-success" ng-click="printtAnswer()">Imprimir</button>
+        <button ng-class="true?'btn btn-success':''" ng-click="printtAnswer()">Imprimir</button>
       </div>
 
       <div class="row">
@@ -109,7 +116,7 @@
       <br>
 
       <div><h4>El resultado es: {{ good*100/(good+err) + '%' }}</h4></div>
-      <button ng-class="btn btn-success" ng-click="printtAnswer()">Imprimir</button>
+      <button ng-class="true?'btn btn-success':''" ng-click="printtAnswer()">Imprimir</button>
     </div>
   </center>
   <table class="table-bordered">

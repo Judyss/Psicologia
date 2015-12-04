@@ -10,6 +10,8 @@
 angular.module('emiApp')
   .controller('FormularioAnswerCtrl', function ($scope, $rootScope, Restangular, $ApiUrls, $routeParams, $location, RestFormService, $mdDialog) {
     $scope.form_id = $routeParams.id;
+
+    $scope.statusCharge = 0;
     if ($routeParams.id) {
       $scope.list_answer = [];
       //$scope.form
@@ -17,10 +19,25 @@ angular.module('emiApp')
         .then(function (data) {
           $scope.form = data;
         });
+
       RestFormService.get($ApiUrls.AnswerDetail)
         .then(function (data) {
           console.log(data);
-          $scope.list_answer = data;
+          $scope.list_answer = [];
+
+          for (var i = 0; i < data.length; i++) {
+            if (data[i].form == $scope.form_id) {
+              $scope.list_answer.push(data[i]);
+            }
+          }
+
+          if ($scope.list_answer.length > 0) {
+            $scope.statusCharge = 2;
+          } else {
+            $scope.statusCharge = 1;
+          }
+        }, function () {
+          $scope.statusCharge = 3;
         })
     } else {
       $location.url('/Formulario/list');
@@ -63,6 +80,20 @@ angular.module('emiApp')
       return data;
     }
 
+
+    $scope.statusCharge = 0;
+    $scope.totalCharge = 2;
+    $scope.partialCharge = 0;
+
+
+    $scope.finishCharge = function(){
+      if($scope.totalCharge == 1){
+        $scope.statusCharge = 1;
+      }else{
+        $scope.statusCharge = 1;
+      }
+    };
+
     RestFormService.get($ApiUrls.FormQuestion, $rootScope.formId)
       .then(function (data) {
         for (var i = 0; i < data.length; i++) {
@@ -71,9 +102,12 @@ angular.module('emiApp')
         $scope.form = data;
         RestFormService.get($ApiUrls.Answer)
           .then(function (data2) {
+            $scope.partialCharge++;
+            $scope.finishCharge();
             console.log($scope.idAccountStudent, data2);
+
             for (var i = 0; i < data2.length; i++) {
-              if ($scope.idAccountStudent == data2[i].owner) {
+              if ($scope.idAccountStudent == data2[i].owner && data2[i].form == $rootScope.formId) {
                 console.log(data2[i].owner);
                 $scope.answeres = data2[i];
                 $scope.answeres = normalizeResponse(data2[i]);

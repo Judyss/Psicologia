@@ -45,8 +45,8 @@ angular.module('emiApp')
               '</md-list-item>',
             template_listSelect = '' +
               '<md-list-item data-ng-repeat="value in question.values">' +
-              '<md-radio-group ng-model="question.answer"  >' +
-              '<md-radio-button name="{{value.id}}" value="{{value.id}}" class="md-primary">' +
+              '<md-radio-group ng-model="value.checked">' +
+              '<md-radio-button name="fedfe" value="{{value.id}}" class="md-primary">' +
               '{{value.title}}' +
               '</md-radio-button>' +
               '</md-radio-group>' +
@@ -70,10 +70,12 @@ angular.module('emiApp')
               template = template_textLarge;
               break;
             case "3":
-              template = template_multipleSelection;
+              //template = template_multipleSelection;
+              template = template_listSelect;
               break;
             case "4":
-              template = template_listSelect;
+              template = template_multipleSelection;
+              //template = template_listSelect;
               break;
             case "5":
               template = template_multipleEntrance;

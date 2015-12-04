@@ -1,6 +1,6 @@
 //theme app
-$color-theme-background: #27ae60;
-//$color-theme-background: #3498db;
+//$color-theme-background: #27ae60; // app green theme
+$color-theme-background: #154B79;   // app blue emi theme
 //$color-theme-background: #e67e22;
 $color-theme-text: #fff;
 
@@ -35,13 +35,13 @@ $login-background-view: rgba(0,0,0,0);
 $login-background-header: $color-theme-background;//#106CC8;
 $login-background-footer: $color-theme-background;
 $login-background-body: #fff;
-$login-background-body-light: lighten($login-background-body, 3%);
+$login-background-body-light: rgba(0,0,0,0);
 //register
 $register-background-view: rgba(0,0,0,0);
 $register-background-header: $color-theme-background;
 $register-background-footer: $color-theme-background;
 $register-background-body: #fff;
-$register-background-body-light: lighten($login-background-body, 3%);
+$register-background-body-light: rgba(0,0,0,0);
 
 //colors
 $hover-percent: 10%;

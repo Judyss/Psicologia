@@ -21,19 +21,22 @@ angular.module('emiApp')
     var intervalTimeSolved;
     //get Form instance
     if ($scope.currentFormId) {
-      AuthService.login().then(function(){
+      AuthService.login().then(function (dataa) {
+        //console.log("data ligga", dataa);
         Restangular.all($ApiUrls.Answer).getList()
           .then(function (data) {
             var exist = false;
+            console.log("-->", $scope.currentFormId, data);
             for(var i = 0; i < data.length;i++){
-              if($rootScope.currentUser.id == data[i].owner){
+              if (dataa.id == data[i].owner && $scope.currentFormId == data[i].form) {
                 exist = true;
               }
             }
+            console.log("exist: " + exist);
             if(!exist){
               loadForm();
             }else{
-              $scope.statusForm = 4;
+              $scope.statusForm = 3;
             }
           }, function (data) {
 
@@ -75,12 +78,13 @@ angular.module('emiApp')
         });
     }
 
+    $scope.timerSendAutomatic = null;
     //time interval
     $scope.startTime = function () {
-      var intervalTime = $interval(function () {
+      $scope.timerSendAutomatic = $interval(function () {
         $scope.seconds--;
         if ($scope.seconds <= 0) {
-          $interval.cancel(intervalTime);
+          $interval.cancel($scope.timerSendAutomatic);
           $scope.finishTest();
         }
       }, 1000);
@@ -90,8 +94,16 @@ angular.module('emiApp')
       }, 1000);
     };
 
+    $scope.$watch('Questions',function(aa,bb){
+      console.log("--------------------======------");
+      console.log(aa,bb);
+      $scope.setQuestion($scope.current_question + 1);
+    }, true);
     $scope.finishTest = function () {
       $interval.cancel(intervalTimeSolved);
+      if($scope.timerSendAutomatic != null){
+        $interval.cancel($scope.timerSendAutomatic);
+      }
       $rootScope.finishFormMessage();
       AnswerService.add($scope.Questions, $scope.currentFormId, $scope.seconds_solved_test)
         .then(function (data) {

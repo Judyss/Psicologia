@@ -1,8 +1,31 @@
 <ng-include src="'views/includes/public_menu.html'" class="hidden-print"></ng-include>
 <div id="answer" class="hidden-print">
+  <div class="container p20" data-ng-show="statusCharge == 3">
+    <p class="bg-info" style="    border: 1px red solid;border-radius: 10px;padding: 30px;">
+      <img src="images/not_found.png" width="20%" style="margin-right: 50px">
+      <span style="font-size: 18px">No tiene coneccion a internet</span>
+    </p>
+  </div>
 
+  <div class="container p20" data-ng-show="statusCharge == 1">
+    <p class="bg-info" style="    border: 1px red solid;border-radius: 10px;padding: 30px;">
+      <img src="images/folder.png" width="20%" style="margin-right: 50px">
+      <span>
+        <span style="font-size: 18px">No se han encontrado respuestas</span><br>
+        <a href="#/Formulario/list"> Volver a lista de evaluaciones</a>
+      </span>
+    </p>
+  </div>
 
-  <div class="container" style="background: #fff">
+  <div class="container p20" data-ng-show="statusCharge == 0">
+    <p class="bg-info" style="    border: 1px red solid;border-radius: 10px;padding: 30px;">
+      <img src="images/loading.gif" width="20%" style="margin-right: 50px">
+      <span style="font-size: 18px">Espere un momento por favor, estamos cargando sus respuestas...</span>
+
+    </p>
+  </div>
+
+  <div class="container" style="background: #fff" data-ng-show="statusCharge == 2">
     <br>
     <h2 class="pull-left">{{form.name}}</h2>
 
@@ -14,10 +37,8 @@
     </div>
     <br>
     <span class="clearfix"></span>
-    <div class="row text-center pT20" data-ng-show="list_answer.length == 0">
-      <i>No se han encontrado respuestas</i>
-    </div>
-    <table class="table table-bordered table-striped" data-ng-show="list_answer.length > 0">
+
+    <table class="table table-bordered table-striped">
       <thead>
       <tr>
         <th>N</th>
@@ -30,7 +51,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr ng-repeat="answers in list_answer | filter:searchName" ng-show="answers.form== form.id">
+      <tr ng-repeat="answers in list_answer | filter:searchName" ng-show="answers.form == form.id">
         <td>{{$index+1}}</td>
         <td>
           <img ng-src="{{answers.owner.image}}" class="inline-block"

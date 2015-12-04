@@ -95,3 +95,12 @@ body {
 .answer_none{background-color: lighten(blue,30%);}
 .answer_correct{background-color: lighten(green,30%);}
 .answer_incorrect{background-color: lighten(red,30%);}
+
+.btn.btn-success{
+  background-color: darken(#154B79, 3%) !important;
+  color: #fff !important;
+}
+.btn.btn-success:hover{
+  background-color: #446CAB;
+  color: #fff !important;
+}

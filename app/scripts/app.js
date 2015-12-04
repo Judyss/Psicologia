@@ -23,8 +23,8 @@ angular
     'angularFileUpload'
   ])
   .config(function ($routeProvider, $httpProvider, RestangularProvider) {
-    RestangularProvider.setBaseUrl('http://127.0.0.1:8000');
-    //RestangularProvider.setBaseUrl('https://psicologia-app.herokuapp.com/');
+    //RestangularProvider.setBaseUrl('http://127.0.0.1:8000');
+    RestangularProvider.setBaseUrl('https://psicologia-app.herokuapp.com/');
     RestangularProvider.setRequestSuffix('/');
     $httpProvider.interceptors.push('InterceptorService');
     $routeProvider
@@ -104,7 +104,8 @@ angular
       '/Formulario/list',
       '/Formulario/edit',
       '/Formulario/view',
-      '/Formulario/nuevo'
+      '/Formulario/answer',
+      '/Administrador/Enviar'
     ];
     var routeHideAuth = [
       '/Registro',
